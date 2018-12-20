@@ -1,21 +1,19 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import Link from 'gatsby-link'
+import { Container, Text } from 'atti-components'
+import Layout from '../components/Layout/index.js'
 
-import Layout from '../components/layout'
-import Image from '../components/image'
-import SEO from '../components/seo'
+import { Introduction } from '../pagesComponents/homepage'
 
-const IndexPage = () => (
+const Index = () => (
   <Layout>
-    <SEO title="Home" keywords={['gatsby', 'application', 'react']} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <Container>
+      <Introduction />
+      <Text>Coucou</Text>
+      <Link to="/travels">Voir les voyages</Link><br/>
+      <Link to="/web">Voir le web</Link>
+    </Container>
   </Layout>
 )
 
-export default IndexPage
+export default React.memo(Index)
