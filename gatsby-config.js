@@ -38,15 +38,12 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId,
-        accessToken
+        spaceId: 'jw3pwll4r1ki',
+        accessToken: 'e5daa23d5d7ff910db596c9e4921e5fed5290774212d3d75cd62bbc21bbf5468',
       },
     },
     {
       resolve: `gatsby-plugin-styled-components`,
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
   ],
 }
