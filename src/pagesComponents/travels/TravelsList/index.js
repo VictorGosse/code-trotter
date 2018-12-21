@@ -2,17 +2,35 @@ import React from 'react'
 import Link from 'gatsby-link'
 import { Header2 } from 'atti-components'
 import { StaticQuery, graphql } from 'gatsby'
+import { map } from 'lodash'
+
+import TravelContainer from './styles/TravelContainer.js'
 
 const TravelsList = () => (
   <StaticQuery
     query={graphql`
       query BlogPosts {
-        allContentfulBlogPost {
+        allContentfulBlogPost(sort: {fields: [startDate], order: DESC} ) {
           edges{
             node {
               title
+              startDate
+              endDate
+              heroImage {
+                description
+                file {
+                  url
+                  fileName
+                  contentType
+                }
+                title
+              }
+              place
+              slug
+              description {
+                description
+              }
               body {
-                id
                 body
               }
             }
@@ -22,8 +40,11 @@ const TravelsList = () => (
     `}
     render={data => (
       <>
-        <Header2>{data.allContentfulBlogPost.edges[0].node.title}</Header2>
-        <Header2>{data.allContentfulBlogPost.edges[1].node.title}</Header2>
+        {map(data.allContentfulBlogPost.edges, article => (
+          <TravelContainer background={article.node.heroImage.file.url}>
+            <Header2>{article.node.title}</Header2> 
+          </TravelContainer>
+        ))}
         <Link to="/">Retour à la page d'accueil</Link>
       </>
     )}
