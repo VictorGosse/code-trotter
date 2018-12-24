@@ -1,15 +1,33 @@
 import React from 'react'
-import Link from 'gatsby-link'
-import { Header2 } from 'atti-components'
+import PropTypes from 'prop-types'
+import { Breadcrumb, Cell, Grid, Header2 } from 'atti-components'
 import { graphql } from 'gatsby'
 
+import { Layout } from '../components'
+import { Header } from '../pagesComponents/travelBlogPost'
 
-const TravelsList = (data) => (
-    <>
-      <Header2>{data.title}</Header2> 
-      <Link to="/">Retour à la page d'accueil</Link>
-    </>
+const Travel = ({ data }) => (
+  <Layout>
+    <Header data={data.contentfulBlogPost} />
+    <Grid>
+      <Cell cols={[[1, 6],[1, 6],[3, 10]]}>
+        <Header2>{data.contentfulBlogPost.title}</Header2>
+        <Breadcrumb
+          elements={[
+            { name: 'Accueil', url: '/' },
+            { name: 'Voyages', url: '/travels' },
+            { name: data.contentfulBlogPost.title },
+          ]}
+          separator='>'
+        />
+      </Cell>
+    </Grid>
+  </Layout>
 )
+
+Travel.PropTypes = {
+  data: PropTypes.object.isRequired
+}
 
 export const pageQuery = graphql`
   query($id: String!) {
@@ -38,4 +56,4 @@ export const pageQuery = graphql`
   }
 `
 
-export default React.memo(TravelsList)
+export default React.memo(Travel)

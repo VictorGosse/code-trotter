@@ -43,6 +43,7 @@ const TravelsList = () => (
         {map(data.allContentfulBlogPost.edges, article => (
           <TravelContainer background={article.node.heroImage.file.url}>
             <Header2>{article.node.title}</Header2> 
+            <Link to={`/travels/${article.node.slug}`}>Lire l'article</Link>
           </TravelContainer>
         ))}
         <Link to="/">Retour à la page d'accueil</Link>
