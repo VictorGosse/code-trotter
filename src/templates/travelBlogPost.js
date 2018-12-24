@@ -1,17 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Breadcrumb, Cell, Grid, Header2 } from 'atti-components'
+import { Breadcrumb, Cell, Grid, Header2, Text } from 'atti-components'
 import { graphql } from 'gatsby'
 
 import { Layout } from '../components'
+import renderAst from '../helpers/renderAst'
 import { Header } from '../pagesComponents/travelBlogPost'
+
+
 
 const Travel = ({ data }) => (
   <Layout>
     <Header data={data.contentfulBlogPost} />
     <Grid>
       <Cell cols={[[1, 6],[1, 6],[3, 10]]}>
-        <Header2>{data.contentfulBlogPost.title}</Header2>
         <Breadcrumb
           elements={[
             { name: 'Accueil', url: '/' },
@@ -20,6 +22,9 @@ const Travel = ({ data }) => (
           ]}
           separator='>'
         />
+        <div>
+          {renderAst(data.contentfulBlogPost.body.childMarkdownRemark.htmlAst)}
+        </div>
       </Cell>
     </Grid>
   </Layout>
@@ -50,7 +55,9 @@ export const pageQuery = graphql`
         description
       }
       body {
-        body
+        childMarkdownRemark{
+          htmlAst
+        }
       }
     }
   }

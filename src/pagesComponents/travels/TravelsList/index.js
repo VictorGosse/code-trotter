@@ -1,10 +1,11 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import { Header2 } from 'atti-components'
 import { StaticQuery, graphql } from 'gatsby'
 import { map } from 'lodash'
 
+import TextContainer from './styles/TextContainer.js'
 import TravelContainer from './styles/TravelContainer.js'
+import { Link, TravelDates } from '../../../components'
 
 const TravelsList = () => (
   <StaticQuery
@@ -14,8 +15,8 @@ const TravelsList = () => (
           edges{
             node {
               title
-              startDate
-              endDate
+              startDate(formatString: "DD/MM/YYYY")
+              endDate(formatString: "DD/MM/YYYY")
               heroImage {
                 description
                 file {
@@ -40,10 +41,13 @@ const TravelsList = () => (
     `}
     render={data => (
       <>
-        {map(data.allContentfulBlogPost.edges, article => (
-          <TravelContainer background={article.node.heroImage.file.url}>
-            <Header2>{article.node.title}</Header2> 
-            <Link to={`/travels/${article.node.slug}`}>Lire l'article</Link>
+        {map(data.allContentfulBlogPost.edges, ({node}) => (
+          <TravelContainer key={node.slug} background={node.heroImage.file.url}>
+            <TextContainer>
+              <Header2>{node.title}</Header2>
+              <TravelDates startDate={node.startDate} endDate={node.endDate} />
+              <Link to={`/travels/${node.slug}`}>Lire l'article</Link>
+            </TextContainer>
           </TravelContainer>
         ))}
         <Link to="/">Retour à la page d'accueil</Link>
