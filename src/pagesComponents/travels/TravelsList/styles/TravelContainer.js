@@ -7,6 +7,7 @@ const TravelContainer = styled('article')`
   align-items: center;
   justify-content: center;
   margin: 40px 0;
+  padding: 20px;
   background-image: url(${({ background }) => background});
   background-size: cover;
   background-position: center;

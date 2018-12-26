@@ -11,11 +11,17 @@ import PostImage from './PostImage'
 const Header2 = styled(AttiHeader2)`
   width: ${({ theme }) => theme.blogPostWidth};
   margin: 35px auto 10px auto;
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: 100%;
+  }
 `
 
 const Header3 = styled(AttiHeader3)`
   width: ${({ theme }) => theme.blogPostWidth};
   margin: 35px auto 10px auto;
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: 100%;
+  }
 `
 
 const Image = styled(PostImage)`
@@ -32,6 +38,9 @@ const Text = styled(AttiText)`
   margin: auto;
   font-size: ${({ theme }) => theme.fonts.fontSize.fs16};
   line-height: 28px;
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: 100%;
+  }
 `
 
 export {

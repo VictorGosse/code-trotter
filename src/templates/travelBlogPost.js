@@ -14,9 +14,9 @@ const Travel = ({ data }) => (
     <Header data={data.contentfulBlogPost} />
     <Container>
       <Breadcrumb title={data.contentfulBlogPost.title} />
-      <div>
+      <article>
         {renderAst(data.contentfulBlogPost.body.childMarkdownRemark.htmlAst)}
-      </div>
+      </article>
     </Container>
   </Layout>
 )
