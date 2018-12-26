@@ -19,6 +19,14 @@ const HeaderTextContainer = styled(Container)`
     text-transform: uppercase;
     text-align: center;
   }
+
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin: 200px 0;
+  }
+
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    margin: 150px 0;
+  }
 `
 
 export default HeaderTextContainer

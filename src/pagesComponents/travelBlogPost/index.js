@@ -1,3 +1,4 @@
+import Breadcrumb from './Breadcrumb'
 import Header from './Header'
 
-export { Header }
+export { Breadcrumb, Header }

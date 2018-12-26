@@ -3,7 +3,7 @@ import { Header1 } from 'atti-components'
 
 const Introduction = () => (
   <>
-    <Header1 textAlign="center">Les voyages</Header1>
+    <Header1 textAlign="center" mt="65px" mb="25px">Les voyages</Header1>
     <hr />
   </>
 )

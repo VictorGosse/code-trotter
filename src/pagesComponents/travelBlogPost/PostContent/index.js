@@ -1,0 +1,43 @@
+import styled from 'styled-components'
+import { 
+  Header2 as AttiHeader2, 
+  Header3 as AttiHeader3,
+  Link as AttiLink, 
+  Text as AttiText
+} from 'atti-components'
+
+import PostImage from './PostImage'
+
+const Header2 = styled(AttiHeader2)`
+  width: ${({ theme }) => theme.blogPostWidth};
+  margin: 35px auto 10px auto;
+`
+
+const Header3 = styled(AttiHeader3)`
+  width: ${({ theme }) => theme.blogPostWidth};
+  margin: 35px auto 10px auto;
+`
+
+const Image = styled(PostImage)`
+`
+
+const Link = styled(AttiLink)`
+  font-size: ${({ theme }) => theme.fonts.fontSize.fs16};
+  line-height: 28px;
+`
+
+const Text = styled(AttiText)`
+  display: block;
+  width: ${({ theme }) => theme.blogPostWidth};
+  margin: auto;
+  font-size: ${({ theme }) => theme.fonts.fontSize.fs16};
+  line-height: 28px;
+`
+
+export {
+  Header2,
+  Header3,
+  Image,
+  Link,
+  Text,
+}

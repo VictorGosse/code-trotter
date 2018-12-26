@@ -24,7 +24,8 @@ const RightCategory = styled('div')`
   }
 
   ${CategoryLink} {
-    margin-right: 50px;
+    margin-right: 15%;
+    margin-top: 13%;
     @media only screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
       margin-right: 10px;
     }

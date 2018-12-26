@@ -5,7 +5,7 @@ import { map } from 'lodash'
 
 import TextContainer from './styles/TextContainer.js'
 import TravelContainer from './styles/TravelContainer.js'
-import { Link, SecondaryButton, TravelDates } from '@components'
+import { SecondaryButton, TravelDates } from '@components'
 import routes from '@config/routes'
 
 const TravelsList = () => (
@@ -51,7 +51,6 @@ const TravelsList = () => (
             </TextContainer>
           </TravelContainer>
         ))}
-        <Link to={routes.homepage}>Retour à la page d'accueil</Link>
       </>
     )}
   />

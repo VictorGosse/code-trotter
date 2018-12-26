@@ -26,7 +26,8 @@ const LeftCategory = styled('div')`
   }
 
   ${CategoryLink} {
-    margin-left: 50px;
+    margin-left: 15%;
+    margin-bottom: 13%;
     
     @media only screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
       margin-left: 10px;
