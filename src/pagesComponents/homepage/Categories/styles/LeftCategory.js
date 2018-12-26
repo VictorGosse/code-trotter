@@ -27,6 +27,26 @@ const LeftCategory = styled('div')`
 
   ${CategoryLink} {
     margin-left: 50px;
+    
+    @media only screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+      margin-left: 10px;
+    }
+  }
+
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: 100%;
+    height: 500px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+    top: 0;
+    justify-content: center;
+    &:after {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+    }
+    ${CategoryLink} {
+      margin: 0;
+    }
   }
 `
 

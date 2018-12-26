@@ -25,6 +25,19 @@ const RightCategory = styled('div')`
 
   ${CategoryLink} {
     margin-right: 50px;
+    @media only screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+      margin-right: 10px;
+    }
+  }
+  
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: 100%;
+    height: 500px;
+    margin-top: calc(500px - 10%);
+    justify-content: center;
+    ${CategoryLink} {
+      margin: 0;
+    }
   }
 `
 

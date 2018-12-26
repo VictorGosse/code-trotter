@@ -8,6 +8,10 @@ const CategoryContainer = styled('div')`
     color: currentColor;
     text-decoration: none;
   }
+
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    height: 950px;
+  }
 `
 
 export default CategoryContainer
