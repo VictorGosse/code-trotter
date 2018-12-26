@@ -13,6 +13,15 @@ const CategoryLink = styled(Header1)`
     background-color: white;
     color: black;
   }
+  a {
+    display: inline-flex;
+    align-items: center;
+    svg {
+      height: 35px;
+      margin-right: 10px;
+      fill: currentColor;
+    }
+  }
 `
 
 export default CategoryLink
