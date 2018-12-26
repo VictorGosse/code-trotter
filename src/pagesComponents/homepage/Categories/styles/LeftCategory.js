@@ -20,7 +20,7 @@ const LeftCategory = styled('div')`
     display: block;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.1);
     -webkit-clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
     clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
   }

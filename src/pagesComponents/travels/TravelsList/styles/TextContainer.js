@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 import { Header2 } from 'atti-components'
 
-import { SecondaryButton } from '@components'
-
 const TextContainer = styled('div')`
   z-index: 1;
   display: flex;
@@ -19,10 +17,6 @@ const TextContainer = styled('div')`
     text-transform: uppercase;
     text-align: center;
 
-  }
-
-  ${SecondaryButton} {
-    margin-bottom: ${({theme}) => theme.spaces.s5};
   }
 `
 
