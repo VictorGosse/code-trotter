@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import { StaticQuery, graphql } from 'gatsby'
 
 import routes from '@config/routes'
+import AngleLeft from '@icons/AngleLeft.js'
 import AngleRight from '@icons/AngleRight.js'
 import CategoryContainer from './styles/CategoryContainer'
 import CategoryLink from './styles/CategoryLink'
@@ -34,7 +35,7 @@ const Categories = () => (
         </LeftCategory>
         <WhiteSeparator />
         <RightCategory image={data.allContentfulHomePageImage.edges[0].node.image.file.url}>
-          <CategoryLink><Link to={routes.web}><AngleRight /> Web</Link></CategoryLink>
+          <CategoryLink><Link to={routes.web}><AngleRight /> Web <AngleLeft /></Link></CategoryLink>
         </RightCategory>
       </CategoryContainer>
     )}

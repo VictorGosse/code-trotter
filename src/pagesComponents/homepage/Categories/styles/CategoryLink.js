@@ -16,11 +16,6 @@ const CategoryLink = styled(Header1)`
   a {
     display: inline-flex;
     align-items: center;
-    svg {
-      height: 35px;
-      margin-right: 10px;
-      fill: currentColor;
-    }
   }
 `
 

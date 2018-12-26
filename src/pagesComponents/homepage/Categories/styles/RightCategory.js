@@ -26,6 +26,39 @@ const RightCategory = styled('div')`
   ${CategoryLink} {
     margin-right: 15%;
     margin-top: 13%;
+    svg {
+      opacity: 0;
+      transition: all ease 0.5s;
+      height: 35px;
+      fill: currentColor;
+      &:first-child {
+        margin-right: 10px;
+        margin-left: -15px;
+      }
+      &:last-child {
+        margin-left: 10px;
+        margin-right: -15px;
+      }
+    }
+    &:hover {
+      svg {
+        &:first-child {
+          display: none;
+          @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+            display: inline-block;
+            opacity: 1;
+            margin-left: 0px;
+          }
+        }
+        &:last-child {
+          opacity: 1;
+          margin-right: 0px;
+          @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+            display: none;
+          }
+        }
+      }
+    }
     @media only screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
       margin-right: 10px;
     }

@@ -28,6 +28,20 @@ const LeftCategory = styled('div')`
   ${CategoryLink} {
     margin-left: 15%;
     margin-bottom: 13%;
+    svg {
+      opacity: 0;
+      margin-left: -15px;
+      transition: all ease 0.5s;
+      height: 35px;
+      margin-right: 10px;
+      fill: currentColor;
+    }
+    &:hover {
+      svg {
+        opacity: 1;
+        margin-left: 0px;
+      }
+    }
     
     @media only screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
       margin-left: 10px;
