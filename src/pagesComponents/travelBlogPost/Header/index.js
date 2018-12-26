@@ -4,7 +4,7 @@ import { Header1 } from 'atti-components'
 import HeaderContainer from './styles/HeaderContainer'
 import HeaderTextContainer from './styles/HeaderTextContainer'
 import ImageHeader from './styles/ImageHeader'
-import { TravelDates } from '../../../components'
+import { TravelDates } from '@components'
 
 const Header = ({ data }) => (
   <HeaderContainer>

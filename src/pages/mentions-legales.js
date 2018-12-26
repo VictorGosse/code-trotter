@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container } from 'atti-components'
 
-import Layout from '../components/Layout/index.js'
+import Layout from '@components/Layout/index.js'
 
 
 const MentionsLegales = () => (

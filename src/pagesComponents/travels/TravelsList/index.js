@@ -5,7 +5,8 @@ import { map } from 'lodash'
 
 import TextContainer from './styles/TextContainer.js'
 import TravelContainer from './styles/TravelContainer.js'
-import { Link, TravelDates } from '../../../components'
+import { Link, SecondaryButton, TravelDates } from '@components'
+import routes from '@config/routes'
 
 const TravelsList = () => (
   <StaticQuery
@@ -46,11 +47,11 @@ const TravelsList = () => (
             <TextContainer>
               <Header2>{node.title}</Header2>
               <TravelDates startDate={node.startDate} endDate={node.endDate} />
-              <Link to={`/travels/${node.slug}`}>Lire l'article</Link>
+              <SecondaryButton to={`${routes.travels}/${node.slug}`}>Lire l'article</SecondaryButton>
             </TextContainer>
           </TravelContainer>
         ))}
-        <Link to="/">Retour à la page d'accueil</Link>
+        <Link to={routes.homepage}>Retour à la page d'accueil</Link>
       </>
     )}
   />

@@ -1,3 +1,3 @@
-import Introduction from './Introduction'
+import Categories from './Categories'
 
-export { Introduction }
+export { Categories }

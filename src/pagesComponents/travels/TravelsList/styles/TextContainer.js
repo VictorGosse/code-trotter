@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Header2 } from 'atti-components'
 
-import { Link } from '../../../../components'
+import { SecondaryButton } from '@components'
 
 const TextContainer = styled('div')`
   z-index: 1;
@@ -21,16 +21,8 @@ const TextContainer = styled('div')`
 
   }
 
-  ${Link} {
-    ${({theme}) => `
-      border: 1px solid ${theme.colors.snow};
-      color: ${theme.colors.snow};
-      padding: ${theme.spaces.s5} ${theme.spaces.s6};
-      margin-bottom: ${theme.spaces.s5};
-    `}
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0.3rem;
+  ${SecondaryButton} {
+    margin-bottom: ${({theme}) => theme.spaces.s5};
   }
 `
 

@@ -1,4 +1,5 @@
-const dotenv = require("dotenv");
+const dotenv = require("dotenv")
+const path = require('path')
 
 if (process.env.ENVIRONMENT !== "production") {
   dotenv.config();
@@ -46,5 +47,18 @@ module.exports = {
     {
       resolve: `gatsby-plugin-styled-components`,
     },
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          '@components': path.resolve(__dirname, 'src/components'),
+          '@config': path.resolve(__dirname, 'src/config'),
+          '@helpers': path.resolve(__dirname, 'src/helpers'),
+          '@icons': path.resolve(__dirname, 'src/icons'),
+          '@images': path.resolve(__dirname, 'src/images'),
+          '@pagesComponents': path.resolve(__dirname, 'src/pagesComponents'),
+        }
+      }
+    }
   ],
 }

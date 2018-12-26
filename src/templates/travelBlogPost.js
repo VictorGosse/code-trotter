@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Breadcrumb, Cell, Grid, Header2, Text } from 'atti-components'
+import { Breadcrumb, Cell, Grid } from 'atti-components'
 import { graphql } from 'gatsby'
 
-import { Layout } from '../components'
-import renderAst from '../helpers/renderAst'
-import { Header } from '../pagesComponents/travelBlogPost'
+import { Layout } from '@components'
+import routes from '@config/routes'
+import renderAst from '@helpers/renderAst'
+import { Header } from '@pagesComponents/travelBlogPost'
 
 
 
@@ -16,8 +17,8 @@ const Travel = ({ data }) => (
       <Cell cols={[[1, 6],[1, 6],[3, 10]]}>
         <Breadcrumb
           elements={[
-            { name: 'Accueil', url: '/' },
-            { name: 'Voyages', url: '/travels' },
+            { name: 'Accueil', url: routes.homepage },
+            { name: 'Voyages', url: routes.travels },
             { name: data.contentfulBlogPost.title },
           ]}
           separator='>'
