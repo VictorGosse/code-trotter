@@ -35,7 +35,7 @@ const WebBlogPostsList = () => (
     `}
     render={data => (
       <Grid>
-        <Cell cols={[[1, 6], [1, 6], [4, 10]]}>
+        <Cell cols={[[1, 7], [1, 7], [4, 10]]}>
           {map(data.allContentfulWebBlogPost.edges, ({node}) => (
             <ArticleContainer key={node.slug}>
               <ArticleTitle><Link to={`${routes.web}/${node.slug}`}>{node.title}</Link></ArticleTitle>
