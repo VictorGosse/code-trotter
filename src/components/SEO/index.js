@@ -9,6 +9,9 @@ const SEO = ({ description, lang, keywords, title }) => (
     }}
     title={title}
     titleTemplate={`%s | Akalaa`}
+    link={[
+      { rel: 'shortcut icon', type: 'image/png', href: '' }
+    ]}
     meta={[
       {
         name: 'description',
