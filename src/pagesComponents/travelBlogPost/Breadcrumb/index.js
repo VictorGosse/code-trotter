@@ -1,9 +1,8 @@
 import React from 'react'
 
-import { Breadcrumb } from 'atti-components'
-
 import routes from '@config/routes'
 import BreadcrumbContainer from './styles/BreadcrumbContainer'
+import { Breadcrumb } from '@components'
 
 const BreadcrumbTravel = ({ title }) => (
   <BreadcrumbContainer>

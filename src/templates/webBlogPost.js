@@ -5,13 +5,13 @@ import { graphql } from 'gatsby'
 import { Layout } from '@components'
 import renderAst from '@helpers/renderAstWeb'
 import ArticleContainer from '@pagesComponents/webBlogPost/ArticleContainer'
-import ArticleTitle from '@pagesComponents/webBlogPost/ArticleTitle'
+import Header from '@pagesComponents/webBlogPost/Header'
 
 
 const WebBlogPost = ({ data }) => (
   <Layout>
     <ArticleContainer>
-      <ArticleTitle>{data.contentfulWebBlogPost.title}</ArticleTitle>
+      <Header article={data.contentfulWebBlogPost} />
       {renderAst(data.contentfulWebBlogPost.content.childMarkdownRemark.htmlAst)}
     </ArticleContainer>
   </Layout>
@@ -25,11 +25,13 @@ export const pageQuery = graphql`
   query($id: String!) {
     contentfulWebBlogPost(id: {eq: $id}) {
       title
-      publicationDate
+      publicationDate: publicationDate(formatString: "DD/MM/YYYY")
+      publicationDateFormatted: publicationDate(formatString: "DD-MM-YYYY")
       slug
       content {
         childMarkdownRemark{
           htmlAst
+          timeToRead
         }
       }
     }

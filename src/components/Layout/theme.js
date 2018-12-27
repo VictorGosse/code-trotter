@@ -9,7 +9,7 @@ const otherTheme = {
   ...theme,
   colors: {
     ...theme.colors,
-    secondary: '#6777F2',
+    secondary: '#4E5FE0',
     tertiary: '#E16A3E',
   }
 }

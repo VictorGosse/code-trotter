@@ -23,6 +23,7 @@ const WebBlogPostsList = () => (
               content {
                 childMarkdownRemark {
                   excerpt(pruneLength: 280)
+                  timeToRead
                 }
               }
             }
