@@ -8,6 +8,8 @@ import routes from '@config/routes'
 import ArticleContainer from './styles/ArticleContainer.js'
 import ArticleDate from '../ArticleDate'
 import ArticleTitle from './styles/ArticleTitle.js'
+import DateReadContainer from './styles/DateReadContainer.js'
+import { TimeToRead } from '@components'
 
 const WebBlogPostsList = () => (
   <StaticQuery
@@ -38,7 +40,10 @@ const WebBlogPostsList = () => (
             <ArticleContainer key={node.slug}>
               <ArticleTitle><Link to={`${routes.web}/${node.slug}`}>{node.title}</Link></ArticleTitle>
               <Text>{node.content.childMarkdownRemark.excerpt}</Text>
-              <ArticleDate publicationDate={node.publicationDate} publicationDateFormatted={node.publicationDateFormatted} />
+              <DateReadContainer>
+                <ArticleDate publicationDate={node.publicationDate} publicationDateFormatted={node.publicationDateFormatted} />
+                <TimeToRead timeToRead={node.content.childMarkdownRemark.timeToRead} />
+              </DateReadContainer>
             </ArticleContainer>
           ))}
         </Cell>

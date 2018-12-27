@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Container } from 'atti-components'
 import { graphql } from 'gatsby'
 
-import { Layout } from '@components'
+import { Layout, SEO } from '@components'
 import renderAst from '@helpers/renderAstTravels'
 import { Breadcrumb, Header } from '@pagesComponents/travelBlogPost'
 
@@ -11,6 +11,11 @@ import { Breadcrumb, Header } from '@pagesComponents/travelBlogPost'
 
 const Travel = ({ data }) => (
   <Layout light>
+    <SEO 
+      description=""
+      keywords={[]}
+      title={data.contentfulBlogPost.title}
+    />
     <Header data={data.contentfulBlogPost} />
     <Container>
       <Breadcrumb title={data.contentfulBlogPost.title} />

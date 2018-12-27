@@ -5,7 +5,7 @@ const DateContainer = styled(Text.withComponent('time'))`
   display: inline-flex;
   align-items: center;
   color: ${({ theme }) => theme.colors.tertiary};
-  margin-top: 5px;
+  margin-right: 5px;
   svg {
     margin-right: 10px;
     fill: currentColor;

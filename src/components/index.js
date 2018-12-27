@@ -5,6 +5,7 @@ import Layout from './Layout'
 import Link from './Link'
 import Menu from './Menu'
 import SecondaryButton from './SecondaryButton'
+import SEO from './SEO'
 import TimeToRead from './TimeToRead'
 import TravelDates from './TravelDates'
 
@@ -16,6 +17,7 @@ export {
   Link,
   Menu,
   SecondaryButton,
+  SEO,
   TimeToRead,
   TravelDates,
 }

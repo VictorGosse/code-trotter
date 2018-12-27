@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import { Layout } from '@components'
+import { Layout, SEO } from '@components'
 import renderAst from '@helpers/renderAstWeb'
 import ArticleContainer from '@pagesComponents/webBlogPost/ArticleContainer'
 import Header from '@pagesComponents/webBlogPost/Header'
@@ -10,6 +10,11 @@ import Header from '@pagesComponents/webBlogPost/Header'
 
 const WebBlogPost = ({ data }) => (
   <Layout>
+    <SEO 
+      description=""
+      keywords={[]}
+      title={data.contentfulWebBlogPost.title}
+    />
     <ArticleContainer>
       <Header article={data.contentfulWebBlogPost} />
       {renderAst(data.contentfulWebBlogPost.content.childMarkdownRemark.htmlAst)}

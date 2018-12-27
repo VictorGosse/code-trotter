@@ -1,11 +1,16 @@
 import React from 'react'
 import { Container, Header2, Header3, Text } from 'atti-components'
 
-import { Introduction, Layout } from '@components'
+import { Introduction, Layout, SEO } from '@components'
 
 
 const MentionsLegales = () => (
   <Layout>
+    <SEO 
+      description="Mention légales"
+      keywords={[]}
+      title="Mentions légales du site"
+    />
     <Container>
       <Introduction title="Mention Légales" />
       <Text mt="30px">

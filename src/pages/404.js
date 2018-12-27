@@ -1,13 +1,16 @@
 import React from 'react'
+import { Container, Text } from 'atti-components'
 
-import SEO from '@components/Seo'
+import { Introduction, Layout, SEO } from '@components'
 
 const NotFoundPage = () => (
-  <div>
+  <Layout>
     <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </div>
+    <Container>
+      <Introduction title="Not Found" />
+      <Text mt="40px" textAlign="center">You just hit a route that doesn&#39;t exist... the sadness.</Text>
+    </Container>
+  </Layout>
 )
 
 export default NotFoundPage
