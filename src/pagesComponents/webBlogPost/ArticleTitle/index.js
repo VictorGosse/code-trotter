@@ -3,7 +3,7 @@ import { Header1 } from 'atti-components'
 
 const ArticleTitle = styled(Header1)`
   text-align: center;
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.secondary};
   &:after {
     content: ' ';
     display: block;
