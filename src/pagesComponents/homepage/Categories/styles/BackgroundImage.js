@@ -1,13 +1,11 @@
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 
-const ImageHeader = styled(Img)`
+const BackgroundImage = styled(Img)`
+  position: absolute !important;
   object-fit: cover;
   width: 100%;
   height: 100%;
-  position: absolute !important;
-  left: 0;
-  top: 0;
 `
 
-export default ImageHeader
+export default BackgroundImage

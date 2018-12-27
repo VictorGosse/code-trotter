@@ -32,13 +32,9 @@ export const pageQuery = graphql`
       startDate
       endDate
       heroImage {
-        description
-        file {
-          url
-          fileName
-          contentType
+        fluid(quality: 100, maxWidth: 1600) {
+          ...GatsbyContentfulFluid
         }
-        title
       }
       place
       slug

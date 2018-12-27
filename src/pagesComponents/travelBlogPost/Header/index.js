@@ -8,7 +8,7 @@ import { TravelDates } from '@components'
 
 const Header = ({ data }) => (
   <HeaderContainer>
-    <ImageHeader src={data.heroImage.file.url}/>
+    <ImageHeader fluid={data.heroImage.fluid} alt="" />
     <HeaderTextContainer>
       <Header1 textAlign="center">{data.title}</Header1>
       <TravelDates startDate={data.startDate} endDate={data.endDate} />

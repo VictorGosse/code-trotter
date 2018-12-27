@@ -5,6 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import routes from '@config/routes'
 import AngleLeft from '@icons/AngleLeft.js'
 import AngleRight from '@icons/AngleRight.js'
+import BackgroundImage from './styles/BackgroundImage'
 import CategoryContainer from './styles/CategoryContainer'
 import CategoryLink from './styles/CategoryLink'
 import LeftCategory from './styles/LeftCategory'
@@ -19,8 +20,8 @@ const Categories = () => (
           edges{
             node {
               image {
-                file {
-                  url
+                fluid(quality: 100, maxWidth: 1600) {
+                  ...GatsbyContentfulFluid
                 }
               }
             }
@@ -30,11 +31,13 @@ const Categories = () => (
     `}
     render={data => (
       <CategoryContainer>
-        <LeftCategory image={data.allContentfulHomePageImage.edges[1].node.image.file.url}>
+        <LeftCategory>
+          <BackgroundImage fluid={data.allContentfulHomePageImage.edges[1].node.image.fluid} alt="" />
           <CategoryLink><Link to={routes.travels}><AngleRight /> Voyages</Link></CategoryLink>
         </LeftCategory>
         <WhiteSeparator />
-        <RightCategory image={data.allContentfulHomePageImage.edges[0].node.image.file.url}>
+        <RightCategory>
+          <BackgroundImage fluid={data.allContentfulHomePageImage.edges[0].node.image.fluid} alt="" />
           <CategoryLink><Link to={routes.web}><AngleRight /> Web <AngleLeft /></Link></CategoryLink>
         </RightCategory>
       </CategoryContainer>

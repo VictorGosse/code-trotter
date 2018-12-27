@@ -9,9 +9,6 @@ const RightCategory = styled('div')`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background-image: url('${({ image }) => image}');
-  background-size: cover;
-  background-position: center;
   position: relative;
   &:after {
     position: absolute;

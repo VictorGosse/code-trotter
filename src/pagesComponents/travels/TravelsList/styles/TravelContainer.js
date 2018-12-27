@@ -8,9 +8,6 @@ const TravelContainer = styled('article')`
   justify-content: center;
   margin: 40px 0;
   padding: 20px;
-  background-image: url(${({ background }) => background});
-  background-size: cover;
-  background-position: center;
   position: relative;
 
   &:after {
@@ -22,6 +19,7 @@ const TravelContainer = styled('article')`
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
   }
 `
 

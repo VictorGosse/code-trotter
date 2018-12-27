@@ -3,6 +3,7 @@ import { Header2 } from 'atti-components'
 import { StaticQuery, graphql } from 'gatsby'
 import { map } from 'lodash'
 
+import HeroImage from './styles/HeroImage.js'
 import TextContainer from './styles/TextContainer.js'
 import TravelContainer from './styles/TravelContainer.js'
 import { SecondaryButton, TravelDates } from '@components'
@@ -20,10 +21,8 @@ const TravelsList = () => (
               endDate(formatString: "DD/MM/YYYY")
               heroImage {
                 description
-                file {
-                  url
-                  fileName
-                  contentType
+                fluid(quality: 100, maxWidth: 1200) {
+                  ...GatsbyContentfulFluid
                 }
                 title
               }
@@ -43,7 +42,8 @@ const TravelsList = () => (
     render={data => (
       <>
         {map(data.allContentfulBlogPost.edges, ({node}) => (
-          <TravelContainer key={node.slug} background={node.heroImage.file.url}>
+          <TravelContainer key={node.slug}>
+            <HeroImage fluid={node.heroImage.fluid} alt="" />
             <TextContainer>
               <Header2>{node.title}</Header2>
               <TravelDates startDate={node.startDate} endDate={node.endDate} />

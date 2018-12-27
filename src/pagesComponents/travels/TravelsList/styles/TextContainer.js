@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Header2 } from 'atti-components'
 
 const TextContainer = styled('div')`
-  z-index: 1;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;

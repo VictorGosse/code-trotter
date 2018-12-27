@@ -12,8 +12,7 @@ const LeftCategory = styled('div')`
   clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
   display: flex;
   align-items: center;
-  background-image: url('${({ image }) => image}');
-  background-size: cover;
+  overflow: hidden;
   &:after {
     position: absolute;
     content: ' ';
