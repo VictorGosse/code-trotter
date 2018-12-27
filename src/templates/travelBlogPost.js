@@ -4,7 +4,7 @@ import { Container } from 'atti-components'
 import { graphql } from 'gatsby'
 
 import { Layout } from '@components'
-import renderAst from '@helpers/renderAst'
+import renderAst from '@helpers/renderAstTravels'
 import { Breadcrumb, Header } from '@pagesComponents/travelBlogPost'
 
 

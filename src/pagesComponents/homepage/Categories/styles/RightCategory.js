@@ -5,7 +5,6 @@ import CategoryLink from './CategoryLink'
 const RightCategory = styled('div')`
   width: 60%;
   float: right;
-  background-color: red;
   height: 100%;
   display: flex;
   align-items: center;

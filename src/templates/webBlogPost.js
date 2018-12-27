@@ -1,17 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Container, Header1 } from 'atti-components'
 import { graphql } from 'gatsby'
 
 import { Layout } from '@components'
-
+import renderAst from '@helpers/renderAstWeb'
+import ArticleContainer from '@pagesComponents/webBlogPost/ArticleContainer'
+import ArticleTitle from '@pagesComponents/webBlogPost/ArticleTitle'
 
 
 const WebBlogPost = ({ data }) => (
-  <Layout light>
-    <Container>
-      <Header1>{data.contentfulWebBlogPost.title}</Header1>
-    </Container>
+  <Layout>
+    <ArticleContainer>
+      <ArticleTitle>{data.contentfulWebBlogPost.title}</ArticleTitle>
+      {renderAst(data.contentfulWebBlogPost.content.childMarkdownRemark.htmlAst)}
+    </ArticleContainer>
   </Layout>
 )
 

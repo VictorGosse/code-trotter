@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const BreadcrumbContainer = styled('div')`
-  width: ${({ theme }) => theme.blogPostWidth};
+  width: ${({ theme }) => theme.travelBlogPostWidth};
   margin: auto;
 `
 

@@ -1,13 +1,13 @@
 import { theme } from 'atti-components'
 
+console.log(theme)
 const otherTheme = {
-  blogPostWidth: '70%',
-  ...theme,
-  text: {
-    fonts: {
-      fontSize: '16px',
-    },
+  travelBlogPostWidth: '70%',
+  webBlogPost: {
+    basicWidth: '50%',
+    extendedWdith: '70%',
   },
+  ...theme,
 }
 
 export default otherTheme
