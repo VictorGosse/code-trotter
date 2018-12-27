@@ -48,3 +48,13 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+.gatsby-highlight-code-line {
+  background-color: #5c5c5c;
+  display: block;
+  margin-right: -1em;
+  margin-left: -1em;
+  padding-right: 1em;
+  padding-left: 0.75em;
+  border-left: 0.3em solid #f99;
+}

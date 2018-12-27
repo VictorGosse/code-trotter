@@ -26,6 +26,9 @@ const Header3 = styled(AttiHeader3)`
 
 const Image = styled(AttiImage)`
   width: ${({ theme }) => theme.webBlogPost.extendedWidth};
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: 100%;
+  }
 `
 
 const Link = styled(AttiLink)`
