@@ -1,9 +1,9 @@
 import React from 'react'
 import { Header1 } from 'atti-components'
 
-const Introduction = () => (
+const Introduction = ({ title }) => (
   <>
-    <Header1 textAlign="center">Le Web</Header1>
+    <Header1 textAlign="center" mt="65px" mb="25px">{title}</Header1>
     <hr />
   </>
 )

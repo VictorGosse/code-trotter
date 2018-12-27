@@ -1,3 +1,3 @@
-import Introduction from './Introduction'
+import WebBlogPostsList from './WebBlogPostsList'
 
-export { Introduction }
+export { WebBlogPostsList }
