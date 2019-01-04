@@ -1,7 +1,7 @@
 const path = require('path')
 
-const createTravelPages = ({ graphql, boundActionCreators }) => {
-  const {createPage} = boundActionCreators
+const createTravelPages = ({ graphql, actions }) => {
+  const {createPage} = actions
   return new Promise((resolve, reject) => {
     const blogPostTemplate = path.resolve('src/templates/travelBlogPost.js')
     resolve(
@@ -35,8 +35,8 @@ const createTravelPages = ({ graphql, boundActionCreators }) => {
   })
 }
 
-const createWebPages = ({ graphql, boundActionCreators }) => {
-  const {createPage} = boundActionCreators
+const createWebPages = ({ graphql, actions }) => {
+  const {createPage} = actions
   return new Promise((resolve, reject) => {
     const webBlogPostTemplate = path.resolve('src/templates/webBlogPost.js')
     resolve(

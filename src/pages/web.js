@@ -8,12 +8,13 @@ import { WebBlogPostsList } from '@pagesComponents/web'
 const Web = () => (
   <Layout>
     <SEO 
-      description="Vous pouvez retrouver ici des articles liés à l'intégration, au développement, à la gestion de projet ou plus globalement, au web !"
-      keywords={["web", "articles", "développement", "HTML", "CSS", "JavaScript", "React", "Gestion de projet", "Intégration"]}
-      title="Blog du développeur web"
+      description="You can find here multiple articles related to front-end development, web development, project management, etc."
+      keywords={["web", "articles", "development", "HTML", "CSS", "JavaScript", "React", "project management", "integration"]}
+      lang="en"
+      title="The Code-trotter's blog"
     />
     <Container>
-      <Introduction title="Développement Web" />
+      <Introduction title="Web development" />
       <WebBlogPostsList />
     </Container>
   </Layout>

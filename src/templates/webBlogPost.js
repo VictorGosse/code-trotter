@@ -4,8 +4,7 @@ import { graphql } from 'gatsby'
 
 import { Layout, SEO } from '@components'
 import renderAst from '@helpers/renderAstWeb'
-import ArticleContainer from '@pagesComponents/webBlogPost/ArticleContainer'
-import Header from '@pagesComponents/webBlogPost/Header'
+import { ArticleContainer, Header } from '@pagesComponents/webBlogPost'
 
 
 const WebBlogPost = ({ data }) => (
@@ -13,6 +12,7 @@ const WebBlogPost = ({ data }) => (
     <SEO 
       description=""
       keywords={[]}
+      lang="en"
       title={data.contentfulWebBlogPost.title}
     />
     <ArticleContainer>

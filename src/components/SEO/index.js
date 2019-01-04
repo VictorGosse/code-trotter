@@ -8,7 +8,7 @@ const SEO = ({ description, lang, keywords, title }) => (
       lang,
     }}
     title={title}
-    titleTemplate={`%s | Akalaa`}
+    titleTemplate={`%s | Code-trotter`}
     link={[
       { rel: 'shortcut icon', type: 'image/png', href: '' }
     ]}

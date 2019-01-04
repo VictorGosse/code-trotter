@@ -14,9 +14,9 @@ const MentionsLegales = () => (
     <Container>
       <Introduction title="Mention Légales" />
       <Text mt="30px">
-        Ce site (https://www.victor-gosse.com) est la propriété de Victor Gosse<br /><br />
+        Ce site (https://www.code-trotter.com) est la propriété de Victor Gosse<br /><br />
         
-        RESPONSABLE DE LA PUBLICATION : V. Gosse (E-mail : contact@victor-gosse.com)<br />
+        RESPONSABLE DE LA PUBLICATION : V. Gosse (E-mail : gosse.web@gmail.com)<br />
         HÉBERGEMENT : Netlify : https://www.netlify.com<br />
         WEBMASTER : Victor Gosse<br />
       </Text>
@@ -26,12 +26,12 @@ const MentionsLegales = () => (
       <Text>
         A l’exception de l’iconographie, la reproduction des pages de ce site sur un support papier est autorisée, sous réserve des trois conditions suivantes : 
         gratuité de la diffusion, respect de l’intégrité des documents reproduits (aucune modification, ni altération d’aucune sorte); 
-        citation explicite du site http://www.victor-gosse.com comme source et mention que les droits de reproduction sont réservés et strictement limités.
+        citation explicite du site http://www.code-trotter.com comme source et mention que les droits de reproduction sont réservés et strictement limités.
       </Text>
       <Header3 mt="25px" mb="15px">REPRODUCTION SUR SUPPORT ÉLECTRONIQUE</Header3>
       <Text>
         La reproduction de tout ou d’une partie de ce site sur un support électronique est autorisée sous réserve de l’ajout de façon claire et lisible 
-        de la source (http://www.victor-gosse.com) et de la mention “Droits réservés”. Les informations utilisées ne doivent l’être qu’à des fins 
+        de la source (http://www.code-trotter.com) et de la mention “Droits réservés”. Les informations utilisées ne doivent l’être qu’à des fins 
         personnelles, associatives ou professionnelles; toute utilisation à des fins commerciales ou publicitaires est exclue.
       </Text>
 
