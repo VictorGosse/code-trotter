@@ -16,6 +16,16 @@ const MenuContainer = styled('nav')`
   ${MenuLink} {
     color: ${({ light }) => light ? 'white' : 'black'};
   }
+  
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    padding: 20px 12px;
+    ${MenuLink}:first-child {
+      margin-left: 0;
+    }
+    div ${MenuLink}:last-child {
+      margin-right: 0;
+    }
+  }
 `
 
 export default MenuContainer

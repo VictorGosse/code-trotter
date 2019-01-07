@@ -32,6 +32,14 @@ const Link = styled(AttiLink)`
   line-height: 28px;
 `
 
+const Separator = styled('hr')`
+  width: 30%;
+  margin: 30px auto;
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: 50%;
+  }
+`
+
 const Text = styled(AttiText)`
   display: block;
   width: ${({ theme }) => theme.travelBlogPostWidth};
@@ -48,5 +56,6 @@ export {
   Header3,
   Image,
   Link,
+  Separator,
   Text,
 }
