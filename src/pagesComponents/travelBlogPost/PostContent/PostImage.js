@@ -1,12 +1,9 @@
 import React from 'react'
 
-import { Image, ImageLegend } from './styles'
+import { Image } from './styles'
 
 const PostImage = ({ alt, src }) => (
-  <>
-    <Image src={src} alt="" />
-    <ImageLegend>{alt}</ImageLegend>
-  </>
+    <Image src={src} alt={alt} />
 )
 
 export default React.memo(PostImage)
