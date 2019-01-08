@@ -3,21 +3,24 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import { Layout, SEO } from '@components'
+import routes from '@config/routes'
 import renderAst from '@helpers/renderAstWeb'
-import { ArticleContainer, Header } from '@pagesComponents/webBlogPost'
+import { ArticleContainer, Header, Share } from '@pagesComponents/webBlogPost'
 
 
 const WebBlogPost = ({ data }) => (
   <Layout>
     <SEO 
-      description=""
-      keywords={[]}
+      description={data.contentfulWebBlogPost.description}
+      image={data.contentfulWebBlogPost.metaImage.file.url}
       lang="en"
+      url={`${routes.root}${routes.web}/${data.contentfulWebBlogPost.slug}`}
       title={data.contentfulWebBlogPost.title}
     />
     <ArticleContainer>
       <Header article={data.contentfulWebBlogPost} />
       {renderAst(data.contentfulWebBlogPost.content.childMarkdownRemark.htmlAst)}
+      <Share slug={data.contentfulWebBlogPost.slug} title={data.contentfulWebBlogPost.title} />
     </ArticleContainer>
   </Layout>
 )
@@ -33,6 +36,12 @@ export const pageQuery = graphql`
       publicationDate: publicationDate(formatString: "DD/MM/YYYY")
       publicationDateFormatted: publicationDate(formatString: "DD-MM-YYYY")
       slug
+      description
+      metaImage {
+        file {
+          url
+        }
+      }
       content {
         childMarkdownRemark{
           htmlAst

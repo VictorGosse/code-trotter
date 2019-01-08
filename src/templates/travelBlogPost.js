@@ -13,7 +13,6 @@ const Travel = ({ data }) => (
   <Layout light>
     <SEO 
       description=""
-      keywords={[]}
       title={data.contentfulBlogPost.title}
     />
     <Header data={data.contentfulBlogPost} />

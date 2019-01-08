@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-const SEO = ({ description, lang, keywords, title }) => (
+const SEO = ({ description, image, lang, url, title }) => (
   <Helmet
     htmlAttributes={{
       lang,
@@ -26,6 +26,14 @@ const SEO = ({ description, lang, keywords, title }) => (
         content: description,
       },
       {
+        name: 'og:url',
+        content: url,
+      },
+      {
+        name: 'og:image',
+        content: image,
+      },
+      {
         property: 'og:type',
         content: 'website',
       },
@@ -38,6 +46,14 @@ const SEO = ({ description, lang, keywords, title }) => (
         content: 'Victor Gosse',
       },
       {
+        name: 'twitter:image',
+        content: image,
+      },
+      {
+        name: 'twitter:url',
+        content: url,
+      },
+      {
         name: 'twitter:title',
         content: title,
       },
@@ -45,27 +61,21 @@ const SEO = ({ description, lang, keywords, title }) => (
         name: 'twitter:description',
         content: description,
       },
-    ]
-      .concat(
-        keywords.length > 0
-          ? {
-              name: 'keywords',
-              content: keywords.join(', '),
-            }
-          : []
-      )}
+    ]}
   />
 )
 
 SEO.defaultProps = {
+  image: '',
   lang: 'fr',
-  keywords: [],
+  url: '',
 }
 
 SEO.propTypes = {
   description: PropTypes.string,
+  image: PropTypes.string,
   lang: PropTypes.string,
-  keywords: PropTypes.arrayOf(PropTypes.string),
+  url: PropTypes.string,
   title: PropTypes.string.isRequired,
 }
 
