@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const ImageLegend = styled('p')`
+const ImageLegend = styled('span')`
   text-align: center;
   text-transform: uppercase;
   font-size: ${({ theme }) => theme.fonts.fontSize.fs12};
