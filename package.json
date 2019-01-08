@@ -32,7 +32,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "cross-env rm -rf .cache && gatsby build",
     "dev": "cross-env rm -rf .cache && gatsby develop",
     "develop": "gatsby develop",
     "start": "npm run develop",
