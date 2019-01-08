@@ -12,7 +12,7 @@ import { Breadcrumb, Header } from '@pagesComponents/travelBlogPost'
 const Travel = ({ data }) => (
   <Layout light>
     <SEO 
-      description=""
+      description={data.contentfulBlogPost.description.description}
       title={data.contentfulBlogPost.title}
     />
     <Header data={data.contentfulBlogPost} />
