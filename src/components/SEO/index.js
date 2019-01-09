@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
+import favicon from '../../images/favicon.png';
+
 const SEO = ({ description, image, lang, url, title }) => (
   <Helmet
     htmlAttributes={{
@@ -10,7 +12,7 @@ const SEO = ({ description, image, lang, url, title }) => (
     title={title}
     titleTemplate={`%s | Code-trotter`}
     link={[
-      { rel: 'shortcut icon', type: 'image/png', href: '' }
+      { rel: 'shortcut icon', type: 'image/png', href: `${favicon}`  }
     ]}
     meta={[
       {

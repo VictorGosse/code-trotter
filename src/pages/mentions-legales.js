@@ -16,7 +16,7 @@ const MentionsLegales = () => (
       <Text mt="30px">
         Ce site (https://www.code-trotter.com) est la propriété de Victor Gosse<br /><br />
         
-        RESPONSABLE DE LA PUBLICATION : V. Gosse (E-mail : gosse.web@gmail.com)<br />
+        RESPONSABLE DE LA PUBLICATION : V. Gosse (E-mail : thecodetrotter@gmail.com)<br />
         HÉBERGEMENT : Netlify : https://www.netlify.com<br />
         WEBMASTER : Victor Gosse<br />
       </Text>
