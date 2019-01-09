@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import { Layout, SEO } from '@components'
+import { Bio, Layout, SEO } from '@components'
 import routes from '@config/routes'
 import renderAst from '@helpers/renderAstWeb'
 import { ArticleContainer, Header, Share } from '@pagesComponents/webBlogPost'
@@ -21,6 +21,7 @@ const WebBlogPost = ({ data }) => (
       <Header article={data.contentfulWebBlogPost} />
       {renderAst(data.contentfulWebBlogPost.content.childMarkdownRemark.htmlAst)}
       <Share slug={data.contentfulWebBlogPost.slug} title={data.contentfulWebBlogPost.title} />
+      <Bio />
     </ArticleContainer>
   </Layout>
 )

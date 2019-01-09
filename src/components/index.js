@@ -1,3 +1,4 @@
+import Bio from './Bio'
 import Breadcrumb from './Breadcrumb'
 import Footer from './Footer'
 import Introduction from './Introduction'
@@ -10,6 +11,7 @@ import TimeToRead from './TimeToRead'
 import TravelDates from './TravelDates'
 
 export {
+  Bio,
   Breadcrumb,
   Footer,
   Introduction,

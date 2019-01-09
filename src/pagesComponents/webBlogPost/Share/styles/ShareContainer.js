@@ -4,7 +4,7 @@ import { Text } from 'atti-components'
 const ShareContainer = styled(Text)`
   width: ${({ theme }) => theme.webBlogPost.basicWidth};
   text-align: center;
-  margin: 35px auto 10px auto;
+  margin: 50px auto 10px auto;
   background-color: ${({ theme }) => theme.colors.smoke};
   padding: 20px;
   display: flex;
@@ -12,6 +12,7 @@ const ShareContainer = styled(Text)`
   justify-content: center;
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     width: 100%;
+    padding: 20px 15px;
   }
 
   svg {
@@ -19,6 +20,9 @@ const ShareContainer = styled(Text)`
     height: 25px;
     fill: #1da1f2;
     margin-right: 10px;
+    @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+      margin-right: 5px;
+    }
   }
 `
 
