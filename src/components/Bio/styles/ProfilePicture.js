@@ -6,10 +6,7 @@ const ProfilePicture = styled(Image)`
   object-fit: cover;
   height: 90px;
   width: 90px;
-  margin-right: 30px;
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    margin-right: 20px;
-  }
+  flex-grow: 1;
 `
 
 export default ProfilePicture
