@@ -6,6 +6,8 @@ const ProfilePicture = styled(Image)`
   object-fit: cover;
   height: 90px;
   width: 90px;
+  min-height: 90px;
+  min-width: 90px;
   flex-grow: 1;
 `
 
