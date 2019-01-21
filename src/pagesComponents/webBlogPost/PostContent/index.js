@@ -19,6 +19,7 @@ const Header2 = styled(AttiHeader2)`
 const Header3 = styled(AttiHeader3)`
   width: ${({ theme }) => theme.webBlogPost.basicWidth};
   margin: 35px auto 10px auto;
+  line-height: 28px;
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     width: 100%;
   }
