@@ -7,6 +7,7 @@ import {
   Text as AttiText
 } from 'atti-components'
 
+
 const Header2 = styled(AttiHeader2)`
   width: ${({ theme }) => theme.webBlogPost.basicWidth};
   margin: 35px auto 10px auto;
@@ -75,7 +76,29 @@ const Text = styled(AttiText)`
   }
 `
 
+const Blockquote = styled('blockquote')`
+  display: flex;
+  width: ${({ theme }) => theme.webBlogPost.basicWidth};
+  margin: 10px auto 10px auto;
+  &:before {
+    content: ' ';
+    display: block;
+    width: 5px;
+    margin-right: 10px;
+    background-color: ${({ theme }) => theme.colors.smoke};
+  }
+  
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: 100%;
+  }
+
+  > ${Text} {
+    width: 100%;
+  }
+`
+
 export {
+  Blockquote,
   Header2,
   Header3,
   Image,
