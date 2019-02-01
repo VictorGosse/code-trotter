@@ -1,17 +1,24 @@
 import { theme } from 'atti-components'
 
 const otherTheme = {
-  travelBlogPostWidth: '70%',
-  webBlogPost: {
-    basicWidth: '50%',
-    extendedWidth: '70%',
-  },
   ...theme,
   colors: {
     ...theme.colors,
     secondary: '#4E5FE0',
     tertiary: '#cf4410',
-  }
+  },
+  components: {
+    header2: {
+      fonts: {
+        fontSize: '34px',
+      },
+    },
+  },
+  travelBlogPostWidth: '70%',
+  webBlogPost: {
+    basicWidth: '50%',
+    extendedWidth: '70%',
+  },
 }
 
 export default otherTheme

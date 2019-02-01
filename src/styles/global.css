@@ -61,4 +61,5 @@ table {
 
 body :not(pre) > code[class*="language-"] {
   padding: 0.1em 0.3em;
+  white-space: nowrap;
 }
