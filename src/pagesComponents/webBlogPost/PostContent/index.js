@@ -89,7 +89,7 @@ const Blockquote = styled('blockquote')`
     display: block;
     width: 5px;
     margin-right: 10px;
-    background-color: ${({ theme }) => theme.colors.smoke};
+    background-color: ${({ theme }) => theme.colors.darkSmoke};
   }
   
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
