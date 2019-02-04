@@ -2,6 +2,7 @@ import React from 'react'
 import RehypeReact from 'rehype-react'
 import { 
   Blockquote,
+  EM,
   Header2, 
   Header3, 
   Image, 
@@ -18,6 +19,7 @@ const renderAst = new RehypeReact({
   components: {
     a: Link,
     blockquote: Blockquote,
+    em: EM,
     h2: Header2,
     h3: Header3,
     hr: Separator,

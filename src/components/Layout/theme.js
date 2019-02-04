@@ -4,7 +4,7 @@ const otherTheme = {
   ...theme,
   colors: {
     ...theme.colors,
-    secondary: '#4E5FE0',
+    secondary: '#2138E0',
     tertiary: '#cf4410',
   },
   components: {

@@ -8,6 +8,9 @@ import {
 
 import PostImage from './PostImage'
 
+const EM = styled('em')`
+  font-style: italic;
+`
 
 const Header2 = styled(AttiHeader2)`
   width: ${({ theme }) => theme.webBlogPost.basicWidth};
@@ -100,6 +103,7 @@ const Blockquote = styled('blockquote')`
 
 export {
   Blockquote,
+  EM,
   Header2,
   Header3,
   Image,

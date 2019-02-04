@@ -62,4 +62,6 @@ table {
 body :not(pre) > code[class*="language-"] {
   padding: 0.1em 0.3em;
   white-space: nowrap;
+  background-color: rgba(252, 222, 76, 0.5);
+  color: #1F2D3D;
 }
