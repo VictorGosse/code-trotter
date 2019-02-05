@@ -35,7 +35,7 @@ const Header3 = styled(AttiHeader3)`
 const Image = styled(PostImage)`
 `
 
-const Link = styled(AttiLink).attrs({ target: '_blank' })`
+const Link = styled(AttiLink).attrs({ target: '_blank', rel: 'noopener noreferrer' })`
   font-size: ${({ theme }) => theme.fonts.fontSize.fs16};
   line-height: 28px;
 `
