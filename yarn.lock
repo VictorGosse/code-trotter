@@ -1208,9 +1208,9 @@ atob@^2.1.1:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
 
-atti-components@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/atti-components/-/atti-components-0.0.2.tgz#2a52b6eead33a51436f84fe921c90d49b5dd153d"
+atti-components@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/atti-components/-/atti-components-0.0.3.tgz#1ff034eaa561050b70c8bf7574ffa9c021fb8b96"
   dependencies:
     lodash "^4.17.10"
     polished "^2.0.3"
