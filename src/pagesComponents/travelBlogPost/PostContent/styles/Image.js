@@ -7,6 +7,10 @@ const Image = styled(Img)`
   margin-top: 25px;
   height: auto;
   object-fit: cover;
+  display: block;
+  > span {
+    display: block;
+  }
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     width: 100%;
     margin-left: 0;

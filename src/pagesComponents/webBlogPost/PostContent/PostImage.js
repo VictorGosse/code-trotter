@@ -11,7 +11,7 @@ const PostImage = ({ alt, src }) => (
       const img = filter(value.edges, val => val.node.file.url === src)[0]
       return img && (
         <>
-          <Image fluid={img.node.fluid} alt="" />
+          <Image fluid={img.node.fluid} alt="" Tag="span" />
           <ImageLegend>{alt}</ImageLegend>
         </>
       )
