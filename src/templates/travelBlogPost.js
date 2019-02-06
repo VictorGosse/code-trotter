@@ -6,7 +6,7 @@ import { graphql } from 'gatsby'
 import { Layout, SEO } from '@components'
 import renderAst from '@helpers/renderAstTravels'
 import { Breadcrumb, Header } from '@pagesComponents/travelBlogPost'
-
+import AssetContext from '@pagesComponents/travelBlogPost/Context/asset-context.js'
 
 
 const Travel = ({ data }) => (
@@ -19,7 +19,9 @@ const Travel = ({ data }) => (
     <Container>
       <Breadcrumb title={data.contentfulBlogPost.title} />
       <article>
-        {renderAst(data.contentfulBlogPost.body.childMarkdownRemark.htmlAst)}
+        <AssetContext.Provider value={data.allContentfulAsset}>
+          {renderAst(data.contentfulBlogPost.body.childMarkdownRemark.htmlAst)}
+        </AssetContext.Provider>
       </article>
     </Container>
   </Layout>
@@ -48,6 +50,18 @@ export const pageQuery = graphql`
       body {
         childMarkdownRemark{
           htmlAst
+        }
+      }
+    }
+    allContentfulAsset {
+      edges {
+        node {
+          file {
+            url
+          }
+          fluid(quality: 100, maxWidth: 1600) {
+            ...GatsbyContentfulFluid
+          }
         }
       }
     }

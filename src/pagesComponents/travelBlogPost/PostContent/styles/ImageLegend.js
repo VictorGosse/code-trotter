@@ -7,6 +7,7 @@ const ImageLegend = styled('span')`
   font-weight: ${({ theme }) => theme.fonts.fontWeight.fw500};
   line-height: ${({ theme }) => theme.fonts.lineHeight.lh14};
   color: ${({ theme }) => theme.colors.silver};
+  margin-top: 15px;
   margin-bottom: 25px;
   display: block;
 `

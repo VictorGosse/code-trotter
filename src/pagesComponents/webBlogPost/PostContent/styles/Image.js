@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import Img from 'gatsby-image'
 
-const Image = styled('img')`
+const Image = styled(Img)`
   width: 120%;
   margin-left: -10%;
   margin-top: 25px;
