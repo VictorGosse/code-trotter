@@ -22,7 +22,7 @@ const TravelsList = () => (
               heroImage {
                 description
                 fluid(quality: 100, maxWidth: 1200) {
-                  ...GatsbyContentfulFluid
+                  ...GatsbyContentfulFluid_withWebp
                 }
                 title
               }

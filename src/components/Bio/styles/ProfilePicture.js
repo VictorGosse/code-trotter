@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { Image } from 'atti-components'
+import Img from 'gatsby-image'
 
-const ProfilePicture = styled(Image)`
+const ProfilePicture = styled(Img)`
   border-radius: 50%;
   object-fit: cover;
   height: 90px;

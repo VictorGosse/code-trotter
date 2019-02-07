@@ -21,7 +21,7 @@ const Categories = () => (
             node {
               image {
                 fluid(quality: 100, maxWidth: 1600) {
-                  ...GatsbyContentfulFluid
+                  ...GatsbyContentfulFluid_withWebp
                 }
               }
             }

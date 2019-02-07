@@ -39,7 +39,7 @@ export const pageQuery = graphql`
       endDate
       heroImage {
         fluid(quality: 100, maxWidth: 1600) {
-          ...GatsbyContentfulFluid
+          ...GatsbyContentfulFluid_withWebp
         }
       }
       place
@@ -60,7 +60,7 @@ export const pageQuery = graphql`
             url
           }
           fluid(quality: 100, maxWidth: 1600) {
-            ...GatsbyContentfulFluid
+            ...GatsbyContentfulFluid_withWebp
           }
         }
       }
