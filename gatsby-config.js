@@ -8,6 +8,15 @@ if (process.env.ENVIRONMENT !== "production") {
 const { spaceId, accessToken } = process.env;
 
 module.exports = {
+  siteMetadata: {
+    title: 'Code-trotter',
+    author: 'Victor Gosse',
+    description: 'Vous pouvez retrouver ici des articles de mes précédents voyages et des articles techniques liés au web, au développement, à la gestion de projet...',
+    siteUrl: 'https://code-trotter.com/',
+    social: {
+      twitter: '@VictorGosse',
+    },
+  },
   plugins: [
     'gatsby-plugin-react-helmet',
     {
@@ -25,36 +34,10 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              // Class prefix for <pre> tags containing syntax highlighting;
-              // defaults to 'language-' (eg <pre class="language-js">).
-              // If your site loads Prism into the browser at runtime,
-              // (eg for use with libraries like react-live),
-              // you may use this to prevent Prism from re-processing syntax.
-              // This is an uncommon use-case though;
-              // If you're unsure, it's best to use the default value.
               classPrefix: "language-",
-              // This is used to allow setting a language for inline code
-              // (i.e. single backticks) by creating a separator.
-              // This separator is a string and will do no white-space
-              // stripping.
-              // A suggested value for English speakers is the non-ascii
-              // character '›'.
               inlineCodeMarker: null,
-              // This lets you set up language aliases.  For example,
-              // setting this to '{ sh: "bash" }' will let you use
-              // the language "sh" which will highlight using the
-              // bash highlighter.
               aliases: {},
-              // This toggles the display of line numbers globally alongside the code.
-              // To use it, add the following line in src/layouts/index.js
-              // right after importing the prism color scheme:
-              //  `require("prismjs/plugins/line-numbers/prism-line-numbers.css");`
-              // Defaults to false.
-              // If you wish to only show line numbers on certain code blocks,
-              // leave false and use the {numberLines: true} syntax below
               showLineNumbers: false,
-              // If setting this to true, the parser won't handle and highlight inline
-              // code used in markdown i.e. single backtick code like `this`.
               noInlineHighlight: false,
             },
           },
@@ -71,6 +54,57 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-styled-components`,
+    },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allContentfulWebBlogPost } }) => {
+              return allContentfulWebBlogPost.edges.map(edge => {
+                return Object.assign({}, {
+                  title: edge.node.title,
+                  description: edge.node.content.childMarkdownRemark.excerpt,
+                  date: edge.node.publicationDate,
+                  url: site.siteMetadata.siteUrl + "web/" + edge.node.slug,
+                  guid: site.siteMetadata.siteUrl + "web/" + edge.node.slug,
+                  custom_elements: [{ 'content:encoded': edge.node.content.childMarkdownRemark.html }]
+                })
+              })
+            },
+            query: `
+              {
+                allContentfulWebBlogPost {
+                  edges {
+                    node {
+                      title
+                      slug
+                      publicationDate: publicationDate(formatString: "YYYY-MM-DD")
+                      content {
+                        childMarkdownRemark{
+                          excerpt(pruneLength: 280)
+                          html
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+            title: "Code-trotter RSS Feed",
+          },
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-alias-imports`,
