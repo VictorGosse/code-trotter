@@ -86,7 +86,7 @@ module.exports = {
             },
             query: `
               {
-                allContentfulWebBlogPost {
+                allContentfulWebBlogPost(sort: {fields: [publicationDate], order: DESC} ) {
                   edges {
                     node {
                       title
