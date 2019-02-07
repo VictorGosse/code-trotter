@@ -11,7 +11,7 @@ module.exports = {
   siteMetadata: {
     title: 'Code-trotter',
     author: 'Victor Gosse',
-    description: 'Vous pouvez retrouver ici des articles de mes précédents voyages et des articles techniques liés au web, au développement, à la gestion de projet...',
+    description: 'You\'ll find here some articles about my trips and some technical posts about Web, development, project management, ...',
     siteUrl: 'https://code-trotter.com/',
     social: {
       twitter: '@VictorGosse',
@@ -62,7 +62,10 @@ module.exports = {
           {
             site {
               siteMetadata {
+                title
+                description
                 siteUrl
+                site_url: siteUrl
               }
             }
           }
