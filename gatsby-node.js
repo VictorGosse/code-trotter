@@ -1,76 +1,50 @@
 const path = require('path')
 
-const createTravelPages = ({ graphql, actions }) => {
+exports.createPages = async function({ graphql, actions }) {
   const {createPage} = actions
-  return new Promise((resolve, reject) => {
-    const blogPostTemplate = path.resolve('src/templates/travelBlogPost.js')
-    resolve(
-      graphql(`
-        {
-          allContentfulBlogPost {
-            edges {
-              node {
-                id
-                slug
-              }
-            }
+  await graphql(`
+    {
+      allContentfulBlogPost {
+        edges {
+          node {
+            id
+            slug
           }
         }
-      `).then((result) => {
-        if (result.errors) {
-          reject(result.errors)
+      }
+    }
+  `).then((result) => {
+    result.data.allContentfulBlogPost.edges.forEach((edge) => {
+      createPage({
+        path: `travels/${edge.node.slug}`,
+        component: path.resolve('src/templates/travelBlogPost.js'),
+        context: {
+          id: edge.node.id,
         }
-        result.data.allContentfulBlogPost.edges.forEach((edge) => {
-          createPage ({
-            path: `travels/${edge.node.slug}`,
-            component: blogPostTemplate,
-            context: {
-              id: edge.node.id,
-            }
-          })
-        })
-        return
       })
-    )
+    })
   })
-}
 
-const createWebPages = ({ graphql, actions }) => {
-  const {createPage} = actions
-  return new Promise((resolve, reject) => {
-    const webBlogPostTemplate = path.resolve('src/templates/webBlogPost.js')
-    resolve(
-      graphql(`
-        {
-          allContentfulWebBlogPost {
-            edges {
-              node {
-                id
-                slug
-              }
-            }
+  await graphql(`
+    {
+      allContentfulWebBlogPost {
+        edges {
+          node {
+            id
+            slug
           }
         }
-      `).then((result) => {
-        if (result.errors) {
-          reject(result.errors)
+      }
+    }
+  `).then((result) => {
+    result.data.allContentfulWebBlogPost.edges.forEach((edge) => {
+      createPage({
+        path: `web/${edge.node.slug}`,
+        component: path.resolve('src/templates/webBlogPost.js'),
+        context: {
+          id: edge.node.id,
         }
-        result.data.allContentfulWebBlogPost.edges.forEach((edge) => {
-          createPage ({
-            path: `web/${edge.node.slug}`,
-            component: webBlogPostTemplate,
-            context: {
-              id: edge.node.id,
-            }
-          })
-        })
-        return
       })
-    )
+    })
   })
-}
-
-exports.createPages = (params) => {
-  createTravelPages(params)
-  createWebPages(params)
 }

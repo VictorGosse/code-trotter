@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { theme as mjTheme,  ThemeProvider } from 'atti-components'
+import { defaultTheme as mjTheme,  ThemeProvider } from 'atti-components'
 
 import Footer from '../Footer'
 import Menu from '../Menu'

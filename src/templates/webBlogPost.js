@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import { Bio, Layout, SEO } from '@components'
@@ -28,10 +27,6 @@ const WebBlogPost = ({ data }) => (
     </ArticleContainer>
   </Layout>
 )
-
-WebBlogPost.PropTypes = {
-  data: PropTypes.object.isRequired
-}
 
 export const pageQuery = graphql`
   query($id: String!) {

@@ -1,9 +1,8 @@
-import { theme } from 'atti-components'
+import { defaultTheme } from 'atti-components'
 
 const otherTheme = {
-  ...theme,
+  ...defaultTheme,
   colors: {
-    ...theme.colors,
     secondary: '#2138E0',
     tertiary: '#cf4410',
   },
@@ -13,7 +12,9 @@ const otherTheme = {
         fontSize: '34px',
       },
     },
-  },
+  }, 
+
+  // Custom
   travelBlogPostWidth: '70%',
   webBlogPost: {
     basicWidth: '50%',

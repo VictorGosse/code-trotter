@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Container } from 'atti-components'
 import { graphql } from 'gatsby'
 
@@ -26,10 +25,6 @@ const Travel = ({ data }) => (
     </Container>
   </Layout>
 )
-
-Travel.PropTypes = {
-  data: PropTypes.object.isRequired
-}
 
 export const pageQuery = graphql`
   query($id: String!) {
