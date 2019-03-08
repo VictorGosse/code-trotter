@@ -1,11 +1,10 @@
-const dotenv = require("dotenv")
 const path = require('path')
 
-if (process.env.ENVIRONMENT !== "production") {
-  dotenv.config();
-}
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
-const { spaceId, accessToken } = process.env;
+const { CONTENTFUL_SPACEID, CONTENTFUL_ACCESS_TOKEN } = process.env;
 
 module.exports = {
   siteMetadata: {
@@ -48,8 +47,8 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: 'jw3pwll4r1ki',
-        accessToken: 'e5daa23d5d7ff910db596c9e4921e5fed5290774212d3d75cd62bbc21bbf5468',
+        spaceId: CONTENTFUL_SPACEID,
+        accessToken: CONTENTFUL_ACCESS_TOKEN,
       },
     },
     {
