@@ -3,7 +3,7 @@ import {
   Header2 as AttiHeader2, 
   Header3 as AttiHeader3,
   Header4 as AttiHeader4,
-  Link as AttiLink, 
+  Link as AttiLink,
   Text as AttiText
 } from 'atti-components'
 
