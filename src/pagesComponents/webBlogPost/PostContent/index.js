@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { 
   Header2 as AttiHeader2, 
   Header3 as AttiHeader3,
+  Header4 as AttiHeader4,
   Link as AttiLink, 
   Text as AttiText
 } from 'atti-components'
@@ -14,7 +15,7 @@ const EM = styled('em')`
 
 const Header2 = styled(AttiHeader2)`
   width: ${({ theme }) => theme.webBlogPost.basicWidth};
-  margin: 45px auto 15px auto;
+  margin: 50px auto 15px auto;
   font-weight: 700;
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     width: 100%;
@@ -23,9 +24,18 @@ const Header2 = styled(AttiHeader2)`
 
 const Header3 = styled(AttiHeader3)`
   width: ${({ theme }) => theme.webBlogPost.basicWidth};
-  margin: 35px auto 10px auto;
+  margin: 30px auto 10px auto;
   line-height: 30px;
   font-size: 28px;
+  font-weight: 700;
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: 100%;
+  }
+`
+
+const Header4 = styled(AttiHeader4)`
+  width: ${({ theme }) => theme.webBlogPost.basicWidth};
+  margin: 20px auto 10px auto;
   font-weight: 700;
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     width: 100%;
@@ -106,6 +116,7 @@ export {
   EM,
   Header2,
   Header3,
+  Header4,
   Image,
   Link,
   List,
