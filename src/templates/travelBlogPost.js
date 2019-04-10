@@ -30,8 +30,8 @@ export const pageQuery = graphql`
   query($id: String!) {
     contentfulBlogPost(id: {eq: $id}) {
       title
-      startDate
-      endDate
+      startDate: startDate(formatString: "DD/MM/YYYY")
+      endDate: endDate(formatString: "DD/MM/YYYY")
       heroImage {
         fluid(quality: 100, maxWidth: 1600) {
           ...GatsbyContentfulFluid_withWebp
