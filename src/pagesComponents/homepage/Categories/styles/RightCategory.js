@@ -40,7 +40,7 @@ const RightCategory = styled('div')`
       svg {
         &:first-child {
           display: none;
-          @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+          @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
             display: inline-block;
             opacity: 1;
             margin-left: 0px;
@@ -49,7 +49,7 @@ const RightCategory = styled('div')`
         &:last-child {
           opacity: 1;
           margin-right: 0px;
-          @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+          @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
             display: none;
           }
         }
@@ -60,7 +60,7 @@ const RightCategory = styled('div')`
     }
   }
   
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 100%;
     height: 500px;
     margin-top: calc(500px - 10%);

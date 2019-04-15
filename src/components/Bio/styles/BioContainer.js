@@ -4,7 +4,7 @@ const BioContainer = styled('div')`
   display: flex;
   width: ${({ theme }) => theme.webBlogPost.basicWidth};
   margin: 50px auto 10px auto;
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 100%;
   }
 `

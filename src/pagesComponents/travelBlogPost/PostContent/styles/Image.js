@@ -7,7 +7,7 @@ const getImageSize = ratio => {
       width: 50%;
       margin-left: auto;
       margin-right: auto;
-      @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+      @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
         width: 80%;
       }
     `
@@ -16,7 +16,7 @@ const getImageSize = ratio => {
       width: 120%;
       margin-left: -10%;
       height: auto;
-      @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+      @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
         width: 100%;
         margin-left: 0;
       }

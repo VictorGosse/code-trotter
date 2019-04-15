@@ -11,7 +11,7 @@ const WhiteSeparator = styled('div')`
   clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
   display: flex;
   align-items: center;
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 100%;
     float: none;
     height: 510px;

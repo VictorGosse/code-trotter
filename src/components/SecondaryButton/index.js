@@ -3,9 +3,9 @@ import Link from '../Link'
 
 const SecondaryButton = styled(Link)`
   ${({theme}) => `
-    border: 1px solid ${theme.colors.snow};
-    color: ${theme.colors.snow};
-    padding: ${theme.spaces.s5} ${theme.spaces.s6};
+    border: 1px solid ${theme.colors.white};
+    color: ${theme.colors.white};
+    padding: 8px 10px;
   `}
   text-decoration: none;
   text-transform: uppercase;
@@ -13,7 +13,7 @@ const SecondaryButton = styled(Link)`
 
   &:hover {
     ${({theme}) => `
-      border: 1px solid ${theme.colors.snow};
+      border: 1px solid ${theme.colors.white};
     `}
   }
 `

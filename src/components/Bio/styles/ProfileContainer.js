@@ -6,7 +6,7 @@ import Name from './Name'
 const ProfileContainer = styled('div')`
   line-height: 22px;
   margin-left: 30px;
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     margin-left: 20px;
   }
   ${Link}, ${Name} {

@@ -11,7 +11,7 @@ import PostImage from './PostImage'
 const Header2 = styled(AttiHeader2)`
   width: ${({ theme }) => theme.travelBlogPostWidth};
   margin: 35px auto 10px auto;
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 100%;
   }
 `
@@ -19,7 +19,7 @@ const Header2 = styled(AttiHeader2)`
 const Header3 = styled(AttiHeader3)`
   width: ${({ theme }) => theme.travelBlogPostWidth};
   margin: 35px auto 10px auto;
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 100%;
   }
 `
@@ -35,7 +35,7 @@ const Link = styled(AttiLink).attrs({ target: '_blank', rel: 'noopener noreferre
 const Separator = styled('hr')`
   width: 30%;
   margin: 30px auto;
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 50%;
   }
 `
@@ -46,7 +46,7 @@ const Text = styled(AttiText)`
   margin: auto;
   font-size: ${({ theme }) => theme.fonts.fontSize.fs16};
   line-height: 28px;
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 100%;
   }
 `

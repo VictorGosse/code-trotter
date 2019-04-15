@@ -10,7 +10,7 @@ const HeaderContainer = styled('header')`
   overflow: hidden;
   position: relative;
 
-  margin-bottom: ${({ theme }) => theme.spaces.s10};
+  margin-bottom: 24px;
   &:after {
     content: ' ';
     display: block;

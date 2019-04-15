@@ -47,7 +47,7 @@ const LeftCategory = styled('div')`
     }
   }
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 100%;
     height: 500px;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);

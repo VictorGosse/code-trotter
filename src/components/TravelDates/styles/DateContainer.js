@@ -4,13 +4,13 @@ import { Text } from 'atti-components'
 const DateContainer = styled('div')`
   display: flex;
   align-items: center;
-  margin-bottom: ${({ theme }) => theme.spaces.s11};
+  margin-bottom: 28px;
   svg * {
-    fill: ${({ theme }) => theme.colors.snow};
+    fill: ${({ theme }) => theme.colors.white};
   }
   ${Text} {
-    margin-left: ${({ theme }) => theme.spaces.s3};
-    color: ${({ theme }) => theme.colors.snow};
+    margin-left: 4px;
+    color: ${({ theme }) => theme.colors.white};
   }
 `
 

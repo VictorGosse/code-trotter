@@ -11,7 +11,7 @@ const Image = styled(Img)`
   > span {
     display: block;
   }
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 100%;
     margin-left: 0;
   }

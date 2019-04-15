@@ -10,11 +10,11 @@ const HeaderTextContainer = styled(Container)`
   
   ${Header1} {
     ${({theme}) => `
-      color: ${theme.colors.snow};
+      color: ${theme.colors.white};
       font-size: ${theme.fonts.fontSize.fs48};
       line-height: ${theme.fonts.lineHeight.lh56};
       font-weight: ${theme.fonts.fontWeight.fw700};
-      margin-bottom: ${theme.spaces.s3};
+      margin-bottom: 4px;
     `}
     text-transform: uppercase;
     text-align: center;
@@ -24,7 +24,7 @@ const HeaderTextContainer = styled(Container)`
     margin: 200px 0;
   }
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     margin: 150px 0;
   }
 `

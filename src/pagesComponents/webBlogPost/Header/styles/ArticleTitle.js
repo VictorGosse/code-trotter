@@ -12,7 +12,7 @@ const ArticleTitle = styled(Header1)`
     background-color: ${({ theme }) => theme.colors.black};
     margin: 35px auto;
   }
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     font-size: 40px;
     line-height: 48px;
   }

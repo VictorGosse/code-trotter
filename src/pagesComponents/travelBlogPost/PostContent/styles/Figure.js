@@ -6,7 +6,7 @@ const Figure = styled('figure')`
   margin-top: 25px;
   margin-bottom: 25px;
   height: auto;
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 100%;
     margin-left: 0;
   }

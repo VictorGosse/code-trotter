@@ -17,7 +17,7 @@ const Header2 = styled(AttiHeader2)`
   width: ${({ theme }) => theme.webBlogPost.basicWidth};
   margin: 50px auto 15px auto;
   font-weight: 700;
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 100%;
   }
 `
@@ -28,7 +28,7 @@ const Header3 = styled(AttiHeader3)`
   line-height: 30px;
   font-size: 28px;
   font-weight: 700;
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 100%;
   }
 `
@@ -37,7 +37,7 @@ const Header4 = styled(AttiHeader4)`
   width: ${({ theme }) => theme.webBlogPost.basicWidth};
   margin: 20px auto 10px auto;
   font-weight: 700;
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 100%;
   }
 `
@@ -56,7 +56,7 @@ const List = styled(AttiText.withComponent('ul'))`
   display: block;
   list-style-type: disc;
   padding-left: 40px;
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 100%;
   }
 `
@@ -70,7 +70,7 @@ const ListItem = styled(AttiText.withComponent('li'))`
 const Separator = styled('hr')`
   width: 30%;
   margin: 30px auto;
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 50%;
   }
 `
@@ -85,7 +85,7 @@ const Text = styled(AttiText)`
   margin: auto;
   font-size: ${({ theme }) => theme.fonts.fontSize.fs16};
   line-height: 28px;
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 100%;
   }
 `
@@ -102,7 +102,7 @@ const Blockquote = styled('blockquote')`
     background-color: ${({ theme }) => theme.colors.darkSmoke};
   }
   
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 100%;
   }
 

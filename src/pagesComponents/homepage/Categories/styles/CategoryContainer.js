@@ -9,7 +9,7 @@ const CategoryContainer = styled('div')`
     text-decoration: none;
   }
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     height: 950px;
   }
 `

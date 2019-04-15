@@ -17,7 +17,7 @@ const MenuContainer = styled('nav')`
     color: ${({ light }) => light ? 'white' : 'black'};
   }
   
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     padding: 20px 12px;
     ${MenuLink}:first-child {
       margin-left: 0;

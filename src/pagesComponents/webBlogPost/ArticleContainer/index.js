@@ -7,7 +7,7 @@ const ArticleContainer = styled(Container.withComponent('article'))`
     width: ${({ theme }) => theme.webBlogPost.basicWidth};
     margin: 25px auto 25px auto;
     border-radius: 0.3em;
-    @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
       width: 100%;
     }
   }

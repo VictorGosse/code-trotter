@@ -65,3 +65,9 @@ body :not(pre) > code[class*="language-"] {
   background-color: rgba(252, 222, 76, 0.5);
   color: #1F2D3D;
 }
+
+@media only screen and (max-width: 767px) {
+  body :not(pre) > code[class*="language-"] {
+    white-space: normal;
+  }
+}
