@@ -7,7 +7,6 @@ const HeaderContainer = styled('header')`
   flex-direction: column;
 
   width: 100%;
-  height: 75vh;
   overflow: hidden;
   position: relative;
 

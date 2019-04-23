@@ -21,7 +21,6 @@ const TextContainer = styled('div')`
   }
   ${SecondaryButton} {
     animation: all ease 1s;
-    margin-top: ${({ theme }) => theme.spaces.s2};
   }
 `
 

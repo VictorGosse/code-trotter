@@ -6,6 +6,7 @@ const HeaderTextContainer = styled(Container)`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 300px 0;
   
   ${Header1} {
     ${({theme}) => `

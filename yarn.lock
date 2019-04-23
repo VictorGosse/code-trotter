@@ -247,13 +247,6 @@
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-syntax-optional-catch-binding" "^7.2.0"
 
-"@babel/plugin-proposal-optional-chaining@^7.0.0":
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-optional-chaining/-/plugin-proposal-optional-chaining-7.2.0.tgz#ae454f4c21c6c2ce8cb2397dc332ae8b420c5441"
-  dependencies:
-    "@babel/helper-plugin-utils" "^7.0.0"
-    "@babel/plugin-syntax-optional-chaining" "^7.2.0"
-
 "@babel/plugin-proposal-unicode-property-regex@^7.2.0":
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-unicode-property-regex/-/plugin-proposal-unicode-property-regex-7.2.0.tgz#abe7281fe46c95ddc143a65e5358647792039520"
@@ -307,12 +300,6 @@
 "@babel/plugin-syntax-optional-catch-binding@^7.2.0":
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-optional-catch-binding/-/plugin-syntax-optional-catch-binding-7.2.0.tgz#a94013d6eda8908dfe6a477e7f9eda85656ecf5c"
-  dependencies:
-    "@babel/helper-plugin-utils" "^7.0.0"
-
-"@babel/plugin-syntax-optional-chaining@^7.2.0":
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-optional-chaining/-/plugin-syntax-optional-chaining-7.2.0.tgz#a59d6ae8c167e7608eaa443fda9fa8fa6bf21dff"
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
 
@@ -620,13 +607,6 @@
     invariant "^2.2.2"
     js-levenshtein "^1.1.3"
     semver "^5.3.0"
-
-"@babel/preset-flow@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@babel/preset-flow/-/preset-flow-7.0.0.tgz#afd764835d9535ec63d8c7d4caf1c06457263da2"
-  dependencies:
-    "@babel/helper-plugin-utils" "^7.0.0"
-    "@babel/plugin-transform-flow-strip-types" "^7.0.0"
 
 "@babel/preset-react@^7.0.0":
   version "7.0.0"
@@ -1432,18 +1412,6 @@ babel-preset-fbjs@^3.1.2:
     "@babel/plugin-transform-template-literals" "^7.0.0"
     babel-plugin-syntax-trailing-function-commas "^7.0.0-beta.0"
 
-babel-preset-gatsby-package@^0.1.2:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/babel-preset-gatsby-package/-/babel-preset-gatsby-package-0.1.4.tgz#3a55db06171377199b6f184b3192ec79595312b0"
-  dependencies:
-    "@babel/plugin-proposal-class-properties" "^7.0.0"
-    "@babel/plugin-proposal-optional-chaining" "^7.0.0"
-    "@babel/plugin-syntax-dynamic-import" "^7.0.0"
-    "@babel/plugin-transform-runtime" "^7.0.0"
-    "@babel/preset-env" "^7.0.0"
-    "@babel/preset-flow" "^7.0.0"
-    "@babel/preset-react" "^7.0.0"
-
 babel-preset-gatsby@^0.1.8:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/babel-preset-gatsby/-/babel-preset-gatsby-0.1.8.tgz#3ada83d10901d28d827474e8067370929ad3be8c"
@@ -2168,7 +2136,7 @@ collection-visit@^1.0.0:
     map-visit "^1.0.0"
     object-visit "^1.0.0"
 
-color-convert@^1.9.0, color-convert@^1.9.1, color-convert@^1.9.3:
+color-convert@^1.9.0, color-convert@^1.9.1:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/color-convert/-/color-convert-1.9.3.tgz#bb71850690e1f136567de629d2d5471deda4c1e8"
   dependencies:
@@ -3082,7 +3050,7 @@ dom-converter@^0.2:
   dependencies:
     utila "~0.4"
 
-dom-helpers@^3.2.1, dom-helpers@^3.4.0:
+dom-helpers@^3.2.1:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/dom-helpers/-/dom-helpers-3.4.0.tgz#e9b369700f959f62ecde5a6babde4bccd9169af8"
   dependencies:
@@ -4313,18 +4281,6 @@ gatsby-plugin-styled-components@^3.0.6:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-styled-components/-/gatsby-plugin-styled-components-3.0.6.tgz#873857d1a03123683833688c8f008bd9f782504b"
   dependencies:
     "@babel/runtime" "^7.0.0"
-
-gatsby-plugin-transition-link@^1.12.2:
-  version "1.12.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-transition-link/-/gatsby-plugin-transition-link-1.12.2.tgz#cf06408b6f949ddd71722bea010e14595d2435b1"
-  dependencies:
-    babel-preset-gatsby-package "^0.1.2"
-    color-convert "^1.9.3"
-    cross-env "^5.2.0"
-    json-bump "^0.1.3"
-    polyfill-array-includes "^1.0.0"
-    react-transition-group "^2.5.0"
-    requestanimationframe-timer "^1.0.4"
 
 gatsby-react-router-scroll@^2.0.4:
   version "2.0.4"
@@ -5915,12 +5871,6 @@ json-buffer@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/json-buffer/-/json-buffer-3.0.0.tgz#5b1f397afc75d677bde8bcfc0e47e1f9a3d9a898"
 
-json-bump@^0.1.3:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/json-bump/-/json-bump-0.1.3.tgz#59dc59891538d92f7992679b42c2e687ba4d9c59"
-  dependencies:
-    jsonfile "^3.0.1"
-
 json-loader@^0.5.7:
   version "0.5.7"
   resolved "https://registry.yarnpkg.com/json-loader/-/json-loader-0.5.7.tgz#dca14a70235ff82f0ac9a3abeb60d337a365185d"
@@ -5960,12 +5910,6 @@ json5@^2.1.0:
   resolved "https://registry.yarnpkg.com/json5/-/json5-2.1.0.tgz#e7a0c62c48285c628d20a10b85c89bb807c32850"
   dependencies:
     minimist "^1.2.0"
-
-jsonfile@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/jsonfile/-/jsonfile-3.0.1.tgz#a5ecc6f65f53f662c4415c7675a0331d0992ec66"
-  optionalDependencies:
-    graceful-fs "^4.1.6"
 
 jsonfile@^4.0.0:
   version "4.0.0"
@@ -7522,10 +7466,6 @@ polished@^2.0.3:
   dependencies:
     "@babel/runtime" "^7.2.0"
 
-polyfill-array-includes@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/polyfill-array-includes/-/polyfill-array-includes-1.0.0.tgz#3dda070475859e99d653acf06ec3622cc76f8430"
-
 portfinder@^1.0.9:
   version "1.0.20"
   resolved "https://registry.yarnpkg.com/portfinder/-/portfinder-1.0.20.tgz#bea68632e54b2e13ab7b0c4775e9b41bf270e44a"
@@ -8086,12 +8026,6 @@ querystringify@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.1.0.tgz#7ded8dfbf7879dcc60d0a644ac6754b283ad17ef"
 
-raf@^3.4.0:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/raf/-/raf-3.4.1.tgz#0742e99a4a6552f445d73e3ee0328af0ff1ede39"
-  dependencies:
-    performance-now "^2.1.0"
-
 randombytes@^2.0.0, randombytes@^2.0.1, randombytes@^2.0.5:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/randombytes/-/randombytes-2.1.0.tgz#df6f84372f0270dc65cdf6291349ab7a473d4f2a"
@@ -8208,15 +8142,6 @@ react-side-effect@^1.1.0:
   dependencies:
     exenv "^1.2.1"
     shallowequal "^1.0.1"
-
-react-transition-group@^2.5.0:
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-2.9.0.tgz#df9cdb025796211151a436c69a8f3b97b5b07c8d"
-  dependencies:
-    dom-helpers "^3.4.0"
-    loose-envify "^1.4.0"
-    prop-types "^15.6.2"
-    react-lifecycles-compat "^3.0.4"
 
 react@^16.8.4:
   version "16.8.4"
@@ -8546,12 +8471,6 @@ request@^2.65.0, request@^2.83.0, request@^2.85.0:
     tough-cookie "~2.4.3"
     tunnel-agent "^0.6.0"
     uuid "^3.3.2"
-
-requestanimationframe-timer@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/requestanimationframe-timer/-/requestanimationframe-timer-1.0.4.tgz#3b48fe55f4359f07c54745caec7437e2532f89d8"
-  dependencies:
-    raf "^3.4.0"
 
 require-directory@^2.1.1:
   version "2.1.1"
