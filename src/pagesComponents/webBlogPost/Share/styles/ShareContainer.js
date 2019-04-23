@@ -4,24 +4,24 @@ import { Text } from 'atti-components'
 const ShareContainer = styled(Text)`
   width: ${({ theme }) => theme.webBlogPost.basicWidth};
   text-align: center;
-  margin: 50px auto 10px auto;
+  margin: ${({ theme }) => theme.spaces.s3} auto ${({ theme }) => theme.spaces.s0_75} auto;
   background-color: ${({ theme }) => theme.colors.lighterNeutral};
-  padding: 20px;
+  padding: ${({ theme }) => theme.spaces.s1_5};
   display: flex;
   align-items: center;
   justify-content: center;
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 100%;
-    padding: 20px 15px;
+    padding: ${({ theme }) => theme.spaces.s1_5} ${({ theme }) => theme.spaces.s1};
   }
 
   svg {
     width: 25px;
     height: 25px;
     fill: #1da1f2;
-    margin-right: 10px;
+    margin-right: ${({ theme }) => theme.spaces.s0_75};
     @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
-      margin-right: 5px;
+      margin-right: ${({ theme }) => theme.spaces.s0_25};
     }
   }
 `

@@ -9,8 +9,8 @@ const fonts = css`
 const BreadcrumbSeparator = styled.span`
   ${fonts};
   color: ${({ theme }) => theme.colors.black};
-  margin-left: 8px;
-  margin-right: 8px;
+  margin-left: ${({ theme }) => theme.spaces.s0_5};
+  margin-right: ${({ theme }) => theme.spaces.s0_5};
 `
 
 export default BreadcrumbSeparator

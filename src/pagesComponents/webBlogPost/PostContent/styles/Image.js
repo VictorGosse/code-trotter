@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 const Image = styled(Img)`
   width: 120%;
   margin-left: -10%;
-  margin-top: 25px;
+  margin-top: ${({ theme }) => theme.spaces.s1_5};
   height: auto;
   object-fit: cover;
   display: block;

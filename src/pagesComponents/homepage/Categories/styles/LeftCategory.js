@@ -29,21 +29,21 @@ const LeftCategory = styled('div')`
     margin-bottom: 13%;
     svg {
       opacity: 0;
-      margin-left: -15px;
+      margin-left: ${({ theme }) => `-${theme.spaces.s1}`};
       transition: all ease 0.5s;
       height: 35px;
-      margin-right: 10px;
+      margin-right: ${({ theme }) => theme.spaces.s0_75};
       fill: currentColor;
     }
     &:hover {
       svg {
         opacity: 1;
-        margin-left: 0px;
+        margin-left: 0;
       }
     }
     
     @media only screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-      margin-left: 10px;
+      margin-left: ${({ theme }) => theme.spaces.s0_75};
     }
   }
 

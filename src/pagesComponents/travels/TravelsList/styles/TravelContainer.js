@@ -6,8 +6,8 @@ const TravelContainer = styled('article')`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 40px 0;
-  padding: 20px;
+  margin: ${({ theme }) => theme.spaces.s3} 0;
+  padding: ${({ theme }) => theme.spaces.s1_5};
   position: relative;
 
   &:after {

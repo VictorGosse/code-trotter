@@ -11,7 +11,7 @@ const HeaderContainer = styled('header')`
   overflow: hidden;
   position: relative;
 
-  margin-bottom: 24px;
+  margin-bottom: ${({ theme }) => theme.spaces.s1_5};
   &:after {
     content: ' ';
     display: block;

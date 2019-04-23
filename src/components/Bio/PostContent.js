@@ -11,7 +11,7 @@ const Link = styled(AttiLink).attrs({ target: '_blank', rel: 'noopener noreferre
 `
 
 const Text = styled(AttiText)`
-  margin-top: 10px;
+  margin-top: ${({ theme }) => theme.spaces.s0_75};
   line-height: 18px;
   font-size: 14px;
 `

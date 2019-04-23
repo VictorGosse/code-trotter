@@ -10,7 +10,7 @@ import PostImage from './PostImage'
 
 const Header2 = styled(AttiHeader2)`
   width: ${({ theme }) => theme.travelBlogPostWidth};
-  margin: 35px auto 10px auto;
+  margin: ${({ theme }) => theme.spaces.s2} auto ${({ theme }) => theme.spaces.s0_75} auto;
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 100%;
   }
@@ -18,7 +18,7 @@ const Header2 = styled(AttiHeader2)`
 
 const Header3 = styled(AttiHeader3)`
   width: ${({ theme }) => theme.travelBlogPostWidth};
-  margin: 35px auto 10px auto;
+  margin: ${({ theme }) => theme.spaces.s2} auto ${({ theme }) => theme.spaces.s0_75} auto;
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 100%;
   }
@@ -34,7 +34,7 @@ const Link = styled(AttiLink).attrs({ target: '_blank', rel: 'noopener noreferre
 
 const Separator = styled('hr')`
   width: 30%;
-  margin: 30px auto;
+  margin: ${({ theme }) => theme.spaces.s2} auto;
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 50%;
   }

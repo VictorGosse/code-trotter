@@ -14,14 +14,14 @@ const TextContainer = styled('div')`
       font-size: ${theme.fonts.fontSize.fs48};
       line-height: ${theme.fonts.lineHeight.lh56};
       font-weight: ${theme.fonts.fontWeight.fw700};
-      margin-bottom: 4px;
+      margin-bottom: ${theme.spaces.s0_25};
     `}
     text-transform: uppercase;
     text-align: center;
   }
   ${SecondaryButton} {
     animation: all ease 1s;
-    margin-top: 28px;
+    margin-top: ${({ theme }) => theme.spaces.s2};
   }
 `
 

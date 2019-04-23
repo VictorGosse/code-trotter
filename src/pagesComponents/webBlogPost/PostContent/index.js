@@ -15,7 +15,7 @@ const EM = styled('em')`
 
 const Header2 = styled(AttiHeader2)`
   width: ${({ theme }) => theme.webBlogPost.basicWidth};
-  margin: 50px auto 15px auto;
+  margin: ${({ theme }) => theme.spaces.s3} auto ${({ theme }) => theme.spaces.s1} auto;
   font-weight: 700;
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 100%;
@@ -24,7 +24,7 @@ const Header2 = styled(AttiHeader2)`
 
 const Header3 = styled(AttiHeader3)`
   width: ${({ theme }) => theme.webBlogPost.basicWidth};
-  margin: 30px auto 10px auto;
+  margin: ${({ theme }) => theme.spaces.s2} auto ${({ theme }) => theme.spaces.s0_75} auto;
   line-height: 30px;
   font-size: 28px;
   font-weight: 700;
@@ -35,7 +35,7 @@ const Header3 = styled(AttiHeader3)`
 
 const Header4 = styled(AttiHeader4)`
   width: ${({ theme }) => theme.webBlogPost.basicWidth};
-  margin: 20px auto 10px auto;
+  margin: ${({ theme }) => theme.spaces.s1_5} auto ${({ theme }) => theme.spaces.s0_75} auto;
   font-weight: 700;
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 100%;
@@ -52,10 +52,10 @@ const Link = styled(AttiLink).attrs({ target: '_blank', rel: 'noopener noreferre
 
 const List = styled(AttiText.withComponent('ul'))`
   width: ${({ theme }) => theme.webBlogPost.basicWidth};
-  margin: 15px auto 10px auto;
+  margin: ${({ theme }) => theme.spaces.s1} auto ${({ theme }) => theme.spaces.s0_75} auto;
   display: block;
   list-style-type: disc;
-  padding-left: 40px;
+  padding-left: ${({ theme }) => theme.spaces.s3};
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 100%;
   }
@@ -69,7 +69,7 @@ const ListItem = styled(AttiText.withComponent('li'))`
 
 const Separator = styled('hr')`
   width: 30%;
-  margin: 30px auto;
+  margin: ${({ theme }) => theme.spaces.s2} auto;
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 50%;
   }
@@ -93,12 +93,12 @@ const Text = styled(AttiText)`
 const Blockquote = styled('blockquote')`
   display: flex;
   width: ${({ theme }) => theme.webBlogPost.basicWidth};
-  margin: 10px auto 10px auto;
+  margin: ${({ theme }) => theme.spaces.s0_75} auto ${({ theme }) => theme.spaces.s0_75} auto;
   &:before {
     content: ' ';
     display: block;
     width: 5px;
-    margin-right: 10px;
+    margin-right: ${({ theme }) => theme.spaces.s0_75};
     background-color: ${({ theme }) => theme.colors.darkSmoke};
   }
   

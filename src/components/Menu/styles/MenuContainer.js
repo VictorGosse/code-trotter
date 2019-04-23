@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import MenuLink from './MenuLink'
 
 const MenuContainer = styled('nav')`
-  padding: 20px 25px;
+  padding: ${({ theme }) => theme.spaces.s1} ${({ theme }) => theme.spaces.s1_5};
   position: absolute;
   top: 0;
   left: 0;
@@ -18,7 +18,7 @@ const MenuContainer = styled('nav')`
   }
   
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
-    padding: 20px 12px;
+    padding: ${({ theme }) => theme.spaces.s1} ${({ theme }) => theme.spaces.s0_75};
     ${MenuLink}:first-child {
       margin-left: 0;
     }

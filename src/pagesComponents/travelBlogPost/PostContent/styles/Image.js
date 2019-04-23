@@ -28,7 +28,7 @@ const Image = styled(Img)`
   ${({ ratio }) => getImageSize(ratio)};
   object-fit: cover;
   display: block;
-  margin-top: 25px;
+  margin-top: ${({ theme }) => theme.spaces.s1_5};
   > span {
     display: block;
   }

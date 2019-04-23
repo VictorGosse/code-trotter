@@ -50,7 +50,7 @@ module.exports = {
       options: {
         spaceId: CONTENTFUL_SPACEID,
         accessToken: CONTENTFUL_ACCESS_TOKEN,
-        //host: `preview.contentful.com`,
+        host: `preview.contentful.com`,
       },
     },
     {

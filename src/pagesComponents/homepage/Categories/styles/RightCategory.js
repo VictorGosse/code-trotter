@@ -28,12 +28,12 @@ const RightCategory = styled('div')`
       height: 35px;
       fill: currentColor;
       &:first-child {
-        margin-right: 10px;
-        margin-left: -15px;
+        margin-right: ${({ theme }) => theme.spaces.s0_75};
+        margin-left: ${({ theme }) => `-${theme.spaces.s1}`};
       }
       &:last-child {
-        margin-left: 10px;
-        margin-right: -15px;
+        margin-left: ${({ theme }) => theme.spaces.s0_75};
+        margin-right: ${({ theme }) => `-${theme.spaces.s1}`};
       }
     }
     &:hover {
@@ -43,12 +43,12 @@ const RightCategory = styled('div')`
           @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
             display: inline-block;
             opacity: 1;
-            margin-left: 0px;
+            margin-left: 0;
           }
         }
         &:last-child {
           opacity: 1;
-          margin-right: 0px;
+          margin-right: 0;
           @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
             display: none;
           }
@@ -56,7 +56,7 @@ const RightCategory = styled('div')`
       }
     }
     @media only screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-      margin-right: 10px;
+      margin-right: ${({ theme }) => theme.spaces.s0_75};
     }
   }
   

@@ -5,7 +5,7 @@ const SecondaryButton = styled(Link)`
   ${({theme}) => `
     border: 1px solid ${theme.colors.white};
     color: ${theme.colors.white};
-    padding: 8px 10px;
+    padding: ${theme.spaces.s0_5} ${theme.spaces.s0_75};
   `}
   text-decoration: none;
   text-transform: uppercase;

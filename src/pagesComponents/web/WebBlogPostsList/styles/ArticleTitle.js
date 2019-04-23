@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Header2 } from 'atti-components'
 
 const ArticleTitle = styled(Header2.withComponent('h1'))`
-  margin-bottom: 10px;
+  margin-bottom: ${({ theme }) => theme.spaces.s0_75};
   a {
     color: ${({ theme }) => theme.colors.secondary};
     text-decoration: none;

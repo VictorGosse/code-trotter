@@ -6,7 +6,6 @@ const HeaderTextContainer = styled(Container)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 300px 0;
   
   ${Header1} {
     ${({theme}) => `
@@ -14,18 +13,10 @@ const HeaderTextContainer = styled(Container)`
       font-size: ${theme.fonts.fontSize.fs48};
       line-height: ${theme.fonts.lineHeight.lh56};
       font-weight: ${theme.fonts.fontWeight.fw700};
-      margin-bottom: 4px;
+      margin-bottom: ${theme.spaces.s0_25};
     `}
     text-transform: uppercase;
     text-align: center;
-  }
-
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    margin: 200px 0;
-  }
-
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
-    margin: 150px 0;
   }
 `
 

@@ -8,7 +8,7 @@ const DateContainer = styled('div')`
     fill: ${({ theme }) => theme.colors.white};
   }
   ${Text} {
-    margin-left: 4px;
+    margin-left: ${({ theme }) => theme.spaces.s0_25};
     color: ${({ theme }) => theme.colors.white};
   }
 `

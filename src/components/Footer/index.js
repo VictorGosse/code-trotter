@@ -8,7 +8,7 @@ import routes from '@config/routes'
 const Footer = () => (
   <FooterContainer>
     <hr />
-    <Text textAlign="center" mb="s5">Copyright © 2019 Victor Gosse, Tous droits réservés - <Link to={routes.mentionsLegales}>Mentions légales</Link></Text>
+    <Text textAlign="center">Copyright © 2019 Victor Gosse, Tous droits réservés - <Link to={routes.mentionsLegales}>Mentions légales</Link></Text>
   </FooterContainer>
 )
 
