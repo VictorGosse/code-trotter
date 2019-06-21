@@ -1,5 +1,6 @@
 const otherTheme = {
   colors: {
+    primary: 'rgb(33, 56, 224)',
     secondary: '#2138E0',
     tertiary: '#cf4410',
   },
@@ -14,6 +15,12 @@ const otherTheme = {
         fontSize: '34px',
       },
     },
+    link: {
+      colors: {
+        border: 'transparent',
+        borderHover: 'currentColor',
+      }
+    }
   }, 
 
   // Custom
