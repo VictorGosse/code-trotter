@@ -1,12 +1,18 @@
 import React from 'react'
 import { Container } from 'atti-components'
 import { graphql } from 'gatsby'
+import styled from 'styled-components'
 
 import { Layout, SEO } from '@components'
 import renderAst from '@helpers/renderAstTravels'
 import { Breadcrumb, Header } from '@pagesComponents/travelBlogPost'
 import AssetContext from '@pagesComponents/travelBlogPost/Context/asset-context.js'
 
+const ArticleContainer = styled('article')`
+  *:first-child {
+    margin-top: ${({ theme }) => theme.spaces.s2};
+  }
+`
 
 const Travel = ({ data }) => (
   <Layout light>
@@ -17,11 +23,11 @@ const Travel = ({ data }) => (
     <Header data={data.contentfulBlogPost} />
     <Container>
       <Breadcrumb title={data.contentfulBlogPost.title} />
-      <article>
+      <ArticleContainer>
         <AssetContext.Provider value={data.allContentfulAsset}>
           {renderAst(data.contentfulBlogPost.body.childMarkdownRemark.htmlAst)}
         </AssetContext.Provider>
-      </article>
+      </ArticleContainer>
     </Container>
   </Layout>
 )

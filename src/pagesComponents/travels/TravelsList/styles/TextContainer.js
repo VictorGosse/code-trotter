@@ -18,8 +18,10 @@ const TextContainer = styled('div')`
     `}
     text-transform: uppercase;
     text-align: center;
+    margin-bottom: ${({ theme }) => theme.spaces.s0_25};
   }
   ${SecondaryButton} {
+    margin-top: ${({ theme }) => theme.spaces.s1_5};
     animation: all ease 1s;
   }
 `

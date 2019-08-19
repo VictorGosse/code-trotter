@@ -46,7 +46,7 @@ const TravelsList = () => (
             <HeroImage fluid={node.heroImage.fluid} alt="" />
             <TextContainer>
               <Header2>{node.title}</Header2>
-              <TravelDates startDate={node.startDate} endDate={node.endDate} />
+              { node.startDate && node.endDate && <TravelDates startDate={node.startDate} endDate={node.endDate} /> }
               <SecondaryButton to={`${routes.travels}/${node.slug}`}>Lire l'article</SecondaryButton>
             </TextContainer>
           </TravelContainer>

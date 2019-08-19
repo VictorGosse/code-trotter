@@ -49,6 +49,10 @@ const Text = styled(AttiText)`
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 100%;
   }
+
+  strong {
+    font-weight: 700;
+  }
 `
 
 export {
