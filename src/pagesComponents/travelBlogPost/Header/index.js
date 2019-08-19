@@ -11,7 +11,7 @@ const Header = ({ data }) => (
     <ImageHeader fluid={data.heroImage.fluid} alt="" />
     <HeaderTextContainer>
       <Header1 textAlign="center">{data.title}</Header1>
-      <TravelDates startDate={data.startDate} endDate={data.endDate} />
+      {data.startDate && data.endDate && <TravelDates startDate={data.startDate} endDate={data.endDate} />}
     </HeaderTextContainer>
   </HeaderContainer>
 )
