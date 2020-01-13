@@ -16,10 +16,6 @@ const SEO = ({ description, image, lang, url, title }) => (
     ]}
     meta={[
       {
-        name: 'google-site-verification',
-        content: '1E806lu_l9hGS22xEiRG5Y-4iXNHwJqPYEUfwbbWixw',
-      },
-      {
         name: 'description',
         content: description,
       },
