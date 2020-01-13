@@ -7,12 +7,10 @@ import Menu from '../Menu'
 import theme from './theme'
 
 const Layout = ({ children, light }) => (
-  <ThemeProvider theme={mjTheme}>
-    <ThemeProvider otherTheme={theme}>
-      <Menu light={light} />
-      {children}
-      <Footer />
-    </ThemeProvider>
+  <ThemeProvider theme={mjTheme} otherTheme={theme}>
+    <Menu light={light} />
+    {children}
+    <Footer />
   </ThemeProvider>
 )
 

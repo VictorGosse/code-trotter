@@ -30,6 +30,5 @@ const otherTheme = {
     extendedWidth: '70%',
   },
 }
-console.log(otherTheme)
 
 export default otherTheme
