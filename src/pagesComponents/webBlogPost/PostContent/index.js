@@ -1,13 +1,13 @@
 import styled from 'styled-components'
-import { 
-  Header2 as AttiHeader2, 
+import {
+  Header2 as AttiHeader2,
   Header3 as AttiHeader3,
   Header4 as AttiHeader4,
   Header5 as AttiHeader5,
-  Link as AttiLink,
   Text as AttiText
 } from 'atti-components'
 
+import AutoLink from './AutoLink'
 import PostImage from './PostImage'
 
 const EM = styled('em')`
@@ -53,11 +53,6 @@ const Header5 = styled(AttiHeader5)`
 `
 
 const Image = styled(PostImage)`
-`
-
-const Link = styled(AttiLink).attrs({ target: '_blank', rel: 'noopener noreferrer' })`
-  font-size: ${({ theme }) => theme.fonts.fontSize.fs16};
-  line-height: 28px;
 `
 
 const List = styled(AttiText.withComponent('ul'))`
@@ -111,7 +106,7 @@ const Blockquote = styled('blockquote')`
     margin-right: ${({ theme }) => theme.spaces.s0_75};
     background-color: ${({ theme }) => theme.colors.darkGrey};
   }
-  
+
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 100%;
   }
@@ -122,6 +117,7 @@ const Blockquote = styled('blockquote')`
 `
 
 export {
+  AutoLink,
   Blockquote,
   EM,
   Header2,
@@ -129,7 +125,6 @@ export {
   Header4,
   Header5,
   Image,
-  Link,
   List,
   ListItem,
   Separator,
