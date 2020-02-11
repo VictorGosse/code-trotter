@@ -1,25 +1,25 @@
 import React from 'react'
 import RehypeReact from 'rehype-react'
-import { 
+import {
+  AutoLink,
   Blockquote,
   EM,
-  Header2, 
-  Header3, 
+  Header2,
+  Header3,
   Header4,
   Header5,
-  Image, 
-  Link, 
-  List, 
-  ListItem, 
-  Separator, 
-  Strong, 
+  Image,
+  List,
+  ListItem,
+  Separator,
+  Strong,
   Text,
 } from '@pagesComponents/webBlogPost/PostContent'
 
 const renderAst = new RehypeReact({
   createElement: React.createElement,
   components: {
-    a: Link,
+    a: AutoLink,
     blockquote: Blockquote,
     em: EM,
     h2: Header2,
