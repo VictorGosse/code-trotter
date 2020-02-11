@@ -19,6 +19,7 @@ const Travel = ({ data }) => (
     <SEO 
       description={data.contentfulBlogPost.description.description}
       title={data.contentfulBlogPost.title}
+      type="article"
     />
     <Header data={data.contentfulBlogPost} />
     <Container>

@@ -3,6 +3,7 @@ import {
   Header2 as AttiHeader2, 
   Header3 as AttiHeader3,
   Header4 as AttiHeader4,
+  Header5 as AttiHeader5,
   Link as AttiLink,
   Text as AttiText
 } from 'atti-components'
@@ -34,6 +35,15 @@ const Header3 = styled(AttiHeader3)`
 `
 
 const Header4 = styled(AttiHeader4)`
+  width: ${({ theme }) => theme.webBlogPost.basicWidth};
+  margin: ${({ theme }) => theme.spaces.s1_5} auto ${({ theme }) => theme.spaces.s0_75} auto;
+  font-weight: 700;
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
+    width: 100%;
+  }
+`
+
+const Header5 = styled(AttiHeader5)`
   width: ${({ theme }) => theme.webBlogPost.basicWidth};
   margin: ${({ theme }) => theme.spaces.s1_5} auto ${({ theme }) => theme.spaces.s0_75} auto;
   font-weight: 700;
@@ -99,7 +109,7 @@ const Blockquote = styled('blockquote')`
     display: block;
     width: 5px;
     margin-right: ${({ theme }) => theme.spaces.s0_75};
-    background-color: ${({ theme }) => theme.colors.darkSmoke};
+    background-color: ${({ theme }) => theme.colors.darkGrey};
   }
   
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
@@ -117,6 +127,7 @@ export {
   Header2,
   Header3,
   Header4,
+  Header5,
   Image,
   Link,
   List,

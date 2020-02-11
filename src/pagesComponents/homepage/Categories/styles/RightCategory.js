@@ -20,6 +20,7 @@ const RightCategory = styled('div')`
   }
 
   ${CategoryLink} {
+    right: 0;
     margin-right: 15%;
     margin-top: 13%;
     svg {
@@ -67,6 +68,7 @@ const RightCategory = styled('div')`
     justify-content: center;
     ${CategoryLink} {
       margin: 0;
+      right: auto;
     }
   }
 `
