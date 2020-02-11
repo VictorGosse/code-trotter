@@ -16,6 +16,42 @@ const WebBlogPost = ({ data }) => (
       lang="en"
       url={`${routes.root}${routes.web}/${data.contentfulWebBlogPost.slug}`}
       title={data.contentfulWebBlogPost.title}
+      type="article"
+
+      extraMeta={[
+        {
+          name: 'article:author',
+          content: ['Victor Gosse'],
+        },
+        {
+          name: 'article:modified_time',
+          content: data.contentfulWebBlogPost.updatedAt,
+        },
+        {
+          name: 'article:published_time',
+          content: data.contentfulWebBlogPost.publicationDateOG,
+        },
+        {
+          name: 'article:tag',
+          content: [...data.contentfulWebBlogPost.tags.split(',')],
+        },
+        {
+          name: 'twitter:label1',
+          content: 'Reading time',
+        },
+        {
+          name: 'twitter:data1',
+          content: `${data.contentfulWebBlogPost.content.childMarkdownRemark.timeToRead} min read`,
+        },
+        {
+          name: 'twitter:label2',
+          content: 'Topics',
+        },
+        {
+          name: 'twitter:data2',
+          content: data.contentfulWebBlogPost.tags,
+        },
+      ]}
     />
     <ArticleContainer>
       <Header article={data.contentfulWebBlogPost} />
@@ -34,8 +70,11 @@ export const pageQuery = graphql`
       title
       publicationDate: publicationDate(formatString: "DD/MM/YYYY")
       publicationDateFormatted: publicationDate(formatString: "DD-MM-YYYY")
+      publicationDateOG: publicationDate
+      updatedAt
       slug
       description
+      tags
       metaImage {
         file {
           url
