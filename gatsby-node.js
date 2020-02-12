@@ -20,6 +20,7 @@ exports.createPages = async function({ graphql, actions }) {
         component: path.resolve('src/templates/travelBlogPost.js'),
         context: {
           id: edge.node.id,
+          light: true,
         }
       })
     })
@@ -47,4 +48,13 @@ exports.createPages = async function({ graphql, actions }) {
       })
     })
   })
+}
+
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage } = actions
+
+  if (page.path === "/") {
+    page.context.light = true
+    createPage(page)
+  }
 }
