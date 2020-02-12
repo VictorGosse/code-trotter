@@ -44,6 +44,7 @@
   "devDependencies": {
     "cross-env": "^6.0.3",
     "date-fns": "^2.9.0",
+    "gatsby-plugin-force-trailing-slashes": "^1.0.4",
     "prettier": "^1.19.1"
   },
   "repository": {
