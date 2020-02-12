@@ -1,9 +1,9 @@
 const routes = {
   homepage: '/',
-  mentionsLegales: '/mentions-legales',
+  mentionsLegales: '/mentions-legales/',
   root: 'https://code-trotter.com',
-  travels: '/travels',
-  web: '/web',
+  travels: '/travels/',
+  web: '/web/',
 }
 
 export default routes

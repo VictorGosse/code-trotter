@@ -18,6 +18,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-force-trailing-slashes`,
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,
@@ -79,8 +80,8 @@ module.exports = {
                   title: edge.node.title,
                   description: edge.node.content.childMarkdownRemark.excerpt,
                   date: edge.node.publicationDate,
-                  url: site.siteMetadata.siteUrl + "web/" + edge.node.slug,
-                  guid: site.siteMetadata.siteUrl + "web/" + edge.node.slug,
+                  url: site.siteMetadata.siteUrl + "web/" + edge.node.slug + "/",
+                  guid: site.siteMetadata.siteUrl + "web/" + edge.node.slug + "/",
                   custom_elements: [{ 'content:encoded': edge.node.content.childMarkdownRemark.html }]
                 })
               })

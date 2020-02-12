@@ -47,7 +47,7 @@ const TravelsList = () => (
             <TextContainer>
               <Header2>{node.title}</Header2>
               { node.startDate && node.endDate && <TravelDates startDate={node.startDate} endDate={node.endDate} /> }
-              <SecondaryButton to={`${routes.travels}/${node.slug}`}>Lire l'article</SecondaryButton>
+              <SecondaryButton to={`${routes.travels}${node.slug}/`}>Lire l'article</SecondaryButton>
             </TextContainer>
           </TravelContainer>
         ))}
