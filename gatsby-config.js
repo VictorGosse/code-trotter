@@ -58,6 +58,12 @@ module.exports = {
       resolve: `gatsby-plugin-styled-components`,
     },
     {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: `${__dirname}/src/components/Layout/index.js`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-feed`,
       options: {
         query: `

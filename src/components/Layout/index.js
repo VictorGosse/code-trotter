@@ -6,9 +6,9 @@ import Footer from '../Footer'
 import Menu from '../Menu'
 import theme from './theme'
 
-const Layout = ({ children, light }) => (
+const Layout = ({ children, pageContext }) => (
   <ThemeProvider theme={mjTheme} otherTheme={theme}>
-    <Menu light={light} />
+    <Menu light={pageContext.light} />
     {children}
     <Footer />
   </ThemeProvider>
