@@ -18,6 +18,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
     `gatsby-plugin-force-trailing-slashes`,
     'gatsby-plugin-react-helmet',
     {

@@ -46,6 +46,7 @@
     "date-fns": "^2.9.0",
     "gatsby-plugin-force-trailing-slashes": "^1.0.4",
     "gatsby-plugin-layout": "^1.1.22",
+    "gatsby-plugin-robots-txt": "^1.5.0",
     "prettier": "^1.19.1"
   },
   "repository": {
