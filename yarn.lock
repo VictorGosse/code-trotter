@@ -1977,10 +1977,10 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-atti-components@^0.2.2-rc11:
-  version "0.2.2-rc11"
-  resolved "https://registry.yarnpkg.com/atti-components/-/atti-components-0.2.2-rc11.tgz#9dd7b9920d9bfc35ccab81f2df2e0dd04bd6db14"
-  integrity sha512-I/GaeLEMP8tzmvotgzfuXCbGk+76QuuklYBzP5+weW5UgyqsII3IZZaDGDbWUYp5BdA1J1qHRcHo2DBaRBOZfw==
+atti-components@^0.2.2-rc12:
+  version "0.2.2-rc12"
+  resolved "https://registry.yarnpkg.com/atti-components/-/atti-components-0.2.2-rc12.tgz#eeb74c46883075d9297fcaa833fbaa6e37e5539a"
+  integrity sha512-L2xH5Pa5a8wzW7GlqrefydlIAeL9k6cdKbbjG8tXxul4yL6gmTHuWI4TrJPW/K6H5yU6pgF6NBB8HSDWNmjK6w==
   dependencies:
     lodash "^4.17.10"
     polished "^3.4.1"

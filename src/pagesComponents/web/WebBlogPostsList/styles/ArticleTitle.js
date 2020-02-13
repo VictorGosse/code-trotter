@@ -7,9 +7,12 @@ const ArticleTitle = styled(Header2.withComponent('h1'))`
     color: ${({ theme }) => theme.colors.secondary};
     text-decoration: none;
     border-bottom: 1px solid transparent;
-    &:hover, &:visited, &:focus, &:active {
+    &:hover, &:focus, &:active {
       color: ${({ theme }) => theme.colors.secondary};
       border-color: ${({ theme }) => theme.colors.secondary};
+    }
+    &:visited {
+      color: ${({ theme }) => theme.components.link.colors.textVisited};
     }
   }
 `

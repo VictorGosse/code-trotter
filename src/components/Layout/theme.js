@@ -1,7 +1,7 @@
 const otherTheme = {
   colors: {
-    primary: 'rgb(33, 56, 224)',
-    secondary: '#2138E0',
+    primary: '#1129d8',
+    secondary: '#1129d8',
     tertiary: '#cf4410',
   },
   components: {
@@ -19,9 +19,10 @@ const otherTheme = {
       colors: {
         border: 'transparent',
         borderHover: 'currentColor',
+        textVisited: '#8b12e6',
       }
     }
-  }, 
+  },
 
   // Custom
   travelBlogPostWidth: '70%',

@@ -23,6 +23,9 @@ const TextContainer = styled('div')`
   ${SecondaryButton} {
     margin-top: ${({ theme }) => theme.spaces.s1_5};
     animation: all ease 1s;
+    &:visited {
+      color: ${({ theme }) => theme.colors.white};
+    }
   }
 `
 
