@@ -58,7 +58,7 @@ const WebBlogPost = ({ data }) => (
       <AssetContext.Provider value={data.allContentfulAsset}>
         {renderAst(data.contentfulWebBlogPost.content.childMarkdownRemark.htmlAst)}
       </AssetContext.Provider>
-      <Share slug={data.contentfulWebBlogPost.slug} title={data.contentfulWebBlogPost.title} />
+      <Share slug={data.contentfulWebBlogPost.slug + "/"} title={data.contentfulWebBlogPost.title} />
       <Bio />
     </ArticleContainer>
   </>
@@ -102,4 +102,4 @@ export const pageQuery = graphql`
   }
 `
 
-export default React.memo(WebBlogPost)
+export default WebBlogPost

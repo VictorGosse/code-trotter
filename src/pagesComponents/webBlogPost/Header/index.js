@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 
 import { Breadcrumb, TimeToRead } from '@components'
 import routes from '@config/routes'
@@ -9,6 +10,32 @@ import InfoContainer from './styles/InfoContainer'
 
 const Header = ({ article }) => (
   <>
+    <Helmet>
+      <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "${routes.root}"
+            },{
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Web",
+              "item": "${routes.root}${routes.web}"
+            },{
+              "@type": "ListItem",
+              "position": 3,
+              "name": "${article.title}",
+              "item": "${routes.root}${routes.web}${article.slug}/"
+            }]
+          }
+        `}
+      </script>
+    </Helmet>
     <ArticleTitle>{article.title}</ArticleTitle>
     <InfoContainer>
       <Breadcrumb
@@ -27,4 +54,4 @@ const Header = ({ article }) => (
   </>
 )
 
-export default React.memo(Header)
+export default Header

@@ -45,4 +45,4 @@ const Categories = () => (
   />
 )
 
-export default React.memo(Categories)
+export default Categories

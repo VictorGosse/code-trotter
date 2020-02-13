@@ -12,4 +12,4 @@ const TravelDates = ({className, endDate, startDate}) => (
   </DateContainer>
 )
 
-export default styled(React.memo(TravelDates))``
+export default styled(TravelDates)``

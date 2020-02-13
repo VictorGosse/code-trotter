@@ -23,7 +23,7 @@ const Travel = ({ data }) => (
     />
     <Header data={data.contentfulBlogPost} />
     <Container>
-      <Breadcrumb title={data.contentfulBlogPost.title} />
+      <Breadcrumb article={data.contentfulBlogPost} />
       <ArticleContainer>
         <AssetContext.Provider value={data.allContentfulAsset}>
           {renderAst(data.contentfulBlogPost.body.childMarkdownRemark.htmlAst)}
@@ -70,4 +70,4 @@ export const pageQuery = graphql`
   }
 `
 
-export default React.memo(Travel)
+export default Travel

@@ -52,4 +52,4 @@ const WebBlogPostsList = () => (
   />
 )
 
-export default React.memo(WebBlogPostsList)
+export default WebBlogPostsList

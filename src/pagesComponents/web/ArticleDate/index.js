@@ -10,4 +10,4 @@ const ArticleDate = ({ publicationDate, publicationDateFormatted }) => (
   </DateContainer>
 )
 
-export default React.memo(ArticleDate)
+export default ArticleDate

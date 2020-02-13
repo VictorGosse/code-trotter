@@ -56,4 +56,4 @@ const TravelsList = () => (
   />
 )
 
-export default React.memo(TravelsList)
+export default TravelsList

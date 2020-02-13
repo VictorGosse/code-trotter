@@ -19,4 +19,4 @@ const PostImage = ({ alt, src }) => (
   </AssetContext.Consumer>
 )
 
-export default React.memo(PostImage)
+export default PostImage
