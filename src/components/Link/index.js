@@ -12,6 +12,9 @@ const NewLink = styled(Text.withComponent(Link))`
   &:hover {
     border-color: ${({ theme }) => theme.components.link.colors.border};
   }
+  &:visited {
+    color: ${({ theme }) => theme.components.link.colors.textVisited};
+  }
 `
 
 export default NewLink
