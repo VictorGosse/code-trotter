@@ -7,4 +7,4 @@ const TimeToRead = ({ timeToRead, withSeparator = true }) => (
   </ReadTime>
 )
 
-export default React.memo(TimeToRead)
+export default TimeToRead

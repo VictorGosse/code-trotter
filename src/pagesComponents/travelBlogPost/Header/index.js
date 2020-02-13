@@ -16,4 +16,4 @@ const Header = ({ data }) => (
   </HeaderContainer>
 )
 
-export default React.memo(Header)
+export default Header

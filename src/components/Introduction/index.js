@@ -8,4 +8,4 @@ const Introduction = ({ title }) => (
   </>
 )
 
-export default React.memo(Introduction)
+export default Introduction
