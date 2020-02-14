@@ -9,9 +9,7 @@ import { Breadcrumb, Header } from '@pagesComponents/travelBlogPost'
 import AssetContext from '@pagesComponents/travelBlogPost/Context/asset-context.js'
 
 const ArticleContainer = styled('article')`
-  *:first-child {
-    margin-top: ${({ theme }) => theme.spaces.s2};
-  }
+  padding-top: ${({ theme }) => theme.spaces.s2};
 `
 
 const Travel = ({ data }) => (
