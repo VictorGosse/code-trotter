@@ -9,12 +9,14 @@ import {
 
 import AutoLink from './AutoLink'
 import PostImage from './PostImage'
+import { TitleWithAnchor } from '@components'
 
 const EM = styled('em')`
   font-style: italic;
 `
 
-const Header2 = styled(AttiHeader2)`
+const Header2 = styled(TitleWithAnchor).attrs(() => ({ Compo: AttiHeader2 }))`
+  position: relative;
   width: ${({ theme }) => theme.webBlogPost.basicWidth};
   margin: ${({ theme }) => theme.spaces.s3} auto ${({ theme }) => theme.spaces.s1} auto;
   font-weight: 700;
@@ -23,7 +25,8 @@ const Header2 = styled(AttiHeader2)`
   }
 `
 
-const Header3 = styled(AttiHeader3)`
+const Header3 = styled(TitleWithAnchor).attrs(() => ({ Compo: AttiHeader3 }))`
+  position: relative;
   width: ${({ theme }) => theme.webBlogPost.basicWidth};
   margin: ${({ theme }) => theme.spaces.s2} auto ${({ theme }) => theme.spaces.s0_75} auto;
   line-height: 30px;

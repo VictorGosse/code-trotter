@@ -1,14 +1,16 @@
 import styled from 'styled-components'
-import { 
-  Header2 as AttiHeader2, 
+import {
+  Header2 as AttiHeader2,
   Header3 as AttiHeader3,
-  Link as AttiLink, 
+  Link as AttiLink,
   Text as AttiText
 } from 'atti-components'
 
 import PostImage from './PostImage'
+import { TitleWithAnchor } from '@components'
 
-const Header2 = styled(AttiHeader2)`
+const Header2 = styled(TitleWithAnchor).attrs(() => ({ Compo: AttiHeader2 }))`
+  position: relative;
   width: ${({ theme }) => theme.travelBlogPostWidth};
   margin: ${({ theme }) => theme.spaces.s2} auto ${({ theme }) => theme.spaces.s0_75} auto;
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {

@@ -8,6 +8,7 @@ import Menu from './Menu'
 import SecondaryButton from './SecondaryButton'
 import SEO from './SEO'
 import TimeToRead from './TimeToRead'
+import TitleWithAnchor from './TitleWithAnchor'
 import TravelDates from './TravelDates'
 
 export {
@@ -21,5 +22,6 @@ export {
   SecondaryButton,
   SEO,
   TimeToRead,
+  TitleWithAnchor,
   TravelDates,
 }
