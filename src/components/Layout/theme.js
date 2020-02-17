@@ -23,6 +23,11 @@ const otherTheme = {
       }
     }
   },
+  layout: {
+    mobile: {
+      padding: 's2',
+    }
+  },
 
   // Custom
   travelBlogPostWidth: '70%',
