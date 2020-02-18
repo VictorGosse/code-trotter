@@ -3,7 +3,7 @@ import { Container } from 'atti-components'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import { SEO } from '@components'
+import { Layout, SEO } from '@components'
 import renderAst from '@helpers/renderAstTravels'
 import { Breadcrumb, Header } from '@pagesComponents/travelBlogPost'
 import AssetContext from '@pagesComponents/travelBlogPost/Context/asset-context.js'
@@ -13,7 +13,7 @@ const ArticleContainer = styled('article')`
 `
 
 const Travel = ({ data }) => (
-  <>
+  <Layout light>
     <SEO
       description={data.contentfulBlogPost.description.description}
       title={data.contentfulBlogPost.title}
@@ -28,7 +28,7 @@ const Travel = ({ data }) => (
         </AssetContext.Provider>
       </ArticleContainer>
     </Container>
-  </>
+  </Layout>
 )
 
 export const pageQuery = graphql`
