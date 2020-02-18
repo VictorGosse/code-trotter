@@ -1,14 +1,15 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "code-trotter",
+  "description": "code-trotter.com website about travels and web development",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Victor Gosse",
   "dependencies": {
     "atti-components": "^0.2.2-rc12",
     "gatsby": "^2.18.21",
     "gatsby-image": "^2.2.38",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-feed": "^2.3.26",
+    "gatsby-plugin-force-trailing-slashes": "^1.0.4",
     "gatsby-plugin-manifest": "^2.2.41",
     "gatsby-plugin-offline": "^3.0.35",
     "gatsby-plugin-react-helmet": "^3.1.21",
@@ -16,6 +17,7 @@
     "gatsby-plugin-sitemap": "^2.2.25",
     "gatsby-plugin-styled-components": "^3.1.17",
     "gatsby-remark-prismjs": "^3.3.30",
+    "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-source-contentful": "^2.1.76",
     "gatsby-source-filesystem": "^2.1.46",
     "gatsby-transformer-remark": "^2.6.48",
@@ -30,7 +32,9 @@
     "styled-components": "^5.0.1"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "travels",
+    "web"
   ],
   "license": "MIT",
   "scripts": {
@@ -44,12 +48,10 @@
   "devDependencies": {
     "cross-env": "^7.0.0",
     "date-fns": "^2.9.0",
-    "gatsby-plugin-force-trailing-slashes": "^1.0.4",
-    "gatsby-plugin-robots-txt": "^1.5.0",
     "prettier": "^1.19.1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/akaala/code-trotter"
   }
 }
