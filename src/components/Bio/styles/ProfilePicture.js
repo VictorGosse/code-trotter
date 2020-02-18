@@ -4,10 +4,10 @@ import Img from 'gatsby-image'
 const ProfilePicture = styled(Img)`
   border-radius: 50%;
   object-fit: cover;
-  height: 90px;
-  width: 90px;
-  min-height: 90px;
-  min-width: 90px;
+  height: 120px;
+  width: 120px;
+  min-height: 120px;
+  min-width: 120px;
   flex-grow: 1;
 `
 

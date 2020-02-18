@@ -10,8 +10,8 @@ const ProfileContainer = styled('div')`
     margin-left: ${({ theme }) => theme.spaces.s1_5};
   }
   ${Link}, ${Name} {
-    line-height: 16px;
-    font-size: 14px;
+    line-height: 22px;
+    font-size:  ${({ theme }) => theme.fonts.fontSize.fs16};
   }
   ${Link} {
     display: inline-block;

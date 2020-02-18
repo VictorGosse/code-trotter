@@ -91,8 +91,7 @@ const Text = styled(AttiText)`
   display: block;
   width: ${({ theme }) => theme.webBlogPost.basicWidth};
   margin: auto;
-  font-size: ${({ theme }) => theme.fonts.fontSize.fs16};
-  line-height: 28px;
+  margin-bottom: ${({ theme }) => theme.spaces.s1};
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 100%;
   }
@@ -107,7 +106,7 @@ const Blockquote = styled('blockquote')`
     display: block;
     width: 5px;
     margin-right: ${({ theme }) => theme.spaces.s0_75};
-    background-color: ${({ theme }) => theme.colors.darkGrey};
+    background-color: ${({ theme }) => theme.colors.tertiary};
   }
 
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
@@ -116,6 +115,7 @@ const Blockquote = styled('blockquote')`
 
   > ${Text} {
     width: 100%;
+    margin-bottom: 0;
   }
 `
 

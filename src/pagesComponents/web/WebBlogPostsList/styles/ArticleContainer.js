@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Text } from 'atti-components'
 
 const ArticleContainer = styled('article')`
   margin: ${({ theme }) => theme.spaces.s2} 0;
@@ -9,12 +8,9 @@ const ArticleContainer = styled('article')`
       display: block;
       width: 150px;
       height: 3px;
-      background-color: ${({ theme }) => theme.colors.black};
+      background-color: ${({ theme }) => theme.colors.secondary};
       margin: ${({ theme }) => theme.spaces.s2} auto;
     }
-  }
-  ${Text} {
-    font-size: ${({ theme }) => theme.fonts.fontSize.fs16};;
   }
 `
 

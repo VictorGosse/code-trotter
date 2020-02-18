@@ -62,7 +62,7 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -76,8 +76,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
@@ -88,12 +88,13 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
 body {
   line-height: 1;
+  /*background-color: #fafafa;*/
 }
 ol, ul {
   list-style: none;
@@ -122,14 +123,137 @@ table {
 }
 
 body :not(pre) > code[class*="language-"] {
-  padding: 0.1em 0.3em;
+  padding: 0.1em 0.6em;
   white-space: nowrap;
-  background-color: rgba(252, 222, 76, 0.5);
-  color: #1F2D3D;
+  background-color: rgba(153, 128, 250, 0.1);
+  color: #9980fa;
 }
 
 @media only screen and (max-width: 767px) {
   body :not(pre) > code[class*="language-"] {
     white-space: normal;
   }
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #f2f2f7;
+  font-size: 18px;
+}
+
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #9294a3;
+}
+
+.token.punctuation {
+  color: #9294a3;
+}
+
+.token.selector,
+.token.tag,
+.token.namespace,
+.token.deleted {
+  color: #75f7a6;
+}
+
+.token.function-name {
+  color: #6196cc;
+}
+
+.token.attr-name,
+.token.boolean,
+.token.number,
+.token.function {
+  color: #12cbc4;
+}
+
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+  color: #ff767b;
+}
+
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin {
+  color: #FFC312;
+}
+
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.variable {
+  color: #b9a7ff;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+  color: #ff8d58;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.inserted {
+  color: green;
+}
+
+pre[class*="language-"].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em; /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #8c9cad;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+.line-numbers-rows > span {
+  pointer-events: none;
+  display: block;
+  counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: #8c9cad;
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
 }
