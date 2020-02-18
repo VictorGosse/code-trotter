@@ -18,7 +18,24 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-sitemap`,
-    `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-robots-txt`,{
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Code-trotter`,
+        short_name: `Code-trotter`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#ffffff`,
+        display: `standalone`,
+        icon: `src/images/favicon.png`
+      },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/mentions-legales/`, `/web/`, `/travels/`],
+      },
+    },
     `gatsby-plugin-force-trailing-slashes`,
     'gatsby-plugin-react-helmet',
     {
@@ -52,7 +69,7 @@ module.exports = {
       options: {
         spaceId: CONTENTFUL_SPACEID,
         accessToken: CONTENTFUL_ACCESS_TOKEN,
-        //host: `preview.contentful.com`,
+       //host: `preview.contentful.com`,
       },
     },
     {
