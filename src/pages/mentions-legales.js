@@ -1,11 +1,11 @@
 import React from 'react'
 import { Container, Header2, Header3, Text } from 'atti-components'
 
-import { Introduction, SEO } from '@components'
+import { Introduction, Layout, SEO } from '@components'
 
 
 const MentionsLegales = () => (
-  <>
+  <Layout>
     <SEO
       description="Mention légales"
       keywords={[]}
@@ -44,7 +44,7 @@ const MentionsLegales = () => (
       <Text>Vous pouvez également supprimer les cookies à tout moment et individuellement en vous rapportant au manuel d'utilisation de votre navigateur.</Text><br /><br />
       <Text>© Victor Gosse 2019</Text>
     </Container>
-  </>
+  </Layout>
 )
 
 export default MentionsLegales

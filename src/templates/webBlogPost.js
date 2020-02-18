@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import { Bio, SEO } from '@components'
+import { Bio, Layout, SEO } from '@components'
 import routes from '@config/routes'
 import renderAst from '@helpers/renderAstWeb'
 import { ArticleContainer, Header, Share } from '@pagesComponents/webBlogPost'
@@ -9,7 +9,7 @@ import AssetContext from '@pagesComponents/webBlogPost/Context/asset-context.js'
 
 
 const WebBlogPost = ({ data }) => (
-  <>
+  <Layout>
     <SEO
       description={data.contentfulWebBlogPost.description}
       image={data.contentfulWebBlogPost.metaImage.file.url}
@@ -61,7 +61,7 @@ const WebBlogPost = ({ data }) => (
       <Share slug={data.contentfulWebBlogPost.slug + "/"} title={data.contentfulWebBlogPost.title} />
       <Bio />
     </ArticleContainer>
-  </>
+  </Layout>
 )
 
 export const pageQuery = graphql`
