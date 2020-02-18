@@ -9,7 +9,7 @@ import AssetContext from '@pagesComponents/webBlogPost/Context/asset-context.js'
 
 
 const WebBlogPost = ({ data }) => (
-  <Layout>
+  <Layout web>
     <SEO
       description={data.contentfulWebBlogPost.description}
       image={data.contentfulWebBlogPost.metaImage.file.url}

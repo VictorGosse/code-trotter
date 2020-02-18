@@ -4,8 +4,8 @@ import { Text } from 'atti-components'
 const ShareContainer = styled(Text)`
   width: ${({ theme }) => theme.webBlogPost.basicWidth};
   text-align: center;
-  margin: ${({ theme }) => theme.spaces.s3} auto ${({ theme }) => theme.spaces.s0_75} auto;
-  background-color: ${({ theme }) => theme.colors.lighterNeutral};
+  margin: ${({ theme }) => theme.spaces.s4} auto ${({ theme }) => theme.spaces.s0_75} auto;
+  background-color: #e5edf6;
   padding: ${({ theme }) => theme.spaces.s1_5};
   display: flex;
   align-items: center;

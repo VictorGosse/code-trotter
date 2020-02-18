@@ -1,5 +1,5 @@
-require("./src/styles/global.css")
 require("prismjs/themes/prism-tomorrow.css")
+require("./src/styles/global.css")
 
 exports.onRouteUpdate = ({ location }) => {
   checkHash(location)

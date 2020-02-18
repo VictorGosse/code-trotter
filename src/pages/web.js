@@ -6,7 +6,7 @@ import { WebBlogPostsList } from '@pagesComponents/web'
 
 
 const Web = () => (
-  <Layout>
+  <Layout web>
     <SEO
       description="You can find here multiple articles related to front-end development, web development, project management, etc."
       keywords={["web", "articles", "development", "HTML", "CSS", "JavaScript", "React", "project management", "integration"]}

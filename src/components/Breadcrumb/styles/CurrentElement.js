@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 const fonts = css`
-  font-size: 14px;
+  font-size: ${({ theme }) => theme.components.text.normal.fonts.fontSize};
   font-weight: 100;
   font-family: "Roboto";
 `
