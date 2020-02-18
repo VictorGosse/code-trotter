@@ -15,8 +15,8 @@ const Web = () => (
     />
     <Container>
       <Introduction title="Web development" />
-      <WebBlogPostsList />
     </Container>
+    <WebBlogPostsList />
   </Layout>
 )
 

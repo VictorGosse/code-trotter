@@ -7,14 +7,14 @@ const HeaderTextContainer = styled(Container)`
   flex-direction: column;
   align-items: center;
   margin: 300px 0;
-  
+
   ${Header1} {
     ${({theme}) => `
       color: ${theme.colors.white};
       font-size: ${theme.fonts.fontSize.fs48};
       line-height: ${theme.fonts.lineHeight.lh56};
       font-weight: ${theme.fonts.fontWeight.fw700};
-      margin-bottom: ${theme.spaces.s0_25};
+      margin-bottom: ${theme.spaces.s1};
     `}
     text-transform: uppercase;
     text-align: center;
