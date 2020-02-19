@@ -44,6 +44,11 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },{
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: path.resolve(__dirname, 'src/components/Layout/index.js'),
+      },
     },
     'gatsby-transformer-sharp',
     {

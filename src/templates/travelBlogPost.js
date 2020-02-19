@@ -3,7 +3,9 @@ import { Container } from 'atti-components'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import { Layout, SEO } from '@components'
+import { SEO } from '@components'
+import { useLightMenu } from '@components/Layout/context/LightMenuContext'
+import { useThemeApp } from '@components/Layout/context/ThemeAppContext'
 import renderAst from '@helpers/renderAstTravels'
 import { Breadcrumb, Header } from '@pagesComponents/travelBlogPost'
 import AssetContext from '@pagesComponents/travelBlogPost/Context/asset-context.js'
@@ -12,24 +14,29 @@ const ArticleContainer = styled('article')`
   padding-top: ${({ theme }) => theme.spaces.s2};
 `
 
-const Travel = ({ data }) => (
-  <Layout light>
-    <SEO
-      description={data.contentfulBlogPost.description.description}
-      title={data.contentfulBlogPost.title}
-      type="article"
-    />
-    <Header data={data.contentfulBlogPost} />
-    <Container>
-      <Breadcrumb article={data.contentfulBlogPost} />
-      <ArticleContainer>
-        <AssetContext.Provider value={data.allContentfulAsset}>
-          {renderAst(data.contentfulBlogPost.body.childMarkdownRemark.htmlAst)}
-        </AssetContext.Provider>
-      </ArticleContainer>
-    </Container>
-  </Layout>
-)
+const Travel = ({ data }) => {
+  useLightMenu().setLightMenu(true)
+  useThemeApp().setThemeApp("")
+
+  return (
+    <>
+      <SEO
+        description={data.contentfulBlogPost.description.description}
+        title={data.contentfulBlogPost.title}
+        type="article"
+      />
+      <Header data={data.contentfulBlogPost} />
+      <Container>
+        <Breadcrumb article={data.contentfulBlogPost} />
+        <ArticleContainer>
+          <AssetContext.Provider value={data.allContentfulAsset}>
+            {renderAst(data.contentfulBlogPost.body.childMarkdownRemark.htmlAst)}
+          </AssetContext.Provider>
+        </ArticleContainer>
+      </Container>
+    </>
+  )
+}
 
 export const pageQuery = graphql`
   query($id: String!) {
