@@ -2,18 +2,21 @@ import React from 'react'
 import { useTheme } from 'styled-components'
 
 import routes from '@config/routes'
+import { useLightMenu } from '@components/Layout/context/LightMenuContext'
 
 import MenuContainer from './styles/MenuContainer'
 import MenuLink from './styles/MenuLink'
 
-const Menu = ({ light }) => {
+const Menu = () => {
   const theme = useTheme()
+  const { lightMenu } = useLightMenu()
+
   if (typeof window !== "undefined") {
     window.theme = theme
   }
 
   return (
-    <MenuContainer light={light}>
+    <MenuContainer light={lightMenu}>
       <MenuLink to={routes.homepage}>Home</MenuLink>
 
       <div>
