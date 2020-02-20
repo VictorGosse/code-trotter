@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const WhiteSeparator = styled('div')`
   width: calc(60% + 10px);
   float: left;
-  background-color: white;
+  background-color: ${({ theme }) => theme.appBackground};
   height: 100%;
   position: absolute;
   z-index: 1;

@@ -1,4 +1,4 @@
-const otherTheme = {
+const defaultTheme = {
   colors: {
     primary: '#1129d8',
     secondary: '#1129d8',
@@ -30,6 +30,7 @@ const otherTheme = {
   },
 
   // Custom
+  appBackground: 'white',
   travelBlogPostWidth: '70%',
   webBlogPost: {
     basicWidth: '50%',
@@ -37,4 +38,4 @@ const otherTheme = {
   },
 }
 
-export default otherTheme
+export default defaultTheme

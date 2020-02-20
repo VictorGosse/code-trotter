@@ -2,17 +2,16 @@ import React from 'react'
 import { Container } from 'atti-components'
 
 import { Introduction, SEO } from '@components'
-import { useLightMenu } from '@components/Layout/context/LightMenuContext'
-import { useThemeApp } from '@components/Layout/context/ThemeAppContext'
+import WebProvider from '@components/WebProvider'
 import { WebBlogPostsList } from '@pagesComponents/web'
+import { useLightMenu } from '@components/Layout/context/LightMenuContext'
 
 
 const Web = () => {
   useLightMenu().setLightMenu(false)
-  useThemeApp().setThemeApp("web")
 
   return (
-    <>
+    <WebProvider>
       <SEO
         description="You can find here multiple articles related to front-end development, web development, project management, etc."
         keywords={["web", "articles", "development", "HTML", "CSS", "JavaScript", "React", "project management", "integration"]}
@@ -23,7 +22,7 @@ const Web = () => {
         <Introduction title="Web development" />
       </Container>
       <WebBlogPostsList />
-    </>
+    </WebProvider>
   )
 }
 

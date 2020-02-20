@@ -2,8 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import { Bio, SEO } from '@components'
+import WebProvider from '@components/WebProvider'
 import { useLightMenu } from '@components/Layout/context/LightMenuContext'
-import { useThemeApp } from '@components/Layout/context/ThemeAppContext'
 import routes from '@config/routes'
 import renderAst from '@helpers/renderAstWeb'
 import { ArticleContainer, Header, Share } from '@pagesComponents/webBlogPost'
@@ -12,10 +12,9 @@ import AssetContext from '@pagesComponents/webBlogPost/Context/asset-context.js'
 
 const WebBlogPost = ({ data }) => {
   useLightMenu().setLightMenu(false)
-  useThemeApp().setThemeApp("web")
 
   return (
-    <>
+    <WebProvider>
       <SEO
         description={data.contentfulWebBlogPost.description}
         image={data.contentfulWebBlogPost.metaImage.file.url}
@@ -67,7 +66,7 @@ const WebBlogPost = ({ data }) => {
         <Share slug={data.contentfulWebBlogPost.slug + "/"} title={data.contentfulWebBlogPost.title} />
         <Bio />
       </ArticleContainer>
-    </>
+    </WebProvider>
   )
 }
 

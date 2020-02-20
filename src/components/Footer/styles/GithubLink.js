@@ -6,6 +6,9 @@ const GithubLink = styled(Link)`
   border-bottom: 0;
   top: 3px;
   position: relative;
+  svg path {
+    fill: ${({ theme }) => theme.colors.black};
+  }
 `
 
 export default GithubLink

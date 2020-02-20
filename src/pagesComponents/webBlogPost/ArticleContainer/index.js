@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Container } from 'atti-components'
 
 const ArticleContainer = styled(Container.withComponent('article'))`
-  margin-top: ${({ theme }) => theme.spaces.s4};
+  padding-top: ${({ theme }) => theme.spaces.s4};
   pre {
     width: ${({ theme }) => theme.webBlogPost.basicWidth};
     margin: ${({ theme }) => theme.spaces.s1_5} auto ${({ theme }) => theme.spaces.s1_5} auto;

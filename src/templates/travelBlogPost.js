@@ -5,7 +5,6 @@ import styled from 'styled-components'
 
 import { SEO } from '@components'
 import { useLightMenu } from '@components/Layout/context/LightMenuContext'
-import { useThemeApp } from '@components/Layout/context/ThemeAppContext'
 import renderAst from '@helpers/renderAstTravels'
 import { Breadcrumb, Header } from '@pagesComponents/travelBlogPost'
 import AssetContext from '@pagesComponents/travelBlogPost/Context/asset-context.js'
@@ -16,7 +15,6 @@ const ArticleContainer = styled('article')`
 
 const Travel = ({ data }) => {
   useLightMenu().setLightMenu(true)
-  useThemeApp().setThemeApp("")
 
   return (
     <>

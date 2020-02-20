@@ -94,7 +94,6 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
-  /*background-color: #fafafa;*/
 }
 ol, ul {
   list-style: none;
@@ -139,6 +138,7 @@ code[class*="language-"],
 pre[class*="language-"] {
   color: #f2f2f7;
   font-size: 18px;
+  background: #232323;
 }
 
 
