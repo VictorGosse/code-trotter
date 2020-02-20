@@ -1,8 +1,10 @@
-const webTheme = {
+const webThemeDark = {
   colors: {
     primary: '#12cbc4',
     secondary: '#9980fa',
     tertiary: '#ffc312',
+    black: 'rgba(255, 255, 255, 0.88)',
+    lightBlack: 'rgba(255, 255, 255, 0.88)',
   },
   components: {
     header1: {
@@ -46,11 +48,13 @@ const webTheme = {
   },
 
   // Custom
+  appBackground: 'white',
   travelBlogPostWidth: '70%',
+  shareBackground: '#232323',
   webBlogPost: {
     basicWidth: '50%',
     extendedWidth: '70%',
   },
 }
 
-export default webTheme
+export default webThemeDark

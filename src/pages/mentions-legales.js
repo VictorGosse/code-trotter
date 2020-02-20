@@ -3,12 +3,10 @@ import { Container, Header2, Header3, Text } from 'atti-components'
 
 import { Introduction, SEO } from '@components'
 import { useLightMenu } from '@components/Layout/context/LightMenuContext'
-import { useThemeApp } from '@components/Layout/context/ThemeAppContext'
 
 
 const MentionsLegales = () =>  {
   useLightMenu().setLightMenu(false)
-  useThemeApp().setThemeApp("")
 
   return (
     <>

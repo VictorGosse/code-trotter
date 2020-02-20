@@ -4,11 +4,9 @@ import { Container } from 'atti-components'
 import { TravelsList } from '@pagesComponents/travels'
 import { Introduction, SEO } from '@components'
 import { useLightMenu } from '@components/Layout/context/LightMenuContext'
-import { useThemeApp } from '@components/Layout/context/ThemeAppContext'
 
 const Travels = () =>  {
   useLightMenu().setLightMenu(false)
-  useThemeApp().setThemeApp("")
 
   return (
     <>

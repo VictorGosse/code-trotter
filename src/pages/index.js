@@ -2,12 +2,10 @@ import React from 'react'
 
 import { SEO } from '@components'
 import { useLightMenu } from '@components/Layout/context/LightMenuContext'
-import { useThemeApp } from '@components/Layout/context/ThemeAppContext'
 import { Categories } from '@pagesComponents/homepage'
 
 const Index = () => {
   useLightMenu().setLightMenu(true)
-  useThemeApp().setThemeApp("")
 
   return (
     <>

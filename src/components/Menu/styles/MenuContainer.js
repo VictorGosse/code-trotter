@@ -12,11 +12,12 @@ const MenuContainer = styled('nav')`
   justify-content: space-between;
   align-items: center;
   z-index: 10;
+  background-color: transparent;
 
   ${MenuLink} {
-    color: ${({ light }) => light ? 'white' : 'black'};
+    color: ${({ theme, light }) => light ? theme.colors.white : theme.colors.black};
   }
-  
+
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     padding: ${({ theme }) => theme.spaces.s1} ${({ theme }) => theme.spaces.s0_75};
     ${MenuLink}:first-child {

@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { ThemeAppProvider } from '../context/ThemeAppContext'
+import { DarkThemeProvider } from '../context/DarkThemeContext'
 import { LightMenuProvider } from '../context/LightMenuContext'
 
 const Provider = ({ children }) => (
   <LightMenuProvider>
-    <ThemeAppProvider>
+    <DarkThemeProvider>
       {children}
-    </ThemeAppProvider>
+    </DarkThemeProvider>
   </LightMenuProvider>
 )
 

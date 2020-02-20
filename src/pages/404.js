@@ -3,11 +3,9 @@ import { Container, Text } from 'atti-components'
 
 import { Introduction, SEO } from '@components'
 import { useLightMenu } from '@components/Layout/context/LightMenuContext'
-import { useThemeApp } from '@components/Layout/context/ThemeAppContext'
 
 const NotFoundPage = () => {
   useLightMenu().setLightMenu(false)
-  useThemeApp().setThemeApp("")
 
   return (
     <>
