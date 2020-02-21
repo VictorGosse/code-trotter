@@ -3,6 +3,10 @@ import { Container } from 'atti-components'
 
 const ArticleContainer = styled(Container.withComponent('article'))`
   padding-top: ${({ theme }) => theme.spaces.s4};
+
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.tabletMax}) {
+    padding-top: ${({ theme }) => theme.spaces.s4};
+  }
   pre {
     width: ${({ theme }) => theme.webBlogPost.basicWidth};
     margin: ${({ theme }) => theme.spaces.s1_5} auto ${({ theme }) => theme.spaces.s1_5} auto;
