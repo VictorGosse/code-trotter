@@ -48,12 +48,16 @@ const Text = styled(AttiText)`
   margin: auto;
   font-size: ${({ theme }) => theme.fonts.fontSize.fs16};
   line-height: 28px;
+  margin-bottom: 20px;
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 100%;
   }
 
   strong {
     font-weight: 700;
+    @media (prefers-color-scheme: dark) {
+      color: ${({theme}) => theme.colors.strong};
+    }
   }
 `
 

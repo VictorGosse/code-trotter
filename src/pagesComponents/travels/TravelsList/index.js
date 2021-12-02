@@ -21,7 +21,7 @@ const TravelsList = () => (
               endDate(formatString: "DD/MM/YYYY")
               heroImage {
                 description
-                fluid(quality: 100, maxWidth: 1200) {
+                fluid(quality: 85, maxWidth: 1200) {
                   ...GatsbyContentfulFluid_withWebp
                 }
                 title
@@ -43,7 +43,7 @@ const TravelsList = () => (
       <>
         {map(data.allContentfulBlogPost.edges, ({node}) => (
           <TravelContainer key={node.slug}>
-            <HeroImage fluid={node.heroImage.fluid} alt="" />
+            {node.heroImage?.fluid && <HeroImage fluid={node.heroImage?.fluid} alt="" />}
             <TextContainer>
               <Header2>{node.title}</Header2>
               { node.startDate && node.endDate && <TravelDates startDate={node.startDate} endDate={node.endDate} /> }

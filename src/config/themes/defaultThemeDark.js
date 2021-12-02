@@ -2,6 +2,7 @@ const defaultThemeDark = {
   colors: {
     primary: '#84c1ff',
     secondary: '#1129d8',
+    strong: '#ffd2b7',
     tertiary: '#cf4410',
     black: 'rgba(255, 255, 255, 0.88)',
     lightBlack: 'rgba(255, 255, 255, 0.88)',

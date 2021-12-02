@@ -43,7 +43,7 @@ export const pageQuery = graphql`
       startDate: startDate(formatString: "DD/MM/YYYY")
       endDate: endDate(formatString: "DD/MM/YYYY")
       heroImage {
-        fluid(quality: 100, maxWidth: 1600) {
+        fluid(quality: 85, maxWidth: 1600) {
           ...GatsbyContentfulFluid_withWebp
         }
       }
@@ -64,7 +64,7 @@ export const pageQuery = graphql`
           file {
             url
           }
-          fluid(quality: 100, maxWidth: 1600) {
+          fluid(quality: 85, maxWidth: 1000) {
             ...GatsbyContentfulFluid_withWebp
           }
         }
