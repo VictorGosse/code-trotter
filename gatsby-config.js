@@ -4,7 +4,7 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-const { CONTENTFUL_SPACEID, CONTENTFUL_ACCESS_TOKEN } = process.env;
+const { CONTENTFUL_ACCESS_TOKEN, CONTENTFUL_ENV, CONTENTFUL_SPACEID } = process.env;
 
 module.exports = {
   siteMetadata: {
@@ -74,7 +74,7 @@ module.exports = {
       options: {
         spaceId: CONTENTFUL_SPACEID,
         accessToken: CONTENTFUL_ACCESS_TOKEN,
-        //host: `preview.contentful.com`,
+        ...(CONTENTFUL_ENV === 'dev' ? {host: `preview.contentful.com`} : {}),
       },
     },
     {
