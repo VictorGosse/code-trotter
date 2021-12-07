@@ -7,7 +7,9 @@ const ArticleTitle = styled(Header2.withComponent('h1'))`
     color: ${({ theme }) => theme.colors.primary};
     text-decoration: none;
     border-bottom: 1px solid transparent;
-    &:hover, &:focus, &:active {
+    &:hover,
+    &:focus,
+    &:active {
       color: ${({ theme }) => theme.colors.primary};
       border-color: currentColor;
     }

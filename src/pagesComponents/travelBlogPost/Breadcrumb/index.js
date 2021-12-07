@@ -40,7 +40,7 @@ const BreadcrumbTravel = ({ article }) => (
           { name: 'Voyages', url: routes.travels },
           { name: article.title },
         ]}
-        separator='>'
+        separator=">"
       />
     </BreadcrumbContainer>
   </>

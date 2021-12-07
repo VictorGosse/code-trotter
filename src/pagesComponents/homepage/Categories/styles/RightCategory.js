@@ -60,7 +60,7 @@ const RightCategory = styled('div')`
       margin-right: ${({ theme }) => theme.spaces.s0_75};
     }
   }
-  
+
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     width: 100%;
     height: 500px;

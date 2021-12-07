@@ -5,14 +5,14 @@ import { TravelsList } from '@pagesComponents/travels'
 import { Introduction, SEO } from '@components'
 import { useLightMenu } from '@components/Layout/context/LightMenuContext'
 
-const Travels = () =>  {
+const Travels = () => {
   useLightMenu().setLightMenu(false)
 
   return (
     <>
       <SEO
         description="Vous pouvez retrouver ici les récits de mes voyages à travers le monde."
-        keywords={["voyages", "monde", "travels"]}
+        keywords={['voyages', 'monde', 'travels']}
         title="Mes voyages"
       />
       <Container>

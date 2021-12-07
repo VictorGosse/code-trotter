@@ -7,8 +7,7 @@ const InternalLink = styled(Text.withComponent(Link))`
   line-height: 28px;
   color: ${({ theme }) => theme.components.link.colors.text};
   text-decoration: none;
-  border-bottom: ${({ theme }) => theme.components.link.borders.width} solid
-    transparent;
+  border-bottom: ${({ theme }) => theme.components.link.borders.width} solid transparent;
 
   &:hover {
     border-color: ${({ theme }) => theme.components.link.colors.border};

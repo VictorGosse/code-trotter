@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
-const getImageSize = ratio => {
+const getImageSize = (ratio) => {
   if (ratio < 1) {
     return css`
       width: 50%;
@@ -24,7 +24,7 @@ const getImageSize = ratio => {
   }
 }
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   ${({ ratio }) => getImageSize(ratio)};
   object-fit: cover;
   display: block;

@@ -22,19 +22,24 @@ const Bio = () => (
             }
           }
           profilePicture {
-            fluid(quality: 100, maxWidth: 1600) {
-              ...GatsbyContentfulFluid_withWebp
-            }
+            gatsbyImageData(width: 1600, placeholder: BLURRED, formats: [WEBP])
           }
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <BioContainer>
-        <ProfilePicture alt="" fluid={data.contentfulBio.profilePicture.fluid} />
+        <ProfilePicture alt="" image={data.contentfulBio.profilePicture.gatsbyImageData} />
         <ProfileContainer>
           <Name>{data.contentfulBio.name}</Name>
-          <Link target="_blank" rel="noopener noreferrer" href={`https://twitter.com/${data.contentfulBio.twitter}`}>@{data.contentfulBio.twitter}</Link><br />
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href={`https://twitter.com/${data.contentfulBio.twitter}`}
+          >
+            @{data.contentfulBio.twitter}
+          </Link>
+          <br />
           {renderAst(data.contentfulBio.description.childMarkdownRemark.htmlAst)}
         </ProfileContainer>
       </BioContainer>

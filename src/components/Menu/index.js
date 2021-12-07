@@ -21,11 +21,11 @@ const Menu = () => {
   const { lightMenu } = useLightMenu()
   const { setDarkTheme } = useDarkTheme()
 
-  if (typeof window !== "undefined") {
+  if (typeof window !== 'undefined') {
     window.theme = theme
   }
 
-  const onChangeSwitch = event => {
+  const onChangeSwitch = (event) => {
     setDarkTheme(event.target.checked)
   }
 
@@ -38,7 +38,12 @@ const Menu = () => {
         <MenuLink to={routes.web}>Web</MenuLink>
         <SwitchContainer>
           <ThemeSwitch for="lightDark">
-            <Checkbox checked={useDarkTheme().darkTheme} onChange={onChangeSwitch} type="checkbox" id="lightDark" />
+            <Checkbox
+              checked={useDarkTheme().darkTheme}
+              onChange={onChangeSwitch}
+              type="checkbox"
+              id="lightDark"
+            />
             <Slider />
             <HiddenLabel>Enable Dark Mode!</HiddenLabel>
           </ThemeSwitch>

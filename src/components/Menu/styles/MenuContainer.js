@@ -15,7 +15,7 @@ const MenuContainer = styled('nav')`
   background-color: transparent;
 
   ${MenuLink} {
-    color: ${({ theme, light }) => light ? theme.colors.white : theme.colors.black};
+    color: ${({ theme, light }) => (light ? theme.colors.white : theme.colors.black)};
   }
 
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {

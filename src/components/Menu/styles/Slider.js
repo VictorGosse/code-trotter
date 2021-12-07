@@ -8,17 +8,17 @@ const Slider = styled('div')`
   left: 0;
   right: 0;
   top: 0;
-  transition: .3s;
+  transition: 0.3s;
   border-radius: 34px;
   &:before {
     position: absolute;
     background-color: ${({ theme }) => theme.colors.white};
-    content: " ";
+    content: ' ';
     height: calc(${({ theme }) => theme.spaces.s1_5} - 4px);
     width: calc(${({ theme }) => theme.spaces.s1_5} - 4px);
     bottom: 2px;
     left: 4px;
-    transition: .3s;
+    transition: 0.3s;
     border-radius: 50%;
   }
 `

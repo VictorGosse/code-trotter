@@ -9,7 +9,9 @@ const Anchor = styled(Link)`
   color: inherit;
   opacity: 0.3;
 
-  &:hover, &:active, &:focus {
+  &:hover,
+  &:active,
+  &:focus {
     opacity: 1;
     color: inherit;
   }

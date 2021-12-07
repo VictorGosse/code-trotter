@@ -3,7 +3,7 @@ import {
   Header2 as AttiHeader2,
   Header3 as AttiHeader3,
   Link as AttiLink,
-  Text as AttiText
+  Text as AttiText,
 } from 'atti-components'
 
 import PostImage from './PostImage'
@@ -26,8 +26,7 @@ const Header3 = styled(AttiHeader3)`
   }
 `
 
-const Image = styled(PostImage)`
-`
+const Image = styled(PostImage)``
 
 const Link = styled(AttiLink).attrs({ target: '_blank', rel: 'noopener noreferrer' })`
   font-size: ${({ theme }) => theme.fonts.fontSize.fs16};
@@ -56,16 +55,9 @@ const Text = styled(AttiText)`
   strong {
     font-weight: 700;
     @media (prefers-color-scheme: dark) {
-      color: ${({theme}) => theme.colors.strong};
+      color: ${({ theme }) => theme.colors.strong};
     }
   }
 `
 
-export {
-  Header2,
-  Header3,
-  Image,
-  Link,
-  Separator,
-  Text,
-}
+export { Header2, Header3, Image, Link, Separator, Text }

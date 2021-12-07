@@ -11,7 +11,7 @@ const ProfileContainer = styled('div')`
   }
   ${Link}, ${Name} {
     line-height: 22px;
-    font-size:  ${({ theme }) => theme.fonts.fontSize.fs16};
+    font-size: ${({ theme }) => theme.fonts.fontSize.fs16};
   }
   ${Link} {
     display: inline-block;

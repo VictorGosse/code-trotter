@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   width: 120%;
   margin-left: -10%;
   margin-top: ${({ theme }) => theme.spaces.s1_5};

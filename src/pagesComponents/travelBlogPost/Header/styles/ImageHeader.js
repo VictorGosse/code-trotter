@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
-const ImageHeader = styled(Img)`
+const ImageHeader = styled(GatsbyImage)`
   object-fit: cover;
   width: 100%;
   height: 100%;

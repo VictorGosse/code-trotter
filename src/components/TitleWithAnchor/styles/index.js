@@ -1,5 +1,3 @@
 import Anchor from './Anchor'
 
-export {
-  Anchor,
-}
+export { Anchor }

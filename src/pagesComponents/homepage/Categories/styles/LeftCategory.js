@@ -41,7 +41,7 @@ const LeftCategory = styled('div')`
         margin-left: 0;
       }
     }
-    
+
     @media only screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
       margin-left: ${({ theme }) => theme.spaces.s0_75};
     }

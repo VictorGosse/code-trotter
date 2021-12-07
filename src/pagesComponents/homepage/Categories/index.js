@@ -17,28 +17,40 @@ const Categories = () => (
     query={graphql`
       query HomePageImages {
         allContentfulHomePageImage {
-          edges{
+          edges {
             node {
               image {
-                fluid(quality: 100, maxWidth: 1600) {
-                  ...GatsbyContentfulFluid_withWebp
-                }
+                gatsbyImageData(width: 1600, placeholder: BLURRED, formats: [WEBP])
               }
             }
           }
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <CategoryContainer>
         <LeftCategory>
-          <BackgroundImage fluid={data.allContentfulHomePageImage.edges[1].node.image.fluid} alt="" />
-          <CategoryLink><Link to={routes.travels}><AngleRight /> Voyages</Link></CategoryLink>
+          <BackgroundImage
+            image={data.allContentfulHomePageImage.edges[1].node.image.gatsbyImageData}
+            alt=""
+          />
+          <CategoryLink>
+            <Link to={routes.travels}>
+              <AngleRight /> Voyages
+            </Link>
+          </CategoryLink>
         </LeftCategory>
         <WhiteSeparator />
         <RightCategory>
-          <BackgroundImage fluid={data.allContentfulHomePageImage.edges[0].node.image.fluid} alt="" />
-          <CategoryLink><Link to={routes.web}><AngleRight /> Web <AngleLeft /></Link></CategoryLink>
+          <BackgroundImage
+            image={data.allContentfulHomePageImage.edges[0].node.image.gatsbyImageData}
+            alt=""
+          />
+          <CategoryLink>
+            <Link to={routes.web}>
+              <AngleRight /> Web <AngleLeft />
+            </Link>
+          </CategoryLink>
         </RightCategory>
       </CategoryContainer>
     )}

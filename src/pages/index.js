@@ -11,12 +11,14 @@ const Index = () => {
     <>
       <SEO
         description="Vous pouvez retrouver ici des articles de mes précédents voyages et des articles techniques liés au web, au développement, à la gestion de projet..."
-        keywords={["voyages", "web", "developpement"]}
+        keywords={['voyages', 'web', 'developpement']}
         title="Les voyages et le web, mes 2 passions"
-        extraMeta={[{
-          name: 'google-site-verification',
-          content: '1E806lu_l9hGS22xEiRG5Y-4iXNHwJqPYEUfwbbWixw',
-        }]}
+        extraMeta={[
+          {
+            name: 'google-site-verification',
+            content: '1E806lu_l9hGS22xEiRG5Y-4iXNHwJqPYEUfwbbWixw',
+          },
+        ]}
       />
       <Categories />
     </>

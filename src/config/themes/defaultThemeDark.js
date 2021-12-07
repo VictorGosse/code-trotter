@@ -11,7 +11,7 @@ const defaultThemeDark = {
     header1: {
       fonts: {
         fontSize: '48px',
-      }
+      },
     },
     header2: {
       fonts: {
@@ -23,13 +23,13 @@ const defaultThemeDark = {
         border: 'transparent',
         borderHover: 'currentColor',
         textVisited: '#5c8cbd',
-      }
-    }
+      },
+    },
   },
   layout: {
     mobile: {
       padding: 's2',
-    }
+    },
   },
 
   // Custom

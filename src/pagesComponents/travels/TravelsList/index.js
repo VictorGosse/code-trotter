@@ -13,17 +13,15 @@ const TravelsList = () => (
   <StaticQuery
     query={graphql`
       query BlogPosts {
-        allContentfulBlogPost(sort: {fields: [startDate], order: DESC} ) {
-          edges{
+        allContentfulBlogPost(sort: { fields: [startDate], order: DESC }) {
+          edges {
             node {
               title
               startDate(formatString: "DD/MM/YYYY")
               endDate(formatString: "DD/MM/YYYY")
               heroImage {
                 description
-                fluid(quality: 85, maxWidth: 1200) {
-                  ...GatsbyContentfulFluid_withWebp
-                }
+                gatsbyImageData(width: 1200, quality: 85, placeholder: BLURRED, formats: [WEBP])
                 title
               }
               place
@@ -39,15 +37,21 @@ const TravelsList = () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <>
-        {map(data.allContentfulBlogPost.edges, ({node}) => (
+        {map(data.allContentfulBlogPost.edges, ({ node }) => (
           <TravelContainer key={node.slug}>
-            {node.heroImage?.fluid && <HeroImage fluid={node.heroImage?.fluid} alt="" />}
+            {node.heroImage?.gatsbyImageData && (
+              <HeroImage image={node.heroImage?.gatsbyImageData} alt="" />
+            )}
             <TextContainer>
               <Header2>{node.title}</Header2>
-              { node.startDate && node.endDate && <TravelDates startDate={node.startDate} endDate={node.endDate} /> }
-              <SecondaryButton to={`${routes.travels}${node.slug}/`}>Lire l'article</SecondaryButton>
+              {node.startDate && node.endDate && (
+                <TravelDates startDate={node.startDate} endDate={node.endDate} />
+              )}
+              <SecondaryButton to={`${routes.travels}${node.slug}/`}>
+                Lire l'article
+              </SecondaryButton>
             </TextContainer>
           </TravelContainer>
         ))}

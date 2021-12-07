@@ -8,7 +8,7 @@ const defaultTheme = {
     header1: {
       fonts: {
         fontSize: '48px',
-      }
+      },
     },
     header2: {
       fonts: {
@@ -20,13 +20,13 @@ const defaultTheme = {
         border: 'transparent',
         borderHover: 'currentColor',
         textVisited: '#8b12e6',
-      }
-    }
+      },
+    },
   },
   layout: {
     mobile: {
       padding: 's2',
-    }
+    },
   },
 
   // Custom

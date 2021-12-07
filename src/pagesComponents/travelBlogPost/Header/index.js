@@ -8,10 +8,12 @@ import { TravelDates } from '@components'
 
 const Header = ({ data }) => (
   <HeaderContainer>
-    <ImageHeader fluid={data.heroImage.fluid} alt="" />
+    <ImageHeader image={data.heroImage.gatsbyImageData} alt="" />
     <HeaderTextContainer>
       <Header1 textAlign="center">{data.title}</Header1>
-      {data.startDate && data.endDate && <TravelDates startDate={data.startDate} endDate={data.endDate} />}
+      {data.startDate && data.endDate && (
+        <TravelDates startDate={data.startDate} endDate={data.endDate} />
+      )}
     </HeaderTextContainer>
   </HeaderContainer>
 )

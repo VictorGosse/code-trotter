@@ -4,7 +4,7 @@ import {
   Header3 as AttiHeader3,
   Header4 as AttiHeader4,
   Header5 as AttiHeader5,
-  Text as AttiText
+  Text as AttiText,
 } from 'atti-components'
 
 import AutoLink from './AutoLink'
@@ -55,8 +55,7 @@ const Header5 = styled(AttiHeader5)`
   }
 `
 
-const Image = styled(PostImage)`
-`
+const Image = styled(PostImage)``
 
 const List = styled(AttiText.withComponent('ul'))`
   width: ${({ theme }) => theme.webBlogPost.basicWidth};

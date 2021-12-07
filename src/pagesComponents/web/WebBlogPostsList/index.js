@@ -15,8 +15,8 @@ const WebBlogPostsList = () => (
   <StaticQuery
     query={graphql`
       query WebBlogPosts {
-        allContentfulWebBlogPost(sort: {fields: [publicationDate], order: DESC} ) {
-          edges{
+        allContentfulWebBlogPost(sort: { fields: [publicationDate], order: DESC }) {
+          edges {
             node {
               title
               slug
@@ -33,15 +33,26 @@ const WebBlogPostsList = () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <Grid>
-        <Cell cols={[[1, 7], [1, 7], [4, 10]]}>
-          {map(data.allContentfulWebBlogPost.edges, ({node}) => (
+        <Cell
+          cols={[
+            [1, 7],
+            [1, 7],
+            [4, 10],
+          ]}
+        >
+          {map(data.allContentfulWebBlogPost.edges, ({ node }) => (
             <ArticleContainer key={node.slug}>
-              <ArticleTitle><Link to={`${routes.web}${node.slug}/`}>{node.title}</Link></ArticleTitle>
+              <ArticleTitle>
+                <Link to={`${routes.web}${node.slug}/`}>{node.title}</Link>
+              </ArticleTitle>
               <Text>{node.content.childMarkdownRemark.excerpt}</Text>
               <DateReadContainer>
-                <ArticleDate publicationDate={node.publicationDate} publicationDateFormatted={node.publicationDateFormatted} />
+                <ArticleDate
+                  publicationDate={node.publicationDate}
+                  publicationDateFormatted={node.publicationDateFormatted}
+                />
                 <TimeToRead timeToRead={node.content.childMarkdownRemark.timeToRead} />
               </DateReadContainer>
             </ArticleContainer>

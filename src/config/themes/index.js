@@ -3,9 +3,4 @@ import defaultThemeDark from './defaultThemeDark'
 import webTheme from './webTheme'
 import webThemeDark from './webThemeDark'
 
-export {
-  defaultTheme,
-  defaultThemeDark,
-  webTheme,
-  webThemeDark,
-}
+export { defaultTheme, defaultThemeDark, webTheme, webThemeDark }

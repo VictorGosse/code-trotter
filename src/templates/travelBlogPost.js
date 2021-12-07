@@ -37,15 +37,13 @@ const Travel = ({ data }) => {
 }
 
 export const pageQuery = graphql`
-  query($id: String!) {
-    contentfulBlogPost(id: {eq: $id}) {
+  query ($id: String!) {
+    contentfulBlogPost(id: { eq: $id }) {
       title
       startDate: startDate(formatString: "DD/MM/YYYY")
       endDate: endDate(formatString: "DD/MM/YYYY")
       heroImage {
-        fluid(quality: 85, maxWidth: 1600) {
-          ...GatsbyContentfulFluid_withWebp
-        }
+        gatsbyImageData(width: 1600, quality: 85, placeholder: BLURRED, formats: [WEBP])
       }
       place
       slug
@@ -53,7 +51,7 @@ export const pageQuery = graphql`
         description
       }
       body {
-        childMarkdownRemark{
+        childMarkdownRemark {
           htmlAst
         }
       }
@@ -64,9 +62,7 @@ export const pageQuery = graphql`
           file {
             url
           }
-          fluid(quality: 85, maxWidth: 1000) {
-            ...GatsbyContentfulFluid_withWebp
-          }
+          gatsbyImageData(width: 1000, quality: 85, placeholder: BLURRED, formats: [WEBP])
         }
       }
     }

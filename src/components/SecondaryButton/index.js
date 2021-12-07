@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Link from '../Link'
 
 const SecondaryButton = styled(Link)`
-  ${({theme}) => `
+  ${({ theme }) => `
     border: 1px solid ${theme.colors.white};
     color: ${theme.colors.white};
     padding: ${theme.spaces.s0_5} ${theme.spaces.s0_75};
@@ -12,7 +12,7 @@ const SecondaryButton = styled(Link)`
   letter-spacing: 0.3rem;
 
   &:hover {
-    ${({theme}) => `
+    ${({ theme }) => `
       border: 1px solid ${theme.colors.white};
     `}
   }

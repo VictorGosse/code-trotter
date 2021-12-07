@@ -32,7 +32,7 @@ const renderAst = new RehypeReact({
     p: Text,
     strong: Strong,
     ul: List,
-  }
+  },
 }).Compiler
 
 export default renderAst

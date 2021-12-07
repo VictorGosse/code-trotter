@@ -9,7 +9,7 @@ const LightMenuProvider = ({ children, light }) => {
     <LightMenuContext.Provider
       value={{
         lightMenu: lightMenu,
-        setLightMenu: lightMenu => setLightMenu(lightMenu),
+        setLightMenu: (lightMenu) => setLightMenu(lightMenu),
       }}
     >
       {children}

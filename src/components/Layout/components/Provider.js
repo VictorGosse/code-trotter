@@ -6,9 +6,7 @@ import { LightMenuProvider } from '../context/LightMenuContext'
 
 const Provider = ({ children }) => (
   <LightMenuProvider>
-    <DarkThemeProvider>
-      {children}
-    </DarkThemeProvider>
+    <DarkThemeProvider>{children}</DarkThemeProvider>
   </LightMenuProvider>
 )
 

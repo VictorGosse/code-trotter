@@ -7,13 +7,17 @@ const DarkThemeProvider = ({ children }) => {
   const [darkTheme, setDarkTheme] = useState(false)
 
   useEffect(() => {
-    setDarkTheme(typeof window !== "undefined" ? window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches : false)
+    setDarkTheme(
+      typeof window !== 'undefined'
+        ? window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        : false,
+    )
   }, [setDarkTheme])
   return (
     <DarkThemeContext.Provider
       value={{
         darkTheme: darkTheme,
-        setDarkTheme: darkTheme => setDarkTheme(darkTheme),
+        setDarkTheme: (darkTheme) => setDarkTheme(darkTheme),
       }}
     >
       {children}

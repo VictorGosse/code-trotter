@@ -9,11 +9,11 @@ const webThemeDark = {
   components: {
     header1: {
       colors: {
-        text: '#9980fa'
+        text: '#9980fa',
       },
       fonts: {
         fontSize: '48px',
-      }
+      },
     },
     header2: {
       fonts: {
@@ -26,25 +26,25 @@ const webThemeDark = {
         border: 'transparent',
         borderHover: 'currentColor',
         textVisited: '#12cbc4',
-      }
+      },
     },
     text: {
       normal: {
         fonts: {
           lineHeight: '32px',
-        }
-      }
-    }
+        },
+      },
+    },
   },
   fonts: {
     fontSize: {
-      fs16: '18px'
-    }
+      fs16: '18px',
+    },
   },
   layout: {
     mobile: {
       padding: 's2',
-    }
+    },
   },
 
   // Custom

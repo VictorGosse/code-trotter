@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { defaultTheme as attiTheme,  ThemeProvider } from 'atti-components'
+import { defaultTheme as attiTheme, ThemeProvider } from 'atti-components'
 
 import { useDarkTheme } from '../context/DarkThemeContext'
 import { defaultTheme, defaultThemeDark } from '@config/themes'

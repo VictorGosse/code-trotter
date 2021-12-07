@@ -9,7 +9,6 @@ import renderAst from '@helpers/renderAstWeb'
 import { ArticleContainer, Header, Share } from '@pagesComponents/webBlogPost'
 import AssetContext from '@pagesComponents/webBlogPost/Context/asset-context.js'
 
-
 const WebBlogPost = ({ data }) => {
   useLightMenu().setLightMenu(false)
 
@@ -22,7 +21,6 @@ const WebBlogPost = ({ data }) => {
         url={`${routes.root}${routes.web}/${data.contentfulWebBlogPost.slug}`}
         title={data.contentfulWebBlogPost.title}
         type="article"
-
         extraMeta={[
           {
             name: 'article:author',
@@ -63,7 +61,10 @@ const WebBlogPost = ({ data }) => {
         <AssetContext.Provider value={data.allContentfulAsset}>
           {renderAst(data.contentfulWebBlogPost.content.childMarkdownRemark.htmlAst)}
         </AssetContext.Provider>
-        <Share slug={data.contentfulWebBlogPost.slug + "/"} title={data.contentfulWebBlogPost.title} />
+        <Share
+          slug={data.contentfulWebBlogPost.slug + '/'}
+          title={data.contentfulWebBlogPost.title}
+        />
         <Bio />
       </ArticleContainer>
     </WebProvider>
@@ -71,8 +72,8 @@ const WebBlogPost = ({ data }) => {
 }
 
 export const pageQuery = graphql`
-  query($id: String!) {
-    contentfulWebBlogPost(id: {eq: $id}) {
+  query ($id: String!) {
+    contentfulWebBlogPost(id: { eq: $id }) {
       title
       publicationDate: publicationDate(formatString: "DD/MM/YYYY")
       publicationDateFormatted: publicationDate(formatString: "DD-MM-YYYY")
@@ -87,7 +88,7 @@ export const pageQuery = graphql`
         }
       }
       content {
-        childMarkdownRemark{
+        childMarkdownRemark {
           htmlAst
           timeToRead
         }
@@ -99,9 +100,7 @@ export const pageQuery = graphql`
           file {
             url
           }
-          fluid(quality: 100, maxWidth: 1600) {
-            ...GatsbyContentfulFluid_withWebp
-          }
+          gatsbyImageData(width: 1600, quality: 85, placeholder: BLURRED, formats: [WEBP])
         }
       }
     }

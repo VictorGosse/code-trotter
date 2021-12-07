@@ -9,7 +9,7 @@ const TextContainer = styled('div')`
   flex-direction: column;
   align-items: center;
   ${Header2} {
-    ${({theme}) => `
+    ${({ theme }) => `
       color: ${theme.colors.white};
       font-size: ${theme.fonts.fontSize.fs48};
       line-height: ${theme.fonts.lineHeight.lh56};
@@ -19,7 +19,7 @@ const TextContainer = styled('div')`
     text-transform: uppercase;
     text-align: center;
     @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
-      ${({theme}) => `
+      ${({ theme }) => `
         color: ${theme.colors.white};
         font-size: ${theme.fonts.fontSize.fs36};
         line-height: ${theme.fonts.lineHeight.lh48};

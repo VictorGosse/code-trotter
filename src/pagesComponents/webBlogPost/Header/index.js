@@ -44,10 +44,13 @@ const Header = ({ article }) => (
           { name: 'Web', url: routes.web },
           { name: article.title },
         ]}
-        separator='>'
+        separator=">"
       />
       <DateReadContainer>
-        <ArticleDate publicationDate={article.publicationDate} publicationDateFormatted={article.publicationDateFormatted} />
+        <ArticleDate
+          publicationDate={article.publicationDate}
+          publicationDateFormatted={article.publicationDateFormatted}
+        />
         <TimeToRead timeToRead={article.content.childMarkdownRemark.timeToRead} />
       </DateReadContainer>
     </InfoContainer>

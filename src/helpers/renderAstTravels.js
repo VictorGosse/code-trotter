@@ -1,6 +1,13 @@
 import React from 'react'
 import RehypeReact from 'rehype-react'
-import { Header2, Header3, Image, Link, Separator, Text } from '@pagesComponents/travelBlogPost/PostContent'
+import {
+  Header2,
+  Header3,
+  Image,
+  Link,
+  Separator,
+  Text,
+} from '@pagesComponents/travelBlogPost/PostContent'
 
 const renderAst = new RehypeReact({
   createElement: React.createElement,
@@ -11,7 +18,7 @@ const renderAst = new RehypeReact({
     hr: Separator,
     img: Image,
     p: Text,
-  }
+  },
 }).Compiler
 
 export default renderAst
