@@ -19,6 +19,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-image`,
+    `gatsby-plugin-typescript`,
     `gatsby-plugin-robots-txt`,{
       resolve: `gatsby-plugin-manifest`,
       options: {
