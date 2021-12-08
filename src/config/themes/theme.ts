@@ -59,7 +59,7 @@ const theme = {
       color: colors.black,
       fontSize: '16px',
       lineHeight: '1.5em',
-    }
+    },
   },
   fontFamily: {
     primary: 'Roboto',

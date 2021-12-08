@@ -14,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
     --color-light-black: #3B3B3B;
     --color-primary: #1129d8;
   }
-`;
+`
 
 const GlobalStylesDark = createGlobalStyle`
   html {
@@ -22,7 +22,7 @@ const GlobalStylesDark = createGlobalStyle`
     --color-light-black: rgba(255, 255, 255, 0.88);
     --color-primary: #84c1ff;
   }
-`;
+`
 
 const ThemeContainer = ({ children }: Props) => {
   const { darkTheme } = useDarkTheme()

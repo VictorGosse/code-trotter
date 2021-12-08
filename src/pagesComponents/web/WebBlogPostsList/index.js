@@ -36,21 +36,21 @@ const WebBlogPostsList = () => (
     `}
     render={(data) => (
       <Container>
-          {map(data.allContentfulWebBlogPost.edges, ({ node }) => (
-            <ArticleContainer key={node.slug}>
-              <ArticleTitle>
-                <Link to={`${routes.web}${node.slug}/`}>{node.title}</Link>
-              </ArticleTitle>
-              <Text>{node.content.childMarkdownRemark.excerpt}</Text>
-              <DateReadContainer>
-                <ArticleDate
-                  publicationDate={node.publicationDate}
-                  publicationDateFormatted={node.publicationDateFormatted}
-                />
-                <TimeToRead timeToRead={node.content.childMarkdownRemark.timeToRead} />
-              </DateReadContainer>
-            </ArticleContainer>
-          ))}
+        {map(data.allContentfulWebBlogPost.edges, ({ node }) => (
+          <ArticleContainer key={node.slug}>
+            <ArticleTitle>
+              <Link to={`${routes.web}${node.slug}/`}>{node.title}</Link>
+            </ArticleTitle>
+            <Text>{node.content.childMarkdownRemark.excerpt}</Text>
+            <DateReadContainer>
+              <ArticleDate
+                publicationDate={node.publicationDate}
+                publicationDateFormatted={node.publicationDateFormatted}
+              />
+              <TimeToRead timeToRead={node.content.childMarkdownRemark.timeToRead} />
+            </DateReadContainer>
+          </ArticleContainer>
+        ))}
       </Container>
     )}
   />

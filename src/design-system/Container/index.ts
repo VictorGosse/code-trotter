@@ -10,7 +10,8 @@ const Container = styled.div`
       padding: 0 ${theme.spaces.s2};
     }
 
-    @media only screen and (min-width: ${theme.breakpoints.tabletMin}) and (max-width: ${theme.breakpoints.tabletMax}) {
+    @media only screen and (min-width: ${theme.breakpoints.tabletMin}) and (max-width: ${theme
+        .breakpoints.tabletMax}) {
       max-width: none;
       padding: 0 ${theme.spaces.s1_5};
     }

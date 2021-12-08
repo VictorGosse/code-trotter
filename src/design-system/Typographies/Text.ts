@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components'
 
-import BaseTypography, {BaseTypographyProps} from './BaseTypography'
+import BaseTypography, { BaseTypographyProps } from './BaseTypography'
 
-const Text = styled(BaseTypography) <BaseTypographyProps>`
+const Text = styled(BaseTypography)<BaseTypographyProps>`
   ${({ theme }) => css`
     color: ${theme.components.text.color};
     font-family: ${theme.fontFamily.primary};
