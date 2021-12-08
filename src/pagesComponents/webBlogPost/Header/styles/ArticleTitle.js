@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Header1 } from 'atti-components'
+import { Header1 } from '@designSystem'
 
 const ArticleTitle = styled(Header1)`
   text-align: center;

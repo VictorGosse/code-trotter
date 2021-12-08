@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { Header2 } from 'atti-components'
+import styled, { css } from 'styled-components'
+import { Header2 } from '@designSystem'
 
 import { SecondaryButton } from '@components'
 
@@ -9,20 +9,20 @@ const TextContainer = styled('div')`
   flex-direction: column;
   align-items: center;
   ${Header2} {
-    ${({ theme }) => `
+    ${({ theme }) => css`
       color: ${theme.colors.white};
-      font-size: ${theme.fonts.fontSize.fs48};
-      line-height: ${theme.fonts.lineHeight.lh56};
-      font-weight: ${theme.fonts.fontWeight.fw700};
+      font-size: 48px;
+      line-height: 56px;
+      font-weight: 700;
       margin-bottom: ${theme.spaces.s0_25};
     `}
     text-transform: uppercase;
     text-align: center;
     @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
-      ${({ theme }) => `
+      ${({ theme }) => css`
         color: ${theme.colors.white};
-        font-size: ${theme.fonts.fontSize.fs36};
-        line-height: ${theme.fonts.lineHeight.lh48};
+        font-size: 36px;
+        line-height: 48px;
         margin-bottom: ${theme.spaces.s1};
       `}
     }

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Header1 } from 'atti-components'
+import { Header1 } from '@designSystem'
 
 const CategoryLink = styled(Header1)`
   color: white;

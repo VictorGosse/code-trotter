@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from 'atti-components'
+import { Container } from '@designSystem'
 
 import { Introduction, SEO } from '@components'
 import WebProvider from '@components/WebProvider'

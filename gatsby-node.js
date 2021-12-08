@@ -41,7 +41,7 @@ exports.createPages = async function({ graphql, actions }) {
     result.data.allContentfulWebBlogPost.edges.forEach((edge) => {
       createPage({
         path: `web/${edge.node.slug}/`,
-        component: path.resolve('src/templates/webBlogPost.js'),
+        component: path.resolve('src/templates/webBlogPost.tsx'),
         context: {
           id: edge.node.id,
         }

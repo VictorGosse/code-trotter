@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header1 } from 'atti-components'
+import { Header1 } from '@designSystem'
 
 const Introduction = ({ title }) => (
   <>

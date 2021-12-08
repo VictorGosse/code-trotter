@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Link } from 'atti-components'
+import { Link } from '@designSystem'
 
 const Anchor = styled(Link)`
   position: absolute;

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from 'atti-components'
+import { Text } from '@designSystem'
 import styled from 'styled-components'
 
 import DateContainer from './styles/DateContainer'

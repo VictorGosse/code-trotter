@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Link } from 'atti-components'
+import { Link } from '@designSystem'
 
 const GithubLink = styled(Link)`
   margin-right: 6px;

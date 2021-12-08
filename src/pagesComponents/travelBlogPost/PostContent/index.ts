@@ -4,7 +4,7 @@ import {
   Header3 as AttiHeader3,
   Link as AttiLink,
   Text as AttiText,
-} from 'atti-components'
+} from '@designSystem'
 
 import PostImage from './PostImage'
 import { TitleWithAnchor } from '@components'
@@ -29,7 +29,7 @@ const Header3 = styled(AttiHeader3)`
 const Image = styled(PostImage)``
 
 const Link = styled(AttiLink).attrs({ target: '_blank', rel: 'noopener noreferrer' })`
-  font-size: ${({ theme }) => theme.fonts.fontSize.fs16};
+  font-size: 16px;
   line-height: 28px;
 `
 
@@ -45,7 +45,7 @@ const Text = styled(AttiText)`
   display: block;
   width: ${({ theme }) => theme.travelBlogPostWidth};
   margin: auto;
-  font-size: ${({ theme }) => theme.fonts.fontSize.fs16};
+  font-size: 16px;
   line-height: 28px;
   margin-bottom: 20px;
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
@@ -54,9 +54,6 @@ const Text = styled(AttiText)`
 
   strong {
     font-weight: 700;
-    @media (prefers-color-scheme: dark) {
-      color: ${({ theme }) => theme.colors.strong};
-    }
   }
 `
 

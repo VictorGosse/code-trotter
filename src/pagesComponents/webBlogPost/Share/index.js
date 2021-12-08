@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'atti-components'
+import { Link } from '@designSystem'
 
 import Twitter from '@icons/Twitter'
 import routes from '@config/routes'

@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { Container, Header1 } from 'atti-components'
+import { Container, Header1 } from '@designSystem'
 
 const HeaderTextContainer = styled(Container)`
   z-index: 1;
@@ -15,9 +15,9 @@ const HeaderTextContainer = styled(Container)`
   ${Header1} {
     ${({ theme }) => css`
       color: ${theme.colors.white};
-      font-size: ${theme.fonts.fontSize.fs48};
-      line-height: ${theme.fonts.lineHeight.lh56};
-      font-weight: ${theme.fonts.fontWeight.fw700};
+      font-size: 48px;
+      line-height: 56px;
+      font-weight: 700;
       margin-bottom: ${theme.spaces.s1};
 
       @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {

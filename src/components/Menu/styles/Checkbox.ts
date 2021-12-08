@@ -7,7 +7,7 @@ const Checkbox = styled('input')`
   ${visuallyHidden};
   &:checked {
     + ${Slider} {
-      background-color: ${({ theme }) => theme.colors.supportWarning};
+      background-color: ${({ theme }) => theme.colors.tertiary};
       &:before {
         transform: translateX(calc(${({ theme }) => theme.spaces.s1_5} - 4px));
       }

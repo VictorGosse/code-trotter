@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'atti-components'
 import { StaticQuery, graphql } from 'gatsby'
 
 import BioContainer from './styles/BioContainer'
@@ -7,6 +6,7 @@ import Name from './styles/Name'
 import ProfileContainer from './styles/ProfileContainer'
 import ProfilePicture from './styles/ProfilePicture'
 
+import { Link } from '@designSystem'
 import renderAst from '@helpers/renderAstBio'
 
 const Bio = () => (

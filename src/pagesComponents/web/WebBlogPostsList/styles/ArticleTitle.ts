@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Header2 } from 'atti-components'
+import { Header2 } from '@designSystem'
 
 const ArticleTitle = styled(Header2.withComponent('h1'))`
   margin-bottom: ${({ theme }) => theme.spaces.s0_5};
@@ -14,7 +14,7 @@ const ArticleTitle = styled(Header2.withComponent('h1'))`
       border-color: currentColor;
     }
     &:visited {
-      color: ${({ theme }) => theme.components.link.colors.textVisited};
+      color: ${({ theme }) => theme.components.link.colorVisited};
     }
   }
 `

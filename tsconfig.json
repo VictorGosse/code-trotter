@@ -15,7 +15,15 @@
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "paths": {
-      "*": ["node_modules/*", "src/*"]
+      "*": ["node_modules/*", "src/*"],
+      "@components/*": ["src/components/*"],
+      "@config/*": ["src/config/*"],
+      "@designSystem": ["src/design-system"],
+      "@designSystem/*": ["src/design-system/*"],
+      "@helpers/*": ["src/helpers/*"],
+      "@icons/*": ["src/icons/*"],
+      "@images/*": ["src/images/*"],
+      "@pagesComponents/*": ["src/pagesComponents/*"],
     },
     "resolveJsonModule": true,
     "sourceMap": true,

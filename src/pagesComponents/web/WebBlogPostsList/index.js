@@ -1,15 +1,16 @@
 import React from 'react'
-import { Cell, Grid, Text } from 'atti-components'
 import Link from 'gatsby-link'
 import { StaticQuery, graphql } from 'gatsby'
 import { map } from 'lodash'
 
-import routes from '@config/routes'
-import ArticleContainer from './styles/ArticleContainer.js'
-import ArticleDate from '../ArticleDate'
-import ArticleTitle from './styles/ArticleTitle.js'
-import DateReadContainer from './styles/DateReadContainer.js'
 import { TimeToRead } from '@components'
+import routes from '@config/routes'
+import { Container, Text } from '@designSystem'
+
+import ArticleContainer from './styles/ArticleContainer'
+import ArticleDate from '../ArticleDate'
+import ArticleTitle from './styles/ArticleTitle'
+import DateReadContainer from './styles/DateReadContainer'
 
 const WebBlogPostsList = () => (
   <StaticQuery
@@ -34,14 +35,7 @@ const WebBlogPostsList = () => (
       }
     `}
     render={(data) => (
-      <Grid>
-        <Cell
-          cols={[
-            [1, 7],
-            [1, 7],
-            [4, 10],
-          ]}
-        >
+      <Container>
           {map(data.allContentfulWebBlogPost.edges, ({ node }) => (
             <ArticleContainer key={node.slug}>
               <ArticleTitle>
@@ -57,8 +51,7 @@ const WebBlogPostsList = () => (
               </DateReadContainer>
             </ArticleContainer>
           ))}
-        </Cell>
-      </Grid>
+      </Container>
     )}
   />
 )

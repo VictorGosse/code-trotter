@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Text } from 'atti-components'
+import { Text } from '@designSystem'
 
 const DateContainer = styled(Text.withComponent('time'))`
   display: inline-flex;

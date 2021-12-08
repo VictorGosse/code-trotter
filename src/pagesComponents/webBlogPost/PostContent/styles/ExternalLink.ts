@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { Link } from 'atti-components'
+import { Link } from '@designSystem'
 
 const ExternalLink = styled(Link)`
-  font-size: ${({ theme }) => theme.fonts.fontSize.fs16};
+  font-size: 18px;
   line-height: 28px;
 `
 

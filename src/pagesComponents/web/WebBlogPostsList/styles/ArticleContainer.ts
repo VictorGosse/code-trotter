@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 
 const ArticleContainer = styled('article')`
-  margin: ${({ theme }) => theme.spaces.s2} 0;
+  margin: ${({ theme }) => theme.spaces.s2} auto;
+  width: ${({ theme }) => theme.webBlogPost.basicWidth};
+
   & + & {
     &:before {
       content: ' ';
@@ -11,6 +13,9 @@ const ArticleContainer = styled('article')`
       background-color: ${({ theme }) => theme.colors.secondary};
       margin: ${({ theme }) => theme.spaces.s2} auto;
     }
+  }
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
+    width: 100%;
   }
 `
 

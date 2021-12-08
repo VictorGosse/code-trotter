@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Header2, Header3, Text } from 'atti-components'
+import { Container, Header2, Header3, Text } from '@designSystem'
 
 import { Introduction, SEO } from '@components'
 import { useLightMenu } from '@components/Layout/context/LightMenuContext'

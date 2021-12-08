@@ -142,6 +142,7 @@ module.exports = {
         alias: {
           '@components': path.resolve(__dirname, 'src/components'),
           '@config': path.resolve(__dirname, 'src/config'),
+          '@designSystem': path.resolve(__dirname, 'src/design-system'),
           '@helpers': path.resolve(__dirname, 'src/helpers'),
           '@icons': path.resolve(__dirname, 'src/icons'),
           '@images': path.resolve(__dirname, 'src/images'),

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Container } from 'atti-components'
+import { Container } from '@designSystem'
 
 const ArticleContainer = styled(Container.withComponent('article'))`
   padding-top: ${({ theme }) => theme.spaces.s4};

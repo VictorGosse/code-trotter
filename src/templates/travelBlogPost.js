@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from 'atti-components'
+import { Container } from '@designSystem'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 

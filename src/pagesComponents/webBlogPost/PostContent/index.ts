@@ -5,7 +5,7 @@ import {
   Header4 as AttiHeader4,
   Header5 as AttiHeader5,
   Text as AttiText,
-} from 'atti-components'
+} from '@designSystem'
 
 import AutoLink from './AutoLink'
 import PostImage from './PostImage'
@@ -69,7 +69,7 @@ const List = styled(AttiText.withComponent('ul'))`
 `
 
 const ListItem = styled(AttiText.withComponent('li'))`
-  font-size: ${({ theme }) => theme.fonts.fontSize.fs16};
+  font-size: 18px;
   line-height: 28px;
   display: list-item;
 `

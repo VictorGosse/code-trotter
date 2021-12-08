@@ -4,7 +4,7 @@ import Link from '../../Link'
 
 const BreadcrumbLink = styled(Link)`
   &:visited {
-    color: ${({ theme }) => theme.components.link.colors.text};
+    color: ${({ theme }) => theme.components.link.color};
   }
 `
 

@@ -1,10 +1,10 @@
 import React from 'react'
-import { Header2 } from 'atti-components'
+import { Header2 } from '@designSystem'
 import { StaticQuery, graphql } from 'gatsby'
 import { map } from 'lodash'
 
 import HeroImage from './styles/HeroImage.js'
-import TextContainer from './styles/TextContainer.js'
+import TextContainer from './styles/TextContainer.ts'
 import TravelContainer from './styles/TravelContainer.js'
 import { SecondaryButton, TravelDates } from '@components'
 import routes from '@config/routes'

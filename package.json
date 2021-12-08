@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "author": "Victor Gosse",
   "dependencies": {
-    "atti-components": "^0.2.2-rc12",
     "gatsby": "^4.3.0",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-feed": "^4.3.0",

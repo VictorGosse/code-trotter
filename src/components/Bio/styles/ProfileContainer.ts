@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Link } from 'atti-components'
+import { Link } from '@designSystem'
 
 import Name from './Name'
 
@@ -11,7 +11,7 @@ const ProfileContainer = styled('div')`
   }
   ${Link}, ${Name} {
     line-height: 22px;
-    font-size: ${({ theme }) => theme.fonts.fontSize.fs16};
+    font-size: 18px;
   }
   ${Link} {
     display: inline-block;
