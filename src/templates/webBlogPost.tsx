@@ -7,7 +7,7 @@ import { useLightMenu } from '@components/Layout/context/LightMenuContext'
 import routes from '@config/routes'
 import renderAst from '@helpers/renderAstWeb'
 import { ArticleContainer, Header, Share } from '@pagesComponents/webBlogPost'
-import AssetContext from '@pagesComponents/webBlogPost/Context/asset-context.js'
+import AssetContext from '@pagesComponents/webBlogPost/Context/asset-context'
 
 const WebBlogPost = ({ data }) => {
   useLightMenu().setLightMenu(false)

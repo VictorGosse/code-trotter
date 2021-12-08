@@ -5,6 +5,7 @@ const LightMenuContext = React.createContext()
 
 const LightMenuProvider = ({ children, light }) => {
   const [lightMenu, setLightMenu] = useState(light)
+
   return (
     <LightMenuContext.Provider
       value={{

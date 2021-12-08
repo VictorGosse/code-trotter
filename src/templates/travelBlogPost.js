@@ -7,7 +7,7 @@ import { SEO } from '@components'
 import { useLightMenu } from '@components/Layout/context/LightMenuContext'
 import renderAst from '@helpers/renderAstTravels'
 import { Breadcrumb, Header } from '@pagesComponents/travelBlogPost'
-import AssetContext from '@pagesComponents/travelBlogPost/Context/asset-context.js'
+import AssetContext from '@pagesComponents/travelBlogPost/Context/asset-context'
 
 const ArticleContainer = styled('article')`
   padding-top: ${({ theme }) => theme.spaces.s2};

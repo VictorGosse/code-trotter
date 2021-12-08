@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Calendar from '@icons/Calendar.js'
-import DateContainer from './styles/DateContainer.js'
+import Calendar from '@icons/Calendar'
+import DateContainer from './styles/DateContainer'
 
 const ArticleDate = ({ publicationDate, publicationDateFormatted }) => (
   <DateContainer datetime={publicationDateFormatted}>

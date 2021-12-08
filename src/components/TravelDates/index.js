@@ -3,7 +3,7 @@ import { Text } from '@designSystem'
 import styled from 'styled-components'
 
 import DateContainer from './styles/DateContainer'
-import Calendar from '@icons/Calendar.js'
+import Calendar from '@icons/Calendar'
 
 const TravelDates = ({ className, endDate, startDate }) => (
   <DateContainer className={className}>

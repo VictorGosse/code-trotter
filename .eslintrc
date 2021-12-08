@@ -1,0 +1,34 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "plugin:testing-library/react",
+    "plugin:jest-dom/recommended",
+    "plugin:typescript-sort-keys/recommended"
+  ],
+  "plugins": ["react-hooks", "testing-library", "jest-dom", "typescript-sort-keys"],
+  "rules": {
+    "@typescript-eslint/no-non-null-asserted-optional-chain": "off",
+    "@typescript-eslint/ban-types": ["error", { "types": { "object": false, "{}": false, "Function": false } }],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "react/prop-types": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "jsx-boolean-value": "off",
+    "jsx-no-lambda": "off",
+    "newline-before-return": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-restricted-imports": ["error", { "paths": [".."] }]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
+

@@ -16,6 +16,7 @@
     "noImplicitThis": true,
     "paths": {
       "*": ["node_modules/*", "src/*"],
+      "@components": ["src/components"],
       "@components/*": ["src/components/*"],
       "@config/*": ["src/config/*"],
       "@designSystem": ["src/design-system"],

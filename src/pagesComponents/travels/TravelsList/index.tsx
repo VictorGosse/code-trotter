@@ -3,9 +3,9 @@ import { Header2 } from '@designSystem'
 import { StaticQuery, graphql } from 'gatsby'
 import { map } from 'lodash'
 
-import HeroImage from './styles/HeroImage.js'
-import TextContainer from './styles/TextContainer.ts'
-import TravelContainer from './styles/TravelContainer.js'
+import HeroImage from './styles/HeroImage'
+import TextContainer from './styles/TextContainer'
+import TravelContainer from './styles/TravelContainer'
 import { SecondaryButton, TravelDates } from '@components'
 import routes from '@config/routes'
 
@@ -50,7 +50,7 @@ const TravelsList = () => (
                 <TravelDates startDate={node.startDate} endDate={node.endDate} />
               )}
               <SecondaryButton to={`${routes.travels}${node.slug}/`}>
-                Lire l'article
+                Lire l&apos;article
               </SecondaryButton>
             </TextContainer>
           </TravelContainer>

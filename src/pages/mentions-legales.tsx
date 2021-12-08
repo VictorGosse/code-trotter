@@ -9,7 +9,7 @@ const MentionsLegales = () => {
 
   return (
     <>
-      <SEO description="Mention légales" keywords={[]} title="Mentions légales du site" />
+      <SEO description="Mention légales" title="Mentions légales du site" />
       <Container>
         <Introduction title="Mention Légales" />
         <Text mt="30px">
@@ -25,7 +25,7 @@ const MentionsLegales = () => {
         </Text>
 
         <Header2 mt="10px" mb="10px">
-          DROIT D'AUTEUR - COPYRIGHT ©
+          DROIT D&apos;AUTEUR - COPYRIGHT ©
         </Header2>
         <Header3 mb="15px">REPRODUCTION SUR SUPPORT PAPIER</Header3>
         <Text>
@@ -58,25 +58,25 @@ const MentionsLegales = () => {
           COOKIES
         </Header2>
         <Text>
-          Lors de votre visite sur notre site, nous sommes susceptibles d'implanter un cookie dans
-          votre ordinateur. Un cookie est un petit bloc de données envoyé à votre navigateur par un
-          serveur web et stocké sur le disque dur de votre ordinateur. Le cookie ne nous permet pas
-          de vous identifier personnellement. De manière générale, il nous permet d'enregistrer des
-          informations relatives à la navigation de votre ordinateur sur notre site (les pages que
-          vous avez consultées, la date et l'heure de la consultation, etc.) que nous pourrons lire
-          lors de vos visites ultérieures.
+          Lors de votre visite sur notre site, nous sommes susceptibles d&apos;implanter un cookie
+          dans votre ordinateur. Un cookie est un petit bloc de données envoyé à votre navigateur
+          par un serveur web et stocké sur le disque dur de votre ordinateur. Le cookie ne nous
+          permet pas de vous identifier personnellement. De manière générale, il nous permet
+          d&apos;enregistrer des informations relatives à la navigation de votre ordinateur sur
+          notre site (les pages que vous avez consultées, la date et l&apos;heure de la
+          consultation, etc.) que nous pourrons lire lors de vos visites ultérieures.
         </Text>
         <Text>
-          Vous pouvez naturellement vous opposer à l'enregistrement de cookies en configurant votre
-          navigateur.
+          Vous pouvez naturellement vous opposer à l&apos;enregistrement de cookies en configurant
+          votre navigateur.
         </Text>
         <Text>
           Vous pouvez également supprimer les cookies à tout moment et individuellement en vous
-          rapportant au manuel d'utilisation de votre navigateur.
+          rapportant au manuel d&apos;utilisation de votre navigateur.
         </Text>
         <br />
         <br />
-        <Text>© Victor Gosse 2019</Text>
+        <Text>© Victor Gosse {new Date().getFullYear()}</Text>
       </Container>
     </>
   )

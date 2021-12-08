@@ -13,6 +13,7 @@ const DarkThemeProvider = ({ children }) => {
         : false,
     )
   }, [setDarkTheme])
+
   return (
     <DarkThemeContext.Provider
       value={{
