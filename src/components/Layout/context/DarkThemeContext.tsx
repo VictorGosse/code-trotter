@@ -1,9 +1,16 @@
-import React, { useContext, useEffect, useState } from 'react'
-import PropTypes from 'prop-types'
+import React, { createContext, useContext, useEffect, useState } from 'react'
 
-const DarkThemeContext = React.createContext()
+type ContextState = {
+  darkTheme: boolean
+  setDarkTheme: React.Dispatch<React.SetStateAction<boolean>>
+}
+type Props = {
+  children: React.ReactNode
+}
 
-const DarkThemeProvider = ({ children }) => {
+const DarkThemeContext = createContext({} as ContextState)
+
+const DarkThemeProvider = ({ children }: Props) => {
   const [darkTheme, setDarkTheme] = useState(false)
 
   useEffect(() => {
@@ -17,16 +24,13 @@ const DarkThemeProvider = ({ children }) => {
   return (
     <DarkThemeContext.Provider
       value={{
-        darkTheme: darkTheme,
-        setDarkTheme: (darkTheme) => setDarkTheme(darkTheme),
+        darkTheme,
+        setDarkTheme,
       }}
     >
       {children}
     </DarkThemeContext.Provider>
   )
-}
-DarkThemeProvider.propTypes = {
-  children: PropTypes.any.isRequired,
 }
 
 const useDarkTheme = () => useContext(DarkThemeContext)

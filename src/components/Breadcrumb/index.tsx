@@ -3,10 +3,15 @@ import { map } from 'lodash'
 
 import { BreadcrumbLink, BreadcrumbSeparator, CurrentElement, StyledBreadcrumb } from './styles'
 
-/**
- * A breadcrumb component.
- */
-const Breadcrumb = ({ elements, separator }) => (
+type Props = {
+  elements: Array<{
+    name: string
+    url: string
+  }>
+  separator: React.ReactNode
+}
+
+const Breadcrumb = ({ elements, separator }: Props) => (
   <StyledBreadcrumb>
     {map(elements, (element, index) => (
       <React.Fragment key={element.name}>

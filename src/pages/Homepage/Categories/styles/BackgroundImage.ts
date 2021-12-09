@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { GatsbyImage } from 'gatsby-plugin-image'
+import { GatsbyImage, GatsbyImageProps } from 'gatsby-plugin-image'
 
-const BackgroundImage = styled(GatsbyImage)`
+const BackgroundImage = styled(GatsbyImage)<GatsbyImageProps>`
   position: absolute !important;
   object-fit: cover;
   width: 100%;

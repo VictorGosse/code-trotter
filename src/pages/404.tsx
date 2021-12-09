@@ -9,7 +9,7 @@ const NotFoundPage = () => {
 
   return (
     <>
-      <SEO title="404: Not found" />
+      <SEO description="Not found" lang="en" title="404: Not found" />
       <Container>
         <Introduction title="Not Found" />
         <Text mt="40px" textAlign="center">

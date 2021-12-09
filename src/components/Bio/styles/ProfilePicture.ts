@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { GatsbyImage } from 'gatsby-plugin-image'
+import { GatsbyImage, GatsbyImageProps } from 'gatsby-plugin-image'
 
-const ProfilePicture = styled(GatsbyImage)`
+const ProfilePicture = styled(GatsbyImage)<GatsbyImageProps>`
   border-radius: 50%;
   object-fit: cover;
   height: 120px;

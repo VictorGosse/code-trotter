@@ -1,10 +1,27 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import favicon from '../../images/favicon.png'
 
-const SEO = ({ description, extraMeta, image, lang, url, title, type }) => (
+type Props = {
+  description: string
+  extraMeta?: Array<{ content: string; name: string }>
+  image?: string
+  lang?: string
+  title: string
+  type?: string
+  url?: string
+}
+
+const SEO = ({
+  description,
+  extraMeta = [],
+  image = '',
+  lang = 'fr',
+  url = '',
+  title,
+  type = 'website',
+}: Props) => (
   <Helmet
     htmlAttributes={{
       lang,
@@ -77,23 +94,5 @@ const SEO = ({ description, extraMeta, image, lang, url, title, type }) => (
     ]}
   />
 )
-
-SEO.defaultProps = {
-  extraMeta: [],
-  image: '',
-  lang: 'fr',
-  url: '',
-  type: 'website',
-}
-
-SEO.propTypes = {
-  description: PropTypes.string,
-  extraMeta: PropTypes.array,
-  image: PropTypes.string,
-  lang: PropTypes.string,
-  url: PropTypes.string,
-  title: PropTypes.string.isRequired,
-  type: PropTypes.string,
-}
 
 export default SEO

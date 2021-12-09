@@ -1,5 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
+import { IGatsbyImageData } from 'gatsby-plugin-image'
 
 import BioContainer from './styles/BioContainer'
 import Name from './styles/Name'
@@ -8,6 +9,20 @@ import ProfilePicture from './styles/ProfilePicture'
 
 import { Link } from '@designSystem'
 import renderAst from '@helpers/renderAstBio'
+
+type Data = {
+  contentfulBio: {
+    description: {
+      childMarkdownRemark: ChildMarkdow
+      nRemark
+    }
+    name: string
+    profilePicture: {
+      gatsbyImageData: IGatsbyImageData
+    }
+    twitter: string
+  }
+}
 
 const Bio = () => (
   <StaticQuery
@@ -27,7 +42,7 @@ const Bio = () => (
         }
       }
     `}
-    render={(data) => (
+    render={(data: Data) => (
       <BioContainer>
         <ProfilePicture alt="" image={data.contentfulBio.profilePicture.gatsbyImageData} />
         <ProfileContainer>

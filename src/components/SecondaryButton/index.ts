@@ -1,21 +1,19 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import Link from '../Link'
 
 const SecondaryButton = styled(Link)`
-  ${({ theme }) => `
+  ${({ theme }) => css`
     border: 1px solid ${theme.colors.white};
     color: ${theme.colors.white};
+    letter-spacing: 0.3rem;
     padding: ${theme.spaces.s0_5} ${theme.spaces.s0_75};
-  `}
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.3rem;
+    text-decoration: none;
+    text-transform: uppercase;
 
-  &:hover {
-    ${({ theme }) => `
+    &:hover {
       border: 1px solid ${theme.colors.white};
-    `}
-  }
+    }
+  `}
 `
 
 export default SecondaryButton

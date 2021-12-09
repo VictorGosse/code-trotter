@@ -12,7 +12,6 @@ const Travels = () => {
     <>
       <SEO
         description="Vous pouvez retrouver ici les récits de mes voyages à travers le monde."
-        keywords={['voyages', 'monde', 'travels']}
         title="Mes voyages"
       />
       <Container>

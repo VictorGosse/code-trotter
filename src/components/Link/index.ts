@@ -10,9 +10,6 @@ const NewLink = styled(Text.withComponent(Link))`
     border-bottom: 1px solid transparent;
   `}
 
-  /* &:hover {
-    border-color: ${({ theme }) => theme.components.link.colors.border};
-  } */
   &:visited {
     color: ${({ theme }) => theme.components.link.colorVisited};
   }

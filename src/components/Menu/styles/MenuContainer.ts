@@ -2,7 +2,11 @@ import styled from 'styled-components'
 
 import MenuLink from './MenuLink'
 
-const MenuContainer = styled('nav')`
+type Props = {
+  light: boolean
+}
+
+const MenuContainer = styled('nav')<Props>`
   padding: ${({ theme }) => theme.spaces.s1} ${({ theme }) => theme.spaces.s1_5};
   position: absolute;
   top: 0;

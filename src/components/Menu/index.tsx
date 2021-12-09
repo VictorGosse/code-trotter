@@ -25,7 +25,7 @@ const Menu = () => {
     window.theme = theme
   }
 
-  const onChangeSwitch = (event) => {
+  const onChangeSwitch: React.ChangeEventHandler<HTMLInputElement> = (event) => {
     setDarkTheme(event.target.checked)
   }
 
@@ -37,7 +37,7 @@ const Menu = () => {
         <MenuLink to={routes.travels}>Voyages</MenuLink>
         <MenuLink to={routes.web}>Web</MenuLink>
         <SwitchContainer>
-          <ThemeSwitch for="lightDark">
+          <ThemeSwitch htmlFor="lightDark">
             <Checkbox
               checked={useDarkTheme().darkTheme}
               onChange={onChangeSwitch}

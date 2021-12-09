@@ -2,7 +2,8 @@ import React from 'react'
 
 import { SEO } from '@components'
 import { useLightMenu } from '@components/Layout/context/LightMenuContext'
-import { Categories } from '@pagesComponents/homepage'
+
+import { Categories } from './Homepage'
 
 const Index = () => {
   useLightMenu().setLightMenu(true)
@@ -11,7 +12,6 @@ const Index = () => {
     <>
       <SEO
         description="Vous pouvez retrouver ici des articles de mes précédents voyages et des articles techniques liés au web, au développement, à la gestion de projet..."
-        keywords={['voyages', 'web', 'developpement']}
         title="Les voyages et le web, mes 2 passions"
         extraMeta={[
           {

@@ -7,7 +7,11 @@ import AppContainer from './components/AppContainer'
 import Provider from './components/Provider'
 import ThemeContainer from './components/ThemeContainer'
 
-const Layout = ({ children }) => {
+type Props = {
+  children: React.ReactNode
+}
+
+const Layout = ({ children }: Props) => {
   return (
     <Provider>
       <ThemeContainer>

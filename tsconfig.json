@@ -21,6 +21,7 @@
       "@config/*": ["src/config/*"],
       "@designSystem": ["src/design-system"],
       "@designSystem/*": ["src/design-system/*"],
+      "@helpers": ["src/helpers"],
       "@helpers/*": ["src/helpers/*"],
       "@icons/*": ["src/icons/*"],
       "@images/*": ["src/images/*"],

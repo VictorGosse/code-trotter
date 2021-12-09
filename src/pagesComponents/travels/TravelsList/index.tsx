@@ -9,6 +9,14 @@ import TravelContainer from './styles/TravelContainer'
 import { SecondaryButton, TravelDates } from '@components'
 import routes from '@config/routes'
 
+type Data = {
+  allContentfulBlogPost: {
+    edges: {
+      node: Travel
+    }[]
+  }
+}
+
 const TravelsList = () => (
   <StaticQuery
     query={graphql`
@@ -37,7 +45,7 @@ const TravelsList = () => (
         }
       }
     `}
-    render={(data) => (
+    render={(data: Data) => (
       <>
         {map(data.allContentfulBlogPost.edges, ({ node }) => (
           <TravelContainer key={node.slug}>
