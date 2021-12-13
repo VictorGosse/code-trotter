@@ -13,8 +13,7 @@ import renderAst from '@helpers/renderAstBio'
 type Data = {
   contentfulBio: {
     description: {
-      childMarkdownRemark: ChildMarkdow
-      nRemark
+      childMarkdownRemark: ChildMarkdownRemark
     }
     name: string
     profilePicture: {

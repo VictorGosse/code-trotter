@@ -6,7 +6,7 @@ import { BreadcrumbLink, BreadcrumbSeparator, CurrentElement, StyledBreadcrumb }
 type Props = {
   elements: Array<{
     name: string
-    url: string
+    url?: string
   }>
   separator: React.ReactNode
 }

@@ -155,6 +155,7 @@ module.exports = {
           '@icons': path.resolve(__dirname, 'src/icons'),
           '@images': path.resolve(__dirname, 'src/images'),
           '@pagesComponents': path.resolve(__dirname, 'src/pagesComponents'),
+          '@templates': path.resolve(__dirname, 'src/templates'),
         },
       },
     },

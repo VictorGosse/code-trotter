@@ -3,7 +3,7 @@ import React from 'react'
 import { SEO } from '@components'
 import { useLightMenu } from '@components/Layout/context/LightMenuContext'
 
-import { Categories } from './Homepage'
+import { Categories } from '@pagesComponents/Homepage'
 
 const Index = () => {
   useLightMenu().setLightMenu(true)

@@ -6,9 +6,9 @@ import DateContainer from './styles/DateContainer'
 import Calendar from '@icons/Calendar'
 
 type Props = {
-  className: string
-  endDate: string
-  startDate: string
+  className?: string
+  endDate: TravelArticle['endDate']
+  startDate: TravelArticle['startDate']
 }
 
 const TravelDates = ({ className, endDate, startDate }: Props) => (
