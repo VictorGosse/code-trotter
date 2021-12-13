@@ -1,7 +1,7 @@
 const path = require('path')
 
-exports.createPages = async function({ graphql, actions }) {
-  const {createPage} = actions
+exports.createPages = async function ({ graphql, actions }) {
+  const { createPage } = actions
   await graphql(`
     {
       allContentfulBlogPost {
@@ -17,11 +17,11 @@ exports.createPages = async function({ graphql, actions }) {
     result.data.allContentfulBlogPost.edges.forEach((edge) => {
       createPage({
         path: `travels/${edge.node.slug}/`,
-        component: path.resolve('src/templates/travelBlogPost.js'),
+        component: path.resolve('src/templates/TravelBlogPost/index.tsx'),
         context: {
           id: edge.node.id,
           light: true,
-        }
+        },
       })
     })
   })
@@ -41,10 +41,10 @@ exports.createPages = async function({ graphql, actions }) {
     result.data.allContentfulWebBlogPost.edges.forEach((edge) => {
       createPage({
         path: `web/${edge.node.slug}/`,
-        component: path.resolve('src/templates/webBlogPost.tsx'),
+        component: path.resolve('src/templates/WebBlogPost/index.tsx'),
         context: {
           id: edge.node.id,
-        }
+        },
       })
     })
   })
@@ -53,7 +53,7 @@ exports.createPages = async function({ graphql, actions }) {
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage } = actions
 
-  if (page.path === "/") {
+  if (page.path === '/') {
     page.context.light = true
     createPage(page)
   }

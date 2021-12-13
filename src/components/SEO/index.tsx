@@ -5,7 +5,7 @@ import favicon from '../../images/favicon.png'
 
 type Props = {
   description: string
-  extraMeta?: Array<{ content: string; name: string }>
+  extraMeta?: Array<{ content: string | string[]; name: string }>
   image?: string
   lang?: string
   title: string
@@ -90,7 +90,10 @@ const SEO = ({
         name: 'twitter:url',
         content: url,
       },
-      ...extraMeta,
+      ...(extraMeta as {
+        content: string
+        name: string
+      }[]),
     ]}
   />
 )

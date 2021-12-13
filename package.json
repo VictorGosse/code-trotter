@@ -49,7 +49,8 @@
     "format": "prettier --write \"src/**/*.{t,j}s{,x}\"",
     "lint": "cross-env eslint 'src/**/*.{t,j}s{,x}'",
     "start": "npm run develop",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:typescript": "tsc --noEmit --skipLibCheck"
   },
   "devDependencies": {
     "@types/react-helmet": "^6.1.4",
@@ -72,9 +73,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/akaala/code-trotter"
-  },
-  "engines": {
-    "node": "^14.15.5",
-    "yarn": "^1.22.4"
   }
 }
