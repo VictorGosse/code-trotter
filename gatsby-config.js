@@ -17,6 +17,7 @@ module.exports = {
       twitter: '@VictorGosse',
     },
   },
+  trailingSlash: 'always',
   plugins: [
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-image`,
@@ -40,7 +41,6 @@ module.exports = {
         precachePages: [`/mentions-legales/`, `/web/`, `/travels/`],
       },
     },
-    `gatsby-plugin-force-trailing-slashes`,
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,
